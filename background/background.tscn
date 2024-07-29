@@ -1,0 +1,150 @@
+[gd_scene load_steps=13 format=3 uid="uid://dplnve58iotk1"]
+
+[ext_resource type="Texture2D" uid="uid://ho0of7mlr1fj" path="res://background/BackgroundAssets/9_Céu.png" id="1_1lced"]
+[ext_resource type="Script" path="res://background/background.gd" id="1_f0cj5"]
+[ext_resource type="Texture2D" uid="uid://6rqi8m1gb4p4" path="res://background/BackgroundAssets/8_Nuvens.png" id="2_2vnx7"]
+[ext_resource type="Texture2D" uid="uid://cwe6coknrwqbm" path="res://background/BackgroundAssets/7_Passaros.png" id="2_062su"]
+[ext_resource type="Texture2D" uid="uid://c3fv1grvs3e0n" path="res://background/BackgroundAssets/6_MontanhaLonge.png" id="3_2m6dg"]
+[ext_resource type="Texture2D" uid="uid://dmib13867rdno" path="res://background/BackgroundAssets/5_Montanha.png" id="5_84uvd"]
+[ext_resource type="Texture2D" uid="uid://db2swiorlnd8o" path="res://background/BackgroundAssets/4_PlantasLonge.png" id="6_j1s7s"]
+[ext_resource type="Texture2D" uid="uid://di2tr4r6vo5qo" path="res://background/BackgroundAssets/4-2_Cactos.png" id="7_op673"]
+[ext_resource type="Texture2D" uid="uid://cp3c5bpc33my5" path="res://background/BackgroundAssets/3_Arvore.png" id="8_fkece"]
+[ext_resource type="Texture2D" uid="uid://lhd87g6jtdya" path="res://background/BackgroundAssets/2_Plantas.png" id="9_0667r"]
+[ext_resource type="Texture2D" uid="uid://b8fppka6w6mxo" path="res://background/BackgroundAssets/1_PlantasFrente.png" id="11_0sl2w"]
+[ext_resource type="PackedScene" uid="uid://cr1gyagi0os8h" path="res://background/BackgroundAssets/shader.tscn" id="12_pltyn"]
+
+[node name="Background" type="ParallaxBackground"]
+script = ExtResource("1_f0cj5")
+
+[node name="DefaultBackground" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(1, 0.1)
+motion_mirroring = Vector2(1152, 2.08165e-12)
+
+[node name="Texture" type="TextureRect" parent="DefaultBackground"]
+custom_minimum_size = Vector2(1152, 648)
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_1lced")
+
+[node name="Birds" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(1, 0.1)
+motion_mirroring = Vector2(1152, 2.08165e-12)
+
+[node name="Texture" type="TextureRect" parent="Birds"]
+texture_filter = 1
+custom_minimum_size = Vector2(1152, 648)
+offset_top = -6.0
+offset_right = 1152.0
+offset_bottom = 642.0
+texture = ExtResource("2_062su")
+
+[node name="Clouds" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(2, 0.1)
+motion_mirroring = Vector2(800, 2.08165e-12)
+
+[node name="Texture" type="TextureRect" parent="Clouds"]
+texture_filter = 1
+custom_minimum_size = Vector2(2.08165e-12, 2.08165e-12)
+offset_left = 111.0
+offset_top = 79.0
+offset_right = 232.0
+offset_bottom = 119.0
+scale = Vector2(4, 4)
+texture = ExtResource("2_2vnx7")
+
+[node name="FarClouds" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(3, 0.1)
+motion_mirroring = Vector2(500, 2.08165e-12)
+
+[node name="Texture" type="TextureRect" parent="FarClouds"]
+texture_filter = 1
+custom_minimum_size = Vector2(2.08165e-12, 2.08165e-12)
+offset_left = 594.0
+offset_top = 190.0
+offset_right = 715.0
+offset_bottom = 230.0
+texture = ExtResource("2_2vnx7")
+
+[node name="FarMountain" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(4, 0.1)
+motion_mirroring = Vector2(1152, 2.08165e-12)
+
+[node name="Texture" type="TextureRect" parent="FarMountain"]
+texture_filter = 1
+custom_minimum_size = Vector2(1152, 648)
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("3_2m6dg")
+
+[node name="Mountain" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(4, 0.1)
+motion_mirroring = Vector2(1152, 2.08165e-12)
+
+[node name="Texture" type="TextureRect" parent="Mountain"]
+texture_filter = 1
+custom_minimum_size = Vector2(1152, 648)
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("5_84uvd")
+
+[node name="FarPlants" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(4, 0.1)
+motion_mirroring = Vector2(1152, 2.08165e-12)
+
+[node name="Texture" type="TextureRect" parent="FarPlants"]
+texture_filter = 1
+custom_minimum_size = Vector2(1152, 648)
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("6_j1s7s")
+
+[node name="Cactus" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(4, 0.1)
+motion_mirroring = Vector2(1152, 2.08165e-12)
+
+[node name="Texture" type="TextureRect" parent="Cactus"]
+texture_filter = 1
+custom_minimum_size = Vector2(1152, 648)
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("7_op673")
+
+[node name="Tree" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(4, 0.1)
+motion_mirroring = Vector2(1152, 2.08165e-12)
+
+[node name="Texture" type="TextureRect" parent="Tree"]
+texture_filter = 1
+custom_minimum_size = Vector2(1152, 648)
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("8_fkece")
+
+[node name="Plants" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(4, 0.1)
+motion_mirroring = Vector2(1152, 2.08165e-12)
+
+[node name="Texture" type="TextureRect" parent="Plants"]
+texture_filter = 1
+custom_minimum_size = Vector2(1152, 648)
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("9_0667r")
+
+[node name="ClosePlants" type="ParallaxLayer" parent="."]
+position = Vector2(9, -121)
+motion_scale = Vector2(3, 0.1)
+motion_mirroring = Vector2(1152, 2.08165e-12)
+
+[node name="Texture" type="TextureRect" parent="ClosePlants"]
+texture_filter = 1
+custom_minimum_size = Vector2(1152, 648)
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("11_0sl2w")
+
+[node name="ParallaxClosePlants" type="ParallaxBackground" parent="."]
+visible = false
+
+[node name="Shader" parent="." instance=ExtResource("12_pltyn")]
+visible = false
