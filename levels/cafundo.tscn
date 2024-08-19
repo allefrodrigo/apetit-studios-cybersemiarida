@@ -1,5 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://h4opdf1mcba"]
-
-[ext_resource type="PackedScene" uid="uid://b4tkuo0ugoc58" path="res://levels/base_level.tscn" id="1_gppir"]
-
-[node name="Cafundo" instance=ExtResource("1_gppir")]

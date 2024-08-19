@@ -1,0 +1,36 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1722781403
+icon.svg::CompressedTexture2D::5506788469632124487::1722263960::1722290245::1::::<><>::
+README.md::TextFile::-1::1722288013::0::1::::<><>::
+::res://background/::1722782535
+background.gd::GDScript::-1::1722276512::0::1::::Background<>ParallaxBackground<>::
+background.tscn::PackedScene::8235629941470578634::1722782535::0::1::::<><>::uid://ho0of7mlr1fj::::res://background/BackgroundAssets/9_Céu.png<>res://background/background.gd<>uid://6rqi8m1gb4p4::::res://background/BackgroundAssets/8_Nuvens.png<>uid://cwe6coknrwqbm::::res://background/BackgroundAssets/7_Passaros.png<>uid://c3fv1grvs3e0n::::res://background/BackgroundAssets/6_MontanhaLonge.png<>uid://dmib13867rdno::::res://background/BackgroundAssets/5_Montanha.png<>uid://db2swiorlnd8o::::res://background/BackgroundAssets/4_PlantasLonge.png<>uid://di2tr4r6vo5qo::::res://background/BackgroundAssets/4-2_Cactos.png<>uid://cp3c5bpc33my5::::res://background/BackgroundAssets/3_Arvore.png<>uid://lhd87g6jtdya::::res://background/BackgroundAssets/2_Plantas.png<>uid://b8fppka6w6mxo::::res://background/BackgroundAssets/1_PlantasFrente.png<>uid://cr1gyagi0os8h::::res://background/BackgroundAssets/shader.tscn
+::res://background/BackgroundAssets/::1722783458
+1_PlantasFrente.png::CompressedTexture2D::4713912480991171076::1722275842::1722290245::1::::<><>::
+2_Plantas.png::CompressedTexture2D::786770697911242948::1722261395::1722290245::1::::<><>::
+3_Arvore.png::CompressedTexture2D::5883651682697861278::1722261395::1722290245::1::::<><>::
+4-2_Cactos.png::CompressedTexture2D::7777696531778098182::1722261395::1722290245::1::::<><>::
+4_PlantasLonge.png::CompressedTexture2D::7286321730014334004::1722261395::1722290245::1::::<><>::
+5_Montanha.png::CompressedTexture2D::8018151867486746492::1722261395::1722290245::1::::<><>::
+6_MontanhaLonge.png::CompressedTexture2D::6749772707892110671::1722261395::1722290245::1::::<><>::
+7_Passaros.png::CompressedTexture2D::6327139988191931470::1722261395::1722290245::1::::<><>::
+8-2_Nuvens.png::CompressedTexture2D::5694472359802297519::1722266284::1722290245::1::::<><>::
+8_Nuvens.png::CompressedTexture2D::2211936085831142839::1722266264::1722290245::1::::<><>::
+9_Céu.png::CompressedTexture2D::521766432568008915::1722261395::1722290245::1::::<><>::
+shader.gdshader::Shader::-1::1722287813::0::1::::<><>::
+shader.tscn::PackedScene::6020132701514913585::1722782535::0::1::::<><>::res://background/BackgroundAssets/shader.gdshader
+Timby_idle_outline.png::CompressedTexture2D::1002004464505970340::1722783458::1722783458::1::::<><>::
+timby_v0_idle_animation-Sheet.png::CompressedTexture2D::3710591266047393413::1721683412::1722290245::1::::<><>::
+Timby_walking_outline-Sheet.png::CompressedTexture2D::1210323811747140418::1722781424::1722781424::1::::<><>::
+::res://character/::1722782535
+character.gd::GDScript::-1::1722782532::0::1::::<>CharacterBody2D<>::
+character.tscn::PackedScene::2468030308814750267::1722782535::0::1::::<><>::res://character/character.gd<>uid://bs4o5p2p8mvxt::::res://background/BackgroundAssets/timby_v0_idle_animation-Sheet.png<>uid://rij4d66617vy::::res://background/BackgroundAssets/Timby_walking_outline-Sheet.png<>uid://c3dcyus2lvu7r::::res://sounds/swing-whoosh-110410.mp3
+::res://levels/::1722782535
+base_level.tscn::PackedScene::4461763987193231029::1722287532::0::1::::<><>::uid://dt8mmoqbw2t7n::::res://terrain/terrain.tscn<>uid://dplnve58iotk1::::res://background/background.tscn<>uid://bbfsdl8p8t3ad::::res://character/character.tscn
+cafundo.tscn::PackedScene::16237230930375690::1722279620::0::1::::<><>::uid://b4tkuo0ugoc58::::res://levels/base_level.tscn
+cafundo_t1.tscn::PackedScene::7972963579235186065::1722782535::0::1::::<><>::uid://b4tkuo0ugoc58::::res://levels/base_level.tscn
+::res://sounds/::1722296229
+::res://terrain/::1722781392
+cafundo_grass_tileset.png::CompressedTexture2D::4386886479560101233::1722278237::1722290245::1::::<><>::
+Terrain (32x32).png::CompressedTexture2D::2499948148893331602::1722467231::1722467231::1::::<><>::
+terrain.tscn::PackedScene::8561725339645639153::1722467668::0::1::::<><>::uid://bbu81stg0ovb3::::res://terrain/Terrain (32x32).png

@@ -1,0 +1,13 @@
+[background arg="res://background/background_teste.png" fade="0.0"]
+[voice volume="0.0"]
+Olá, bem vindo ao mundo de cybersemiarida
+join timby (timby_talking) 1 [animation="Slide In Left"]
+timby (timby_talking): Oiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii grupo LBR
+update timby (timby_listening) 1
+join gato (gato_talking) 4 [animation="Slide In Right"]
+gato (gato_talking): cala boca kkkkkkkkkkk
+- Zuada ai boboca slc
+	gato: vou falar nada vai que é doença
+- prefiro nao comentar
+	gato: beleza po kkk
+update gato
