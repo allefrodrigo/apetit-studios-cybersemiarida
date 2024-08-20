@@ -1,6 +1,6 @@
 [background arg="res://background/background_teste.png" fade="0.0"]
 [voice volume="0.0"]
-timby: Boa noite itinhaaaa!
+timby: Boa noite grupoooo!
 join timby (timby_talking) 1 [animation="Slide In Left"]
 timby (timby_talking): Oiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii grupo LBR
 update timby (timby_listening) 1
