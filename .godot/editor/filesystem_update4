@@ -1,5 +1,7 @@
+res://Bubble.tres
 res://world_01.tscn
-res://New_File.tres
-res://weather.gd
-res://weather.tscn
+res://addons/dialogic/Editor/TimelineEditor/test_timeline_scene.gd
 res://world_01.gdshader
+res://portraits/gato.dch
+res://timelines/introduction.dtl
+res://actors/player.tscn
