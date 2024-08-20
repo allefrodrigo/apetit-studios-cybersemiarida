@@ -1,4 +1,6 @@
 ColorRect
+TextureRect
+HBoxContainer
 GPUParticles2D
 Sprite2D
 AnimationPlayer

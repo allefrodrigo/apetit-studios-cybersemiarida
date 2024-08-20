@@ -1,14 +1,14 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1724125101
-Bubble.tres::Resource/DialogicStyle::2547255308439413089::1724123829::0::1::::<><>::uid://syki6k0e6aac::::res://addons/dialogic/Modules/DefaultLayoutParts/Base_TextBubble/text_bubble_base.tscn<>uid://cn674foxwedqu::::res://addons/dialogic/Modules/DefaultLayoutParts/Layer_Input/full_advance_input_layer.tscn<>res://addons/dialogic/Resources/dialogic_style_layer.gd<>uid://d2it0xiap3gnt::::res://addons/dialogic/Modules/DefaultLayoutParts/Layer_Textbubble/text_bubble_layer.tscn<>res://addons/dialogic/Resources/dialogic_style.gd
+::res://::1724126266
+Bubble.tres::Resource/DialogicStyle::2547255308439413089::1724125141::0::1::::<><>::uid://syki6k0e6aac::::res://addons/dialogic/Modules/DefaultLayoutParts/Base_TextBubble/text_bubble_base.tscn<>uid://cn674foxwedqu::::res://addons/dialogic/Modules/DefaultLayoutParts/Layer_Input/full_advance_input_layer.tscn<>res://addons/dialogic/Resources/dialogic_style_layer.gd<>uid://d2it0xiap3gnt::::res://addons/dialogic/Modules/DefaultLayoutParts/Layer_Textbubble/text_bubble_layer.tscn<>res://addons/dialogic/Resources/dialogic_style.gd
 icon.svg::CompressedTexture2D::3060853630564107255::1722869112::1722869116::1::::<><>::
 weather.gd::GDScript::-1::1724118469::0::1::::<>Node2D<>::
 weather.tscn::PackedScene::2516331509498231491::1724118473::0::1::::<><>::uid://drusxb5n1sqco::::res://assets/snow.png<>res://weather.gd<>uid://d1vhc4w27post::::res://assets/rain.png<>uid://csk80xafgxjds::::res://assets/leaves.png
-world_01.gd::GDScript::-1::1724124532::0::1::::<>Node2D<>::
-world_01.gdshader::Shader::-1::1724125092::0::1::::<><>::
-world_01.tscn::PackedScene::5076016347759370440::1724125089::0::1::::<><>::uid://bk3r225rrtt7j::::res://actors/player.tscn<>uid://b0lu6pemaf8fx::::res://assets/Seasonal Tilesets/1 - Grassland/Terrain (16 x 16).png<>res://world_01.gd<>uid://bvxulnwrxnjrb::::res://assets/Seasonal Tilesets/1 - Grassland/Grassland_entities (16 x 16).png<>uid://bhkxrge6x3p2q::::res://background/background.tscn<>uid://bjrk36gmhe587::::res://sounds/bg_mundo1.wav<>res://world_01.gdshader<>uid://csk80xafgxjds::::res://assets/leaves.png
-::res://actors/::1724125043
-player.tscn::PackedScene::3147193567770036829::1724125043::0::1::::<><>::res://scripts/player.gd<>uid://do4l3w3t7htrt::::res://assets/player.png<>uid://daadjku71bidt::::res://sounds/jump_sound.mp3<>uid://c263vxd0gqbdo::::res://sounds/jump_land.mp3
+world_01.gd::GDScript::-1::1724125322::0::1::::<>Node2D<>::
+world_01.gdshader::Shader::-1::1724126089::0::1::::<><>::
+world_01.tscn::PackedScene::5076016347759370440::1724126029::0::1::::<><>::uid://bk3r225rrtt7j::::res://actors/player.tscn<>uid://b0lu6pemaf8fx::::res://assets/Seasonal Tilesets/1 - Grassland/Terrain (16 x 16).png<>res://world_01.gd<>uid://bvxulnwrxnjrb::::res://assets/Seasonal Tilesets/1 - Grassland/Grassland_entities (16 x 16).png<>uid://bhkxrge6x3p2q::::res://background/background.tscn<>uid://bjrk36gmhe587::::res://sounds/bg_mundo1.wav<>res://world_01.gdshader<>uid://csk80xafgxjds::::res://assets/leaves.png
+::res://actors/::1724126029
+player.tscn::PackedScene::3147193567770036829::1724126029::0::1::::<><>::res://scripts/player.gd<>uid://do4l3w3t7htrt::::res://assets/player.png<>uid://daadjku71bidt::::res://sounds/jump_sound.mp3<>uid://c263vxd0gqbdo::::res://sounds/jump_land.mp3
 ::res://addons/::1724119230
 ::res://addons/dialogic/::1716186798
 plugin.cfg::TextFile::-1::1716186798::0::1::::<><>::
@@ -168,8 +168,8 @@ settings_translation.tscn::PackedScene::5295236732155278879::1716186798::0::1:::
 ::res://addons/dialogic/Editor/Theme/::1716186798
 MainTheme.tres::Theme::5934233903620397670::1716186798::0::1::::<><>::
 PickerTheme.tres::Theme::-1::1716186798::0::1::::<><>::
-::res://addons/dialogic/Editor/TimelineEditor/::1724123829
-test_timeline_scene.gd::GDScript::-1::1724123829::0::1::::<>Control<>::
+::res://addons/dialogic/Editor/TimelineEditor/::1724125141
+test_timeline_scene.gd::GDScript::-1::1724125141::0::1::::<>Control<>::
 test_timeline_scene.tscn::PackedScene::1411608111636751797::1716186798::0::1::::<><>::res://addons/dialogic/Editor/TimelineEditor/test_timeline_scene.gd
 timeline_editor.gd::GDScript::-1::1716186798::0::1::::<>DialogicEditor<>::
 timeline_editor.tscn::PackedScene::5970468661901911489::1716186798::0::1::::<><>::res://addons/dialogic/Editor/TimelineEditor/timeline_editor.gd<>uid://ysqbusmy0qma::::res://addons/dialogic/Editor/TimelineEditor/VisualEditor/timeline_editor_visual.tscn<>uid://dbpkta2tjsqim::::res://addons/dialogic/Editor/Common/hint_tooltip_icon.tscn<>uid://defdeav8rli6o::::res://addons/dialogic/Editor/TimelineEditor/TextEditor/timeline_editor_text.tscn<>res://addons/dialogic/Editor/TimelineEditor/TextEditor/syntax_highlighter.gd
@@ -817,8 +817,8 @@ gato_notalk.png::CompressedTexture2D::8098732604761209268::1723498034::172411476
 gato_talk.png::CompressedTexture2D::3700413139202617255::1723498026::1724114761::1::::<><>::
 timby_notalk.png::CompressedTexture2D::1056115142141616701::1723497476::1724114761::1::::<><>::
 timby_talk.png::CompressedTexture2D::1042821197201043869::1723497348::1724114761::1::::<><>::
-::res://scripts/::1724124930
-player.gd::GDScript::-1::1724124930::0::1::::<>CharacterBody2D<>::
+::res://scripts/::1724126028
+player.gd::GDScript::-1::1724126028::0::1::::<>CharacterBody2D<>::
 ::res://sounds/::1724114763
 bg_mundo1.wav::AudioStreamWAV::3053873508458863882::1724103323::1724114763::1::::<><>::
 jump_land.mp3::AudioStreamMP3::6733674647274393656::1724103901::1724114761::1::::<><>::
