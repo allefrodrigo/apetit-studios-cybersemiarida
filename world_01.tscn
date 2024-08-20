@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://cek4ioi681prk"]
+[gd_scene load_steps=15 format=3 uid="uid://cek4ioi681prk"]
 
 [ext_resource type="PackedScene" uid="uid://bk3r225rrtt7j" path="res://actors/player.tscn" id="1_8swsx"]
 [ext_resource type="Texture2D" uid="uid://b0lu6pemaf8fx" path="res://assets/Seasonal Tilesets/1 - Grassland/Terrain (16 x 16).png" id="1_m8lw3"]
@@ -6,6 +6,25 @@
 [ext_resource type="Texture2D" uid="uid://bvxulnwrxnjrb" path="res://assets/Seasonal Tilesets/1 - Grassland/Grassland_entities (16 x 16).png" id="2_i8b4f"]
 [ext_resource type="PackedScene" uid="uid://bhkxrge6x3p2q" path="res://background/background.tscn" id="4_ebs54"]
 [ext_resource type="AudioStream" uid="uid://bjrk36gmhe587" path="res://sounds/bg_mundo1.wav" id="6_i8lv6"]
+[ext_resource type="Shader" path="res://world_01.gdshader" id="7_j6aco"]
+[ext_resource type="Texture2D" uid="uid://csk80xafgxjds" path="res://assets/leaves.png" id="8_kwh5l"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_5g6ml"]
+shader = ExtResource("7_j6aco")
+shader_parameter/dimensions = Vector2(1152, 648)
+shader_parameter/rows = 20.0
+shader_parameter/columns = 5.0
+shader_parameter/vertical_scroll = 0.23
+shader_parameter/horizontal_scroll = 0.1
+shader_parameter/size_min = 0.3
+shader_parameter/size_max = 0.4
+shader_parameter/wave_min = 0.2
+shader_parameter/wave_max = 1.0
+shader_parameter/wave_speed = 0.5
+shader_parameter/wave_rotation = 1.0
+shader_parameter/far_color = Color(0.5, 0.5, 0.5, 1)
+shader_parameter/near_color = Color(1, 1, 1, 1)
+shader_parameter/particle_texture = ExtResource("8_kwh5l")
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_gfpfp"]
 tile_data = PackedInt32Array(0, 589825, 1)
@@ -244,6 +263,13 @@ pattern_1 = SubResource("TileMapPattern_jh6vb")
 [node name="World-01" type="Node2D"]
 position = Vector2(3, 5)
 script = ExtResource("1_ub705")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_5g6ml")
+offset_left = -213.0
+offset_top = -199.0
+offset_right = 639.0
+offset_bottom = 363.0
 
 [node name="level" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_qm4rk")

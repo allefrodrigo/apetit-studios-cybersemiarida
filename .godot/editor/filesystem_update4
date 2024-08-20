@@ -1,5 +1,5 @@
-res://levels/cafundo_t1.tscn
-res://background/background.tscn
-res://background/BackgroundAssets/shader.tscn
-res://character/character.tscn
-res://character/character.gd
+res://world_01.tscn
+res://New_File.tres
+res://weather.gd
+res://weather.tscn
+res://world_01.gdshader
