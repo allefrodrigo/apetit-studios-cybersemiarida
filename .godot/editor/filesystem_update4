@@ -1,6 +1,4 @@
-res://Bubble.tres
+res://World/world.tscn
+res://Dialogos/dialogos-bubble.tres
 res://addons/dialogic/Editor/TimelineEditor/test_timeline_scene.gd
-res://world_01.gdshader
-res://menu.tscn
-res://world_01.tscn
-res://actors/player.tscn
+res://World/world-tileset.tres
