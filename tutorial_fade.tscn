@@ -1,0 +1,55 @@
+[gd_scene load_steps=5 format=3 uid="uid://badoulo86ypb1"]
+
+[ext_resource type="FontFile" uid="uid://ce7ho62e7e2jd" path="res://Jersey20-Regular.ttf" id="1_p3quk"]
+
+[sub_resource type="Animation" id="Animation_wn48j"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_u6hv7"]
+resource_name = "fade_in_out"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:modulate")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.96667, 3.96667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_kraxr"]
+_data = {
+"RESET": SubResource("Animation_wn48j"),
+"fade_in_out": SubResource("Animation_u6hv7")
+}
+
+[node name="TutorialFade" type="Node2D"]
+
+[node name="Label" type="Label" parent="."]
+offset_right = 207.0
+offset_bottom = 23.0
+theme_override_fonts/font = ExtResource("1_p3quk")
+theme_override_font_sizes/font_size = 10
+text = "Pule o mais alto que puder"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_kraxr")
+}
+autoplay = "fade_in_out"

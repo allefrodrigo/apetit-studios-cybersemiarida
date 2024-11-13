@@ -1,3 +1,13 @@
+res://scripts
+res://singletons
+res://prefabs
+res://Objetos
 res://
-res://assets
-res://fonts
+res://Pointers
+res://Wall
+res://Water
+res://Bridge
+res://Player
+res://shaders
+res://Player/Dust
+res://World/Props
