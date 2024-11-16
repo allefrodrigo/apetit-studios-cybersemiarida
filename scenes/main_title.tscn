@@ -168,6 +168,7 @@ position = Vector2(-20, -8)
 [node name="Fade_timer" type="Timer" parent="Fade"]
 
 [node name="ColorRect2" type="ColorRect" parent="."]
+visible = false
 material = SubResource("ShaderMaterial_hxnbr")
 offset_right = 392.0
 offset_bottom = 224.0
