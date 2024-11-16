@@ -23,7 +23,6 @@ WwiseRuntimeManager="*res://addons/Wwise/runtime/wwise_runtime_manager.gd"
 
 window/size/viewport_width=272
 window/size/viewport_height=153
-window/size/mode=3
 window/size/window_width_override=1904
 window/size/window_height_override=1071
 window/stretch/mode="canvas_items"

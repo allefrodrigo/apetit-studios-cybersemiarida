@@ -1,13 +1,7 @@
-res://assets/Telas/Main_Title
 res://scripts
-res://singletons
 res://prefabs
 res://Objetos
 res://
-res://Pointers
-res://Wall
-res://Water
-res://Bridge
 res://Player
 res://shaders
 res://Player/Dust

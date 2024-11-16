@@ -46,7 +46,7 @@ _data = {
 [node name="goal" type="Area2D"]
 collision_layer = 2
 script = ExtResource("1_fr08u")
-next_level = "res://World/world_02.tscn"
+next_level = "res://scenes/World/world_02.tscn"
 
 [node name="sprite" type="Sprite2D" parent="."]
 position = Vector2(0, 9.53674e-07)
