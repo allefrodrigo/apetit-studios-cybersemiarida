@@ -1,9 +1,9 @@
+ColorRect
+TextureRect
 CollisionShape2D
 Area2D
 ParallaxBackground
 AnimationPlayer
-TextureRect
-ColorRect
 Label
 RayCast2D
 Sprite2D
