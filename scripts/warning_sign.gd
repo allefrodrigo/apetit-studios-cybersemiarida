@@ -10,15 +10,3 @@ const lines : Array[String] = [
 "Sua jornada está apenas...",
 "...COMEÇANDO!",
 ]
-
-func _unhandled_input(event):
-	if area_sign.get_overlapping_bodies().size() > 0:
-		texture.show()
-		if event.is_action_pressed("interact") && !DialogManeger.is_message_active:
-			texture.hide()
-			DialogManeger.start_message(global_position, lines)
-	else:
-		texture.hide()
-		if DialogManeger.dialog_box != null:
-			DialogManeger.dialog_box.queue_free()
-			DialogManeger.is_message_active = false
