@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://cls1bhrmlht6k"]
+[gd_scene load_steps=21 format=3 uid="uid://cls1bhrmlht6k"]
 
 [ext_resource type="Texture2D" uid="uid://lvu88u5ki4cw" path="res://assets/background/9_Céu.png" id="1_i4mjd"]
 [ext_resource type="Texture2D" uid="uid://btl8y2jdf0j8y" path="res://assets/clouds/bg_cloud2.png" id="2_610n1"]
@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://sbycmmfu1vrk" path="res://assets/background/4-2_Cactos.png" id="7_iyqyv"]
 [ext_resource type="Texture2D" uid="uid://c5v8oxi4kpewn" path="res://assets/background/3_Arvore.png" id="8_qd05g"]
 [ext_resource type="Texture2D" uid="uid://62dfhfojqdqv" path="res://assets/background/2_Plantas.png" id="9_u0a06"]
+[ext_resource type="Shader" path="res://shaders/arbusto.gdshader" id="11_bnlqs"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8twc2"]
 atlas = ExtResource("3_phf1l")
@@ -62,13 +63,27 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_1gw6j"]
+shader = ExtResource("11_bnlqs")
+shader_parameter/speed = 1.0
+shader_parameter/minStrength = 0.05
+shader_parameter/maxStrength = 0.01
+shader_parameter/strengthScale = 100.0
+shader_parameter/interval = 3.5
+shader_parameter/detail = 1.0
+shader_parameter/distortion = null
+shader_parameter/heightOffset = null
+shader_parameter/offset = 0.0
+
 [node name="ParallaxBg" type="Node2D"]
+position = Vector2(3, -29)
 
 [node name="ParallaxBackground" type="Node2D" parent="."]
 
 [node name="Sky" type="Parallax2D" parent="ParallaxBackground"]
 scale = Vector2(1.5, 1.5)
 repeat_size = Vector2(272, 0)
+repeat_times = 3
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Sky"]
 texture_filter = 1
@@ -79,6 +94,7 @@ centered = false
 scale = Vector2(1.5, 1.5)
 repeat_size = Vector2(544, 0)
 autoscroll = Vector2(-20, 0)
+repeat_times = 3
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Cloud"]
 texture_filter = 1
@@ -91,7 +107,7 @@ centered = false
 scale = Vector2(1.5, 1.5)
 repeat_size = Vector2(544, 0)
 autoscroll = Vector2(-9, 0)
-repeat_times = 2
+repeat_times = 3
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Cloud2"]
 texture_filter = 1
@@ -104,6 +120,7 @@ centered = false
 scale = Vector2(1.5, 1.5)
 repeat_size = Vector2(500, 0)
 autoscroll = Vector2(-11, 0)
+repeat_times = 3
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Cloud3"]
 texture_filter = 1
@@ -116,6 +133,7 @@ centered = false
 scale = Vector2(1.5, 1.5)
 repeat_size = Vector2(500, 0)
 autoscroll = Vector2(-10, 0)
+repeat_times = 3
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Cloud4"]
 texture_filter = 1
@@ -126,7 +144,9 @@ centered = false
 
 [node name="Mountain" type="Parallax2D" parent="ParallaxBackground"]
 scale = Vector2(1.5, 1.5)
+scroll_scale = Vector2(0.7, 0.7)
 repeat_size = Vector2(272, 0)
+repeat_times = 3
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Mountain"]
 texture_filter = 1
@@ -137,6 +157,7 @@ centered = false
 scale = Vector2(1.5, 1.5)
 repeat_size = Vector2(544, 0)
 autoscroll = Vector2(-30, 0)
+repeat_times = 3
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="ParallaxBackground/Bird"]
 texture_filter = 1
@@ -148,7 +169,9 @@ frame_progress = 0.9192
 
 [node name="Mountain_Near" type="Parallax2D" parent="ParallaxBackground"]
 scale = Vector2(1.5, 1.5)
+scroll_scale = Vector2(0.8, 0.8)
 repeat_size = Vector2(272, 0)
+repeat_times = 3
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Mountain_Near"]
 texture_filter = 1
@@ -157,7 +180,9 @@ centered = false
 
 [node name="Plants_Far" type="Parallax2D" parent="ParallaxBackground"]
 scale = Vector2(1.5, 1.5)
+scroll_scale = Vector2(0.9, 0.9)
 repeat_size = Vector2(272, 0)
+repeat_times = 3
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Plants_Far"]
 texture_filter = 1
@@ -166,7 +191,9 @@ centered = false
 
 [node name="Plants_Cactus" type="Parallax2D" parent="ParallaxBackground"]
 scale = Vector2(1.5, 1.5)
+scroll_scale = Vector2(0.9, 0.9)
 repeat_size = Vector2(272, 0)
+repeat_times = 3
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Plants_Cactus"]
 texture_filter = 1
@@ -175,7 +202,9 @@ centered = false
 
 [node name="Plants_Near" type="Parallax2D" parent="ParallaxBackground"]
 scale = Vector2(1.5, 1.5)
+scroll_scale = Vector2(0.9, 0.9)
 repeat_size = Vector2(272, 0)
+repeat_times = 3
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Plants_Near"]
 texture_filter = 1
@@ -184,9 +213,13 @@ centered = false
 
 [node name="Plants_Far2" type="Parallax2D" parent="ParallaxBackground"]
 scale = Vector2(1.5, 1.5)
+scroll_scale = Vector2(0.9, 0.9)
+scroll_offset = Vector2(-1, 20)
 repeat_size = Vector2(272, 0)
+repeat_times = 3
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Plants_Far2"]
 texture_filter = 1
+material = SubResource("ShaderMaterial_1gw6j")
 texture = ExtResource("9_u0a06")
 centered = false

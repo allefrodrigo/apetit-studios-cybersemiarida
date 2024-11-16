@@ -1,7 +1,7 @@
 extends Node2D
 
 @onready var player = $Player  # Reference to your player node
-@onready var dialogic_character = load("res://Dialogos/player.dch")
+#@onready var dialogic_character = load("res://Dialogos/player.dch")
 @onready var timeline_path = "res://Dialogos/timeline.dtl"
 
 func _ready():
@@ -10,8 +10,6 @@ func _ready():
 	## Trigger the dialog only when the "X" key is pressed and no dialog is running
 	#if event is InputEventKey and event.keycode == KEY_X and event.pressed:
 		#trigger_dialog()
-		#get_viewport().set_input_as_handled()
-
 #func trigger_dialog():
 	## Check if no other dialog is currently running
 	#if Dialogic.current_timeline == null:
