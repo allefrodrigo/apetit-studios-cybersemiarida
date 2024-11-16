@@ -12,6 +12,9 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 @onready var dust_sprite = $DustSprite2D
 @onready var state_label = $Label
 
+func _ready():
+	add_to_group("player")
+	
 func _physics_process(delta):
 	apply_gravity(delta)
 	handle_jump()

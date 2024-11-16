@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=4 uid="uid://cei616u40ocer"]
+[gd_scene load_steps=30 format=4 uid="uid://cei616u40ocer"]
 
 [ext_resource type="Script" path="res://scenes/World/world.gd" id="1_r3s10"]
 [ext_resource type="Texture2D" uid="uid://w1gwsr7bifrb" path="res://scenes/World/Tilesets/tile_jungle_ground_brown.png" id="2_755c4"]
@@ -6,21 +6,10 @@
 [ext_resource type="Texture2D" uid="uid://7evhyf0bq76a" path="res://assets/Wall/tile_jungle_wall_brown.png" id="5_uuanu"]
 [ext_resource type="Texture2D" uid="uid://d124m6kp50ls7" path="res://assets/Water/tile_jungle_water.png" id="6_f4c7t"]
 [ext_resource type="Texture2D" uid="uid://6wwi2wtbmi1n" path="res://scenes/World/Tilesets/GandalfHardcore Platformer Assets v2.png" id="7_sf7d4"]
-[ext_resource type="Texture2D" uid="uid://bbisolw6q7hrg" path="res://assets/Buttons_2/tile004.png" id="10_dm1yo"]
-[ext_resource type="Texture2D" uid="uid://b36q7w43p6le4" path="res://assets/Buttons_2/tile005.png" id="11_81qx7"]
-[ext_resource type="Texture2D" uid="uid://b7roqvwcgkr0y" path="res://assets/Buttons_2/tile002.png" id="12_jfa8u"]
-[ext_resource type="Texture2D" uid="uid://cdecvcnlcn5fn" path="res://assets/Buttons_2/tile003.png" id="13_rjr5s"]
-[ext_resource type="Texture2D" uid="uid://bgkqs0p0sx2ec" path="res://assets/Buttons_2/tile008.png" id="14_8r4n6"]
+[ext_resource type="PackedScene" uid="uid://dwwuffuaonhbe" path="res://prefabs/controls.tscn" id="13_6l3gg"]
 [ext_resource type="Texture2D" uid="uid://hiegaj6qjvel" path="res://scenes/World/Props/bush.png" id="14_fsucw"]
-[ext_resource type="Texture2D" uid="uid://b3oignk10fi1i" path="res://assets/Buttons_2/tile009.png" id="15_10gg1"]
-[ext_resource type="Texture2D" uid="uid://c116kx04ifb3l" path="res://assets/Buttons_2/tile057.png" id="16_7w2h0"]
-[ext_resource type="Texture2D" uid="uid://cx5ohfc0oy85l" path="res://assets/Buttons_2/tile055.png" id="16_72o3d"]
 [ext_resource type="Texture2D" uid="uid://do6fw458xln43" path="res://scenes/World/Props/rock-2.png" id="16_agiad"]
-[ext_resource type="Texture2D" uid="uid://m6s38lesocai" path="res://assets/Buttons_2/tile058.png" id="17_ns31x"]
-[ext_resource type="Texture2D" uid="uid://cisdulfie0abg" path="res://assets/Buttons_2/tile056.png" id="17_wrqpp"]
-[ext_resource type="Texture2D" uid="uid://ctdprbxgsr8sb" path="res://assets/Pointers/2.png" id="19_ai5ea"]
-[ext_resource type="Texture2D" uid="uid://dv46v7s0n8mhs" path="res://assets/Buttons_2/tile096.png" id="20_xfi5i"]
-[ext_resource type="Texture2D" uid="uid://co55xh1ovjblq" path="res://assets/Buttons_2/tile097.png" id="21_wy7pc"]
+[ext_resource type="PackedScene" uid="uid://lm417k411oj5" path="res://props/flag.tscn" id="23_vq0wc"]
 [ext_resource type="PackedScene" uid="uid://ctwvx58kmb020" path="res://prefabs/goal.tscn" id="27_sxyab"]
 [ext_resource type="Texture2D" uid="uid://dbpcaqh710nfd" path="res://scenes/World/Props/rupestre_1.png" id="30_ffu0x"]
 [ext_resource type="Texture2D" uid="uid://crggrq0ygw5b3" path="res://scenes/World/Props/taipa-house-solar.png" id="31_6i78r"]
@@ -29,10 +18,7 @@
 [ext_resource type="AudioStream" uid="uid://dtu6edecpycrc" path="res://assets/Music/bg_mundo1.wav" id="36_ajfc7"]
 [ext_resource type="PackedScene" uid="uid://daolyiryu2ium" path="res://scenes/fade.tscn" id="37_b0kd7"]
 [ext_resource type="PackedScene" uid="uid://badoulo86ypb1" path="res://transitions/tutorial_fade.tscn" id="42_tlf01"]
-[ext_resource type="PackedScene" uid="uid://c81easkegkf0b" path="res://props/coin.tscn" id="42_x1exp"]
 [ext_resource type="PackedScene" uid="uid://cls1bhrmlht6k" path="res://scenes/parallax_bg.tscn" id="47_6m05e"]
-[ext_resource type="Texture2D" uid="uid://btnxk35ilkghx" path="res://scenes/World/Props/big-crate.png" id="50_egs0x"]
-[ext_resource type="Texture2D" uid="uid://cr5p0f4lbhtx7" path="res://scenes/World/Props/small-platform.png" id="52_d2skk"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ts75k"]
 texture = ExtResource("2_755c4")
@@ -2763,7 +2749,7 @@ _data = {
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r1twq"]
-size = Vector2(142, 20)
+size = Vector2(619, 20)
 
 [node name="World" type="Node2D"]
 position = Vector2(-1, 0)
@@ -2779,7 +2765,7 @@ tile_set = SubResource("TileSet_n8it8")
 
 [node name="Straw-house2" type="Sprite2D" parent="."]
 texture_filter = 1
-position = Vector2(410, 94)
+position = Vector2(237, 94)
 texture = ExtResource("31_6i78r")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
@@ -2795,7 +2781,7 @@ zoom = Vector2(1.2, 1.2)
 
 [node name="goal" parent="." instance=ExtResource("27_sxyab")]
 texture_filter = 1
-position = Vector2(1241, 44)
+position = Vector2(1758, 97)
 collision_layer = 0
 collision_mask = 2
 
@@ -2813,92 +2799,33 @@ pitch_scale = 0.41
 visible = false
 position = Vector2(-178, -50)
 
-[node name="controls" type="CanvasLayer" parent="."]
+[node name="controls" parent="." instance=ExtResource("13_6l3gg")]
 
-[node name="ui_left" type="TouchScreenButton" parent="controls"]
+[node name="TutorialFade" parent="." instance=ExtResource("42_tlf01")]
 texture_filter = 1
-position = Vector2(15, 171)
-texture_normal = ExtResource("10_dm1yo")
-texture_pressed = ExtResource("11_81qx7")
-action = "ui_left"
-
-[node name="ui_right" type="TouchScreenButton" parent="controls"]
-texture_filter = 1
-position = Vector2(53, 171)
-texture_normal = ExtResource("12_jfa8u")
-texture_pressed = ExtResource("13_rjr5s")
-action = "ui_right"
-
-[node name="ui_jump" type="TouchScreenButton" parent="controls"]
-texture_filter = 1
-position = Vector2(332, 171)
-texture_normal = ExtResource("14_8r4n6")
-texture_pressed = ExtResource("15_10gg1")
-action = "ui_accept"
-
-[node name="ui_double" type="TouchScreenButton" parent="controls"]
-texture_filter = 1
-position = Vector2(314, 172)
-scale = Vector2(0.53125, 0.5625)
-texture_normal = ExtResource("16_7w2h0")
-texture_pressed = ExtResource("17_ns31x")
-action = "ui_accept"
-
-[node name="ui_double2" type="TouchScreenButton" parent="controls"]
-texture_filter = 1
-position = Vector2(314, 152)
-scale = Vector2(0.53125, 0.5625)
-texture_normal = ExtResource("16_72o3d")
-texture_pressed = ExtResource("17_wrqpp")
-action = "ui_accept"
-
-[node name="ui_double3" type="TouchScreenButton" parent="controls"]
-texture_filter = 1
-position = Vector2(333, 152)
-scale = Vector2(0.53125, 0.5625)
-texture_normal = ExtResource("20_xfi5i")
-texture_pressed = ExtResource("21_wy7pc")
-action = "ui_accept"
+position = Vector2(516, 124)
 
 [node name="Player" parent="." instance=ExtResource("35_cvaor")]
-position = Vector2(433, 132)
-
-[node name="1" type="Sprite2D" parent="."]
-texture_filter = 1
-position = Vector2(668, 87)
-texture = ExtResource("19_ai5ea")
+position = Vector2(110, 132)
 
 [node name="Rock-2" type="Sprite2D" parent="."]
 texture_filter = 1
-position = Vector2(193, 144)
+position = Vector2(847, 138)
 texture = ExtResource("16_agiad")
 
 [node name="Bush" type="Sprite2D" parent="."]
 texture_filter = 1
-position = Vector2(677, 130)
+position = Vector2(265, 137)
 texture = ExtResource("14_fsucw")
 
-[node name="Big-crate" type="Sprite2D" parent="."]
+[node name="Checkpoint" parent="." instance=ExtResource("23_vq0wc")]
 texture_filter = 1
-position = Vector2(766, -46)
-texture = ExtResource("50_egs0x")
-
-[node name="Small-platform" type="Sprite2D" parent="."]
-texture_filter = 1
-position = Vector2(668, 103)
-texture = ExtResource("52_d2skk")
-
-[node name="Coin" parent="." instance=ExtResource("42_x1exp")]
-position = Vector2(760, 112)
-
-[node name="TutorialFade" parent="." instance=ExtResource("42_tlf01")]
-texture_filter = 1
-position = Vector2(915, 54)
+position = Vector2(1247, 104)
 
 [node name="fallzone" parent="." instance=ExtResource("35_6dejq")]
 position = Vector2(925, 191)
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="fallzone"]
-position = Vector2(60, 91)
+position = Vector2(298.5, 91)
 shape = SubResource("RectangleShape2D_r1twq")

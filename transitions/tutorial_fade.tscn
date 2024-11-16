@@ -1,6 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://badoulo86ypb1"]
+[gd_scene load_steps=8 format=3 uid="uid://badoulo86ypb1"]
 
 [ext_resource type="FontFile" uid="uid://bl4y0u5g5cy1n" path="res://fonts/Jersey20-Regular.ttf" id="1_p3quk"]
+[ext_resource type="Script" path="res://scripts/tutorial_fade.gd" id="1_pa3v1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l4r2q"]
+size = Vector2(224, 11)
 
 [sub_resource type="Animation" id="Animation_wn48j"]
 length = 0.001
@@ -19,7 +23,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_u6hv7"]
 resource_name = "fade_in_out"
-length = 4.0
+length = 2.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -27,29 +31,57 @@ tracks/0/path = NodePath("Label:modulate")
 tracks/0/interp = 2
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 1.96667, 3.96667),
-"transitions": PackedFloat32Array(1, 1, 1),
+"times": PackedFloat32Array(0, 1.96667),
+"transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_36rsn"]
+resource_name = "fade_out"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_kraxr"]
 _data = {
 "RESET": SubResource("Animation_wn48j"),
-"fade_in_out": SubResource("Animation_u6hv7")
+"fade_in_out": SubResource("Animation_u6hv7"),
+"fade_out": SubResource("Animation_36rsn")
 }
 
 [node name="TutorialFade" type="Node2D"]
+script = ExtResource("1_pa3v1")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(50, 5.5)
+shape = SubResource("RectangleShape2D_l4r2q")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
 
 [node name="Label" type="Label" parent="."]
-offset_right = 207.0
-offset_bottom = 23.0
+offset_right = 117.0
+offset_bottom = 11.0
 theme_override_fonts/font = ExtResource("1_p3quk")
 theme_override_font_sizes/font_size = 10
-text = "Suba o mais alto que puder"
+text = "A verdade está depois do rio..."
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_kraxr")
 }
-autoplay = "fade_in_out"
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
