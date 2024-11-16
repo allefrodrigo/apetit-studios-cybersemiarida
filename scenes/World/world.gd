@@ -2,7 +2,7 @@ extends Node2D
 
 @onready var player = $Player  # Reference to your player node
 #@onready var dialogic_character = load("res://Dialogos/player.dch")
-@onready var timeline_path = "res://Dialogos/timeline.dtl"
+#@onready var timeline_path = "res://Dialogos/timeline.dtl"
 
 func _ready():
 	$Fade/Fade_transatision/AnimationPlayer.play("fade_out")
