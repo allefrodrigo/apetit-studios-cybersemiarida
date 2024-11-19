@@ -9,12 +9,11 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 # Referências aos nós
 @onready var animated_sprite = $AnimatedSprite2D
-@onready var dust_sprite = $DustSprite2D
 @onready var state_label = $Label
 
 func _ready():
 	add_to_group("player")
-	
+
 func _physics_process(delta):
 	apply_gravity(delta)
 	handle_jump()
@@ -33,36 +32,23 @@ func handle_jump():
 
 func handle_movement():
 	var direction = Input.get_axis("ui_left", "ui_right")
-	if direction:
-		velocity.x = direction * SPEED
-	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
+	velocity.x = direction * SPEED
 
 func update_animations():
 	if not is_on_floor():
-		dust_sprite.visible = false
 		if velocity.y > 0:
 			animated_sprite.play("fall")
 			update_state_text("Fall")
 		else:
 			animated_sprite.play("jump")
 			update_state_text("Jump")
-	elif abs(velocity.x) > 0:
+	elif velocity.x != 0:
 		animated_sprite.play("run")
 		animated_sprite.flip_h = (velocity.x < 0)
-		dust_sprite.flip_h = animated_sprite.flip_h
-		adjust_dust_position(animated_sprite.flip_h)
 		update_state_text("Run")
-		
-		dust_sprite.visible = true
-		dust_sprite.play("run_dust")
 	else:
 		animated_sprite.play("idle")
 		update_state_text("Idle")
-		dust_sprite.visible = false
-
-func adjust_dust_position(is_flipped):
-	dust_sprite.position.x = 10 if is_flipped else -10
 
 func update_state_text(state):
 	state_label.text = state

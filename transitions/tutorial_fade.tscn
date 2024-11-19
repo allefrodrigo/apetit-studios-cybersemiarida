@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://badoulo86ypb1"]
 
-[ext_resource type="FontFile" uid="uid://bl4y0u5g5cy1n" path="res://fonts/Jersey20-Regular.ttf" id="1_p3quk"]
 [ext_resource type="Script" path="res://scripts/tutorial_fade.gd" id="1_pa3v1"]
+[ext_resource type="FontFile" uid="uid://bfx6vshfsm8us" path="res://fonts/PixelifySans-Regular.ttf" id="2_5ill3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l4r2q"]
 size = Vector2(224, 11)
@@ -69,14 +69,13 @@ collision_mask = 2
 position = Vector2(50, 5.5)
 shape = SubResource("RectangleShape2D_l4r2q")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
-
 [node name="Label" type="Label" parent="."]
+texture_filter = 1
 offset_right = 117.0
 offset_bottom = 11.0
-theme_override_fonts/font = ExtResource("1_p3quk")
+theme_override_fonts/font = ExtResource("2_5ill3")
 theme_override_font_sizes/font_size = 10
-text = "A verdade está depois do rio..."
+text = "Digite o texto em propriedades"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

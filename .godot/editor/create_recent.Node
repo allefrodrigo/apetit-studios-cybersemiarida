@@ -1,14 +1,14 @@
+AnimationPlayer
+AnimationTree
+TileMapLayer
 ColorRect
 TextureRect
 CollisionShape2D
 Area2D
 ParallaxBackground
-AnimationPlayer
 Label
 RayCast2D
 Sprite2D
 Node2D
 Timer
 MarginContainer
-NinePatchRect
-AnimatedSprite2D
