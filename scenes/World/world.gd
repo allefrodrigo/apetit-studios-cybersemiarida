@@ -11,7 +11,7 @@ func _ready():
 	#if event is InputEventKey and event.keycode == KEY_X and event.pressed:
 		#trigger_dialog()
 #func trigger_dialog():
-	## Check if no other dialog is currently running
+	## Check if   no other dialog is currently running
 	#if Dialogic.current_timeline == null:
 		## Start the dialog timeline with the player as the node the dialog bubble should follow
 		#var dialogic_layout = Dialogic.start(timeline_path)

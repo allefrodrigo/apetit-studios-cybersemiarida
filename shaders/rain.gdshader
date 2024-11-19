@@ -1,39 +1,51 @@
-// Rain and Snow shader by Brian Smith (steampunkdemon.itch.io)
-// MIT licence
-
 shader_type canvas_item;
 
-uniform float rain_amount = 200.0;
-uniform float near_rain_length : hint_range(0.01, 1.0) = 0.2;
-uniform float far_rain_length : hint_range(0.01, 1.0) = 0.1;
-uniform float near_rain_width : hint_range(0.1, 1.0) = 1.0;
-uniform float far_rain_width : hint_range(0.1, 1.0) = 0.5;
-uniform float near_rain_transparency : hint_range(0.1, 1.0) = 1.0;
-uniform float far_rain_transparency : hint_range(0.1, 1.0) = 0.5;
-// Replace the below reference to source_color with hint_color if you are using a version of Godot before 4.
-uniform vec4 rain_color : source_color = vec4(0.8, 0.8, 0.8, 1.0);
-uniform float base_rain_speed : hint_range(0.1, 1.0) = 0.5;
-uniform float additional_rain_speed : hint_range(0.1, 1.0) = 0.5;
-uniform float slant : hint_range(-1.0, 1.0) = 0.2;
+#define iResolution 1.0/SCREEN_PIXEL_SIZE
+#define iTime TIME
+#define fragColor COLOR
 
-void fragment() {
-// To control the rainfall from your program comment out the below line and add a new uniform above as:
-// uniform float time = 10000.0;
-// Then update the time uniform from your _physics_process function by adding delta. You can then pause the rainfall by not changing the time uniform.
-	float time = 10000.0 + TIME;
+uniform sampler2D iChannel0;
+uniform float frequency : hint_range(-10.0, 4.0, 0.1) = 2.0; // Aumentado o valor padrão
+uniform float size : hint_range(0.001, 0.05, 0.001) = 0.008; // Reduzido o tamanho
 
-// Uncomment the following line if you are applying the shader to a TextureRect and using a version of Godot before 4.
-//	COLOR = texture(TEXTURE,UV);
+vec2 rand(vec2 c){
+    mat2 m = mat2(vec2(12.9898,.16180),vec2(78.233,.31415));
+    return fract(sin(m * c) * vec2(43758.5453, 14142.1));
+}
 
-	vec2 uv = vec2(0.0);
-	float remainder = mod(UV.x - UV.y * slant, 1.0 / rain_amount);
-	uv.x = (UV.x - UV.y * slant) - remainder;
-	float rn = fract(sin(uv.x * rain_amount));
-	uv.y = fract((UV.y + rn));
+vec2 noise(vec2 p){
+    vec2 co = floor(p);
+    vec2 mu = fract(p);
+    mu = 3.*mu*mu-2.*mu*mu*mu;
+    vec2 a = rand((co+vec2(0.,0.)));
+    vec2 b = rand((co+vec2(1.,0.)));
+    vec2 c = rand((co+vec2(0.,1.)));
+    vec2 d = rand((co+vec2(1.,1.)));
+    return mix(mix(a, b, mu.x), mix(c, d, mu.x), mu.y);
+}
 
-// Blurred trail. Works well for rain:
-//	COLOR = mix(COLOR, rain_color, smoothstep(1.0 - (far_rain_length + (near_rain_length - far_rain_length) * rn), 1.0, fract(uv.y - time * (base_rain_speed + additional_rain_speed * rn))) * (far_rain_transparency + (near_rain_transparency - far_rain_transparency) * rn) * step(remainder * rain_amount, far_rain_width + (near_rain_width - far_rain_width) * rn));
+void fragment()
+{
+    vec2 u = UV,
+         v = UV * 0.05, // Reduzido para suavizar o deslocamento
+         n = noise(v*100.); // Reduzido para 100 para suavizar o ruído
 
-// No trail. Works well for snow:
-	COLOR = mix(COLOR, rain_color, step(1.0 - (far_rain_length + (near_rain_length - far_rain_length) * rn), fract(uv.y - time * (base_rain_speed + additional_rain_speed * rn))) * (far_rain_transparency + (near_rain_transparency - far_rain_transparency) * rn) * step(remainder * rain_amount, far_rain_width + (near_rain_width - far_rain_width) * rn));
+    fragColor = textureLod(iChannel0, u, 1.5); // Reduzido o nível de detalhe
+
+    for (float r = 4. ; r > frequency ; r--) {
+        vec2 x = iResolution.xy * r * size,
+             p = 6.28 * u * x + (n - .5) * 1.5, // Reduzido o fator de deslocamento
+             s = sin(p);
+
+        vec2 v = round(u * x - 0.25) / x;
+        vec4 d = vec4(noise(v*100.), noise(v)); // Reduzido para 100
+
+        float t = (s.x+s.y) * max(0., 1. - fract(iTime * (d.b + .05) + d.g) * 1.5); // Reduzido a velocidade e intensidade
+
+        if (d.r < (5.-r)*.06 && t > .6) { // Ajustado os limiares
+            vec3 v = normalize(-vec3(cos(p), mix(.1, 1.5, t-.6))); // Reduzido o range do mix
+
+            fragColor = texture(iChannel0, u - v.xy * .2); // Reduzido o fator de refração
+        }
+    }
 }
