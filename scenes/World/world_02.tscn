@@ -1,4 +1,4 @@
-[gd_scene load_steps=58 format=4 uid="uid://bb1f76sf0k54g"]
+[gd_scene load_steps=59 format=4 uid="uid://bb1f76sf0k54g"]
 
 [ext_resource type="Script" path="res://scenes/World/world.gd" id="1_x2gca"]
 [ext_resource type="PackedScene" uid="uid://cls1bhrmlht6k" path="res://scenes/parallax_bg.tscn" id="2_1v0hq"]
@@ -642,6 +642,8 @@ shader = ExtResource("30_mjd2w")
 shader_parameter/progress = null
 shader_parameter/diamondPixelSize = 0.1
 
+[sub_resource type="GDScript" id="GDScript_rkmdw"]
+
 [node name="World" type="Node2D"]
 script = ExtResource("1_x2gca")
 
@@ -803,8 +805,8 @@ texture = ExtResource("37_yp1im")
 position = Vector2(864, 132)
 
 [node name="Node2D" parent="." instance=ExtResource("39_a1bub")]
-texture_filter = 1
 position = Vector2(844, 121)
+script = SubResource("GDScript_rkmdw")
 
 [node name="2" type="Sprite2D" parent="."]
 texture_filter = 1

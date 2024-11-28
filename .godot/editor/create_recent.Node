@@ -1,14 +1,14 @@
+Node2D
+Area2D
+CollisionShape2D
 AnimationPlayer
 AnimationTree
 TileMapLayer
 ColorRect
 TextureRect
-CollisionShape2D
-Area2D
 ParallaxBackground
 Label
 RayCast2D
 Sprite2D
-Node2D
 Timer
 MarginContainer
