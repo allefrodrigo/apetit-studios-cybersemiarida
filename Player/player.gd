@@ -7,12 +7,17 @@ const JUMP_VELOCITY = -350.0
 # Gravidade
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
+# Dados do jogador
+var health = 100
+
 # Referências aos nós
 @onready var animated_sprite = $AnimatedSprite2D
 @onready var state_label = $Label
 
 func _ready():
 	add_to_group("player")
+	print("Grupos do jogador:", get_groups())
+	respawn_if_needed() # Reaparece no último checkpoint, se necessário
 
 func _physics_process(delta):
 	apply_gravity(delta)
@@ -52,3 +57,12 @@ func update_animations():
 
 func update_state_text(state):
 	state_label.text = state
+
+# Reaparecer no último checkpoint
+func respawn_if_needed():
+	# Usa o singleton CheckpointManager para pegar os dados do checkpoint
+	var checkpoint_data = CheckpointManager.get_checkpoint()
+	if checkpoint_data["position"]:
+		global_position = checkpoint_data["position"]
+		health = CheckpointManager.player_data["health"]
+		print("Respawned at:", checkpoint_data["position"])

@@ -1,20 +1,31 @@
 extends Node2D
 
-@onready var player = $Player  # Reference to your player node
-#@onready var dialogic_character = load("res://Dialogos/player.dch")
-#@onready var timeline_path = "res://Dialogos/timeline.dtl"
+@onready var player = $Player  # Referência ao nó do jogador
 
 func _ready():
 	$Fade/Fade_transatision/AnimationPlayer.play("fade_out")
-#func _input(event: InputEvent):
-	## Trigger the dialog only when the "X" key is pressed and no dialog is running
-	#if event is InputEventKey and event.keycode == KEY_X and event.pressed:
-		#trigger_dialog()
-#func trigger_dialog():
-	## Check if   no other dialog is currently running
-	#if Dialogic.current_timeline == null:
-		## Start the dialog timeline with the player as the node the dialog bubble should follow
-		#var dialogic_layout = Dialogic.start(timeline_path)
-		#dialogic_layout.register_character(dialogic_character, player)
-	#else:
-		#print("Dialogic timeline is already running.")
+
+	# Conectando os sinais das flags
+	for checkpoint in $Flags.get_children():
+		checkpoint.connect("checkpoint_activated", Callable(self, "_on_checkpoint_activated"))
+
+	# Conectando os sinais das fallzones
+	for fallzone in $Fallzones.get_children():
+		fallzone.connect("fallzone_triggered", Callable(self, "_on_fallzone_triggered"))
+
+func _on_checkpoint_activated(position: Vector2, checkpoint_id: int):
+	print("Checkpoint ativado:", checkpoint_id, "na posição:", position)
+
+func _on_fallzone_triggered(fallzone_name: String):
+	print("Player caiu na fallzone:", fallzone_name)
+	# Opcional: Implementar lógica para reposicionar o jogador
+	respawn_player()
+
+func respawn_player():
+	var checkpoint_data = CheckpointManager.get_checkpoint()
+	if checkpoint_data["position"]:
+		print("Respawnando jogador no último checkpoint:", checkpoint_data["position"])
+		player.global_position = checkpoint_data["position"]
+	else:
+		print("Nenhum checkpoint salvo. Respawnando na posição inicial.")
+		player.global_position = Vector2(0, 0)  # Defina a posição inicial padrão

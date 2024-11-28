@@ -5,7 +5,7 @@ var has_started = false  # Flag para verificar se a música já começou
 # Chamado quando o nó entra na árvore de cena pela primeira vez.
 func _ready() -> void:
 	# Inicia a reprodução
-	#play()
+	play()
 	print("Tentando iniciar a música...")
 
 # Chamado a cada frame

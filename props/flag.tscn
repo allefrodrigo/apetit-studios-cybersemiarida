@@ -1,6 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://lm417k411oj5"]
+[gd_scene load_steps=9 format=3 uid="uid://lm417k411oj5"]
 
 [ext_resource type="Texture2D" uid="uid://c8um2uh5a5rh0" path="res://Objetos/Flag.png" id="1_e2k7v"]
+[ext_resource type="Script" path="res://scripts/flag.gd" id="1_yxxfw"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hei2t"]
+radius = 13.0
+height = 50.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8o4x8"]
 atlas = ExtResource("1_e2k7v")
@@ -38,9 +43,18 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Node2D" type="Node2D"]
+[node name="Flag" type="Area2D" groups=["player"]]
+texture_filter = 1
+collision_mask = 2
+script = ExtResource("1_yxxfw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visibility_layer = 2
+shape = SubResource("CapsuleShape2D_hei2t")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_1sci1")
 autoplay = "default"
 frame_progress = 0.545326
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
