@@ -1,15 +1,21 @@
 extends Area2D
 
-#@onready var transition: CanvasLayer = $"../transition"
-@export var next_level : String = "world_01"
+@export_file("*.tscn") var next_scene_path: String
+
+func _ready():
+	connect("body_entered", _on_body_entered)
 
 func _on_body_entered(body):
-	var scene_to_spawn = preload("res://Pickups/Feedback/feedback.tscn")
-	var new_scene_instance = scene_to_spawn.instantiate()
-	get_tree().current_scene.add_child(new_scene_instance)  # Add the instance as a child of the current scene
-	new_scene_instance.global_position = global_position
-	if body.name == "Player" and !next_level == "":
-		pass
-		#transition.change_scene(next_level)
-	else:
-		print("no scene")
+	if body.is_in_group("player"):
+		transition_to_next_scene()
+
+func transition_to_next_scene():
+	if next_scene_path.is_empty():
+		push_error("Next scene path is not set!")
+		return
+	
+	var transition = preload("res://scenes/transition.tscn").instantiate()
+	get_tree().root.add_child(transition)
+	transition.play_transition()
+	await transition.transition_finished
+	get_tree().change_scene_to_file(next_scene_path)

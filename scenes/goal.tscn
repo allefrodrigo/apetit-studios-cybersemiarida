@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://6x1esumef4rj"]
+
+[ext_resource type="Script" path="res://scripts/goal.gd" id="1_pcjr0"]
+[ext_resource type="AudioStream" uid="uid://bu3ffg8jcb1wn" path="res://assets/Music/sound_fade_out.mp3" id="2_trbg1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l7tn0"]
+
+[node name="Area2D" type="Area2D"]
+script = ExtResource("1_pcjr0")
+next_scene_path = "res://scenes/World/world_02.tscn"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_l7tn0")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_trbg1")
