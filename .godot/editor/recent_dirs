@@ -1,5 +1,10 @@
-res://singleton
+res://NPC
+res://scenes/World
+res://scenes
 res://scripts
+res://assets/Wall
+res://assets/Music
+res://singleton
 res://props
 res://shaders
 res://prefabs

@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 WwiseRuntimeManager="*res://addons/Wwise/runtime/wwise_runtime_manager.gd"
 CheckpointManager="*res://singleton/CheckpointManager.gd"
+Shaker="*res://addons/shaker/src/Shaker.gd"
 
 [display]
 
@@ -28,6 +29,10 @@ window/size/window_width_override=1904
 window/size/window_height_override=1071
 window/stretch/mode="canvas_items"
 window/stretch/scale=0.7
+
+[editor_plugins]
+
+enabled=PackedStringArray()
 
 [global_group]
 

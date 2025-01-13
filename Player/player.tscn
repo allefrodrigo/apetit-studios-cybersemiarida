@@ -329,7 +329,7 @@ shape = SubResource("RectangleShape2D_ok28f")
 texture_filter = 1
 position = Vector2(-1, -6)
 sprite_frames = SubResource("SpriteFrames_f4wda")
-animation = &"idle"
+animation = &"run"
 autoplay = "idle"
 
 [node name="DustSprite2D" type="AnimatedSprite2D" parent="."]
