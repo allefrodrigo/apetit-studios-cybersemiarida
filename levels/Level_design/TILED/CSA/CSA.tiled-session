@@ -1,0 +1,82 @@
+{
+    "Map/SizeTest": {
+        "height": 4300,
+        "width": 2
+    },
+    "activeFile": "Cafundo_01.tmx",
+    "expandedProjectPaths": [
+    ],
+    "file.lastUsedOpenFilter": "Todos os Ficheiros (*)",
+    "fileStates": {
+        "Cafundo1.tmx": {
+            "scale": 1,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 636,
+                "y": 294.5
+            }
+        },
+        "Cafundo_01.tmx": {
+            "scale": 3,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 2185,
+                "y": 280.5
+            }
+        },
+        "Rules/Autotile_Rules.tmx": {
+            "scale": 2,
+            "selectedLayer": 1,
+            "viewCenter": {
+                "x": 275.5,
+                "y": 144.25
+            }
+        },
+        "Tileset/cafundo1.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "Tileset/taipa-house-solar.tsx": {
+            "scaleInDock": 1
+        },
+        "cafundo.tsx": {
+            "scaleInDock": 2,
+            "scaleInEditor": 1
+        },
+        "cafundo1.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        }
+    },
+    "last.exportedFilePath": "C:/Users/v-vbt/Downloads/.godot",
+    "last.externalTilesetPath": "C:/Users/v-vbt/OneDrive/Documentos/GitHub/apetit-studios-cybersemiarida/levels/Level_design/TILED/CSA/Tileset",
+    "last.imagePath": "C:/Users/v-vbt/OneDrive/Documentos/GitHub/apetit-studios-cybersemiarida/levels/Level_design/Tilesets",
+    "lastUsedTilesetExportFilter": "Todos os Ficheiros (*)",
+    "map.height": 60,
+    "map.lastUsedExportFilter": "Ficheiro de Cena do Godot 4 (*.tscn)",
+    "map.lastUsedFormat": "tmx",
+    "map.tileHeight": 16,
+    "map.tileWidth": 16,
+    "map.width": 320,
+    "mapScene.enableWorlds": true,
+    "openFiles": [
+        "Cafundo_01.tmx",
+        "Tileset/cafundo1.tsx",
+        "Rules/Autotile_Rules.tmx"
+    ],
+    "project": "CSA.tiled-project",
+    "recentFiles": [
+        "cafundo.tsx",
+        "Tileset/cafundo1.tsx",
+        "Rules/Autotile_Rules.tmx",
+        "Cafundo_01.tmx",
+        "cafundo1.tsx",
+        "Cafundo1.tmx"
+    ],
+    "tileset.lastUsedFilter": "Ficheiros de conjunto de tiles Tiled (*.tsx *.xml)",
+    "tileset.lastUsedFormat": "tsx",
+    "tileset.tileSize": {
+        "height": 16,
+        "width": 16
+    }
+}
