@@ -17,12 +17,15 @@
             }
         },
         "Cafundo_01.tmx": {
-            "scale": 5.5,
-            "selectedLayer": 1,
+            "scale": 1,
+            "selectedLayer": 3,
             "viewCenter": {
-                "x": 3845.818181818182,
-                "y": 385.54545454545456
+                "x": 3367,
+                "y": 577.5
             }
+        },
+        "Cafundo_01.tmx#tileset_cafundo": {
+            "scaleInDock": 0.5
         },
         "Rules/Autotile_Rules.tmx": {
             "scale": 2,
@@ -38,6 +41,9 @@
         },
         "Tileset/taipa-house-solar.tsx": {
             "scaleInDock": 1
+        },
+        "Tileset/tileset_cafundo.tsx": {
+            "dynamicWrapping": false
         },
         "cafundo.tsx": {
             "scaleInDock": 2,
