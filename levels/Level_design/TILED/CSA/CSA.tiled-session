@@ -28,11 +28,11 @@
             "scaleInDock": 0.5
         },
         "Mapa/cafundo_500bl.tmx": {
-            "scale": 0.33,
-            "selectedLayer": 2,
+            "scale": 0.5,
+            "selectedLayer": 4,
             "viewCenter": {
-                "x": 8089.39393939394,
-                "y": 515.1515151515151
+                "x": 5603,
+                "y": 682
             }
         },
         "Rules/Autotile_Rules.tmx": {
