@@ -3,7 +3,7 @@
         "height": 4300,
         "width": 2
     },
-    "activeFile": "Cafundo_01.tmx",
+    "activeFile": "Mapa/cafundo_500bl.tmx",
     "expandedProjectPaths": [
     ],
     "file.lastUsedOpenFilter": "Todos os Ficheiros (*)",
@@ -17,22 +17,30 @@
             }
         },
         "Cafundo_01.tmx": {
-            "scale": 1,
-            "selectedLayer": 3,
+            "scale": 0.33,
+            "selectedLayer": 0,
             "viewCenter": {
-                "x": 3367,
-                "y": 577.5
+                "x": 1721.2121212121212,
+                "y": 407.5757575757575
             }
         },
         "Cafundo_01.tmx#tileset_cafundo": {
             "scaleInDock": 0.5
         },
-        "Rules/Autotile_Rules.tmx": {
+        "Mapa/cafundo_500bl.tmx": {
             "scale": 2,
-            "selectedLayer": 1,
+            "selectedLayer": 2,
             "viewCenter": {
-                "x": 275.5,
-                "y": 205.75
+                "x": 2194.5,
+                "y": 878.75
+            }
+        },
+        "Rules/Autotile_Rules.tmx": {
+            "scale": 3,
+            "selectedLayer": 2,
+            "viewCenter": {
+                "x": 959.9999999999999,
+                "y": 320.16666666666663
             }
         },
         "Tileset/cafundo1.tsx": {
@@ -40,13 +48,24 @@
             "scaleInEditor": 1
         },
         "Tileset/taipa-house-solar.tsx": {
-            "scaleInDock": 1
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "Tileset/tile_jungle_water.tsx": {
+            "scaleInDock": 1.5,
+            "scaleInEditor": 3
         },
         "Tileset/tileset_cafundo.tsx": {
-            "dynamicWrapping": false
+            "dynamicWrapping": false,
+            "scaleInDock": 2,
+            "scaleInEditor": 2
+        },
+        "Tileset/water_test.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
         },
         "cafundo.tsx": {
-            "scaleInDock": 2,
+            "scaleInDock": 0.75,
             "scaleInEditor": 1
         },
         "cafundo1.tsx": {
@@ -56,7 +75,7 @@
     },
     "last.exportedFilePath": "C:/Users/v-vbt/OneDrive/Documentos/GitHub/apetit-studios-cybersemiarida/levels/Level_design/TILED/CSA/Mapa",
     "last.externalTilesetPath": "C:/Users/v-vbt/OneDrive/Documentos/GitHub/apetit-studios-cybersemiarida/levels/Level_design/TILED/CSA/Tileset",
-    "last.imagePath": "C:/Users/v-vbt/OneDrive/Documentos/GitHub/apetit-studios-cybersemiarida/levels/Level_design/TILED/CSA/Tileset",
+    "last.imagePath": "C:/Users/v-vbt/OneDrive/Documentos/GitHub/apetit-studios-cybersemiarida/assets/Water",
     "lastUsedTilesetExportFilter": "Todos os Ficheiros (*)",
     "map.height": 100,
     "map.lastUsedExportFilter": "Ficheiro de Cena do Godot 4 (*.tscn)",
@@ -67,15 +86,24 @@
     "mapScene.enableWorlds": true,
     "openFiles": [
         "Cafundo_01.tmx",
-        "Tileset/cafundo1.tsx",
-        "Rules/Autotile_Rules.tmx"
+        "Rules/Autotile_Rules.tmx",
+        "Tileset/taipa-house-solar.tsx",
+        "Tileset/tileset_cafundo.tsx",
+        "Tileset/tile_jungle_water.tsx",
+        "Mapa/cafundo_500bl.tmx",
+        "Tileset/water_test.tsx"
     ],
     "project": "CSA.tiled-project",
     "recentFiles": [
+        "Cafundo_01.tmx",
+        "Rules/Autotile_Rules.tmx",
+        "Tileset/taipa-house-solar.tsx",
+        "Tileset/tileset_cafundo.tsx",
+        "Tileset/tile_jungle_water.tsx",
+        "Tileset/water_test.tsx",
+        "Mapa/cafundo_500bl.tmx",
         "cafundo.tsx",
         "Tileset/cafundo1.tsx",
-        "Rules/Autotile_Rules.tmx",
-        "Cafundo_01.tmx",
         "cafundo1.tsx",
         "Cafundo1.tmx"
     ],
