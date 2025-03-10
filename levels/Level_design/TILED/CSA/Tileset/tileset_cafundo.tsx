@@ -27,28 +27,32 @@
   </objectgroup>
  </tile>
  <tile id="32">
-  <objectgroup>
-   <object id="1" type="Plataforma" x="0" y="0" width="16" height="16"/>
+  <objectgroup draworder="index" id="2">
+   <object id="5" type="Oneway_Esq_Cima" x="0.272727" y="0.181818">
+    <polygon points="0,0 15.5968,-0.00790514 15.5968,0.644269 0.596838,0.644269 0.770751,15.6008 -0.185771,15.5573"/>
+   </object>
   </objectgroup>
  </tile>
  <tile id="33">
   <objectgroup>
-   <object id="1" type="Plataforma" x="0" y="0" width="16" height="16"/>
+   <object id="1" type="Oneway_Cima" x="0" y="0" width="16" height="1"/>
   </objectgroup>
  </tile>
  <tile id="34">
   <objectgroup>
-   <object id="1" type="Plataforma" x="0" y="0" width="16" height="16"/>
+   <object id="1" type="Oneway_Cima" x="0" y="0" width="16" height="1"/>
   </objectgroup>
  </tile>
  <tile id="35">
   <objectgroup>
-   <object id="1" type="Plataforma" x="0" y="0" width="16" height="16"/>
+   <object id="1" type="Oneway_Cima" x="0" y="0" width="16" height="1"/>
   </objectgroup>
  </tile>
  <tile id="36">
-  <objectgroup>
-   <object id="1" type="Plataforma" x="0" y="0" width="16" height="16"/>
+  <objectgroup draworder="index" id="2">
+   <object id="2" type="Oneway_Dir_Cima" x="-0.0434783" y="0.0869565">
+    <polygon points="0,0 15.913,0 15.9565,15.6522 15.3478,15.5652 15.1739,0.652174 0.0869565,0.652174"/>
+   </object>
   </objectgroup>
  </tile>
  <tile id="38">
@@ -102,28 +106,13 @@
   </objectgroup>
  </tile>
  <tile id="57">
-  <objectgroup>
-   <object id="1" type="Plataforma" x="0" y="0" width="16" height="16"/>
-  </objectgroup>
- </tile>
- <tile id="58">
-  <objectgroup>
-   <object id="1" type="Plataforma" x="0" y="0" width="16" height="16"/>
-  </objectgroup>
- </tile>
- <tile id="59">
-  <objectgroup>
-   <object id="1" type="Plataforma" x="0" y="0" width="16" height="16"/>
-  </objectgroup>
- </tile>
- <tile id="60">
-  <objectgroup>
-   <object id="1" type="Plataforma" x="0" y="0" width="16" height="16"/>
+  <objectgroup draworder="index" id="3">
+   <object id="2" type="Oneway_Esq" x="0" y="0" width="0.727273" height="16"/>
   </objectgroup>
  </tile>
  <tile id="61">
-  <objectgroup>
-   <object id="1" type="Plataforma" x="0" y="0" width="16" height="16"/>
+  <objectgroup draworder="index" id="2">
+   <object id="1" type="Oneway_Dir" x="15.3478" y="0" width="0.652174" height="16"/>
   </objectgroup>
  </tile>
  <tile id="63">
@@ -178,27 +167,12 @@
  </tile>
  <tile id="82">
   <objectgroup>
-   <object id="1" type="Plataforma" x="0" y="0" width="16" height="16"/>
-  </objectgroup>
- </tile>
- <tile id="83">
-  <objectgroup>
-   <object id="1" type="Plataforma" x="0" y="0" width="16" height="16"/>
-  </objectgroup>
- </tile>
- <tile id="84">
-  <objectgroup>
-   <object id="1" type="Plataforma" x="0" y="0" width="16" height="16"/>
-  </objectgroup>
- </tile>
- <tile id="85">
-  <objectgroup>
-   <object id="1" type="Plataforma" x="0" y="0" width="16" height="16"/>
+   <object id="1" type="Oneway_Esq" x="0" y="0" width="0.727273" height="16"/>
   </objectgroup>
  </tile>
  <tile id="86">
   <objectgroup>
-   <object id="1" type="Plataforma" x="0" y="0" width="16" height="16"/>
+   <object id="1" type="Oneway_Dir" x="15.3478" y="0" width="0.652174" height="16"/>
   </objectgroup>
  </tile>
  <tile id="88">
@@ -268,27 +242,12 @@
  </tile>
  <tile id="107">
   <objectgroup>
-   <object id="1" type="Plataforma" x="0" y="0" width="16" height="16"/>
-  </objectgroup>
- </tile>
- <tile id="108">
-  <objectgroup>
-   <object id="1" type="Plataforma" x="0" y="0" width="16" height="16"/>
-  </objectgroup>
- </tile>
- <tile id="109">
-  <objectgroup>
-   <object id="1" type="Plataforma" x="0" y="0" width="16" height="16"/>
-  </objectgroup>
- </tile>
- <tile id="110">
-  <objectgroup>
-   <object id="1" type="Plataforma" x="0" y="0" width="16" height="16"/>
+   <object id="1" type="Oneway_Esq" x="0" y="0" width="0.727273" height="16"/>
   </objectgroup>
  </tile>
  <tile id="111">
   <objectgroup>
-   <object id="1" type="Plataforma" x="0" y="0" width="16" height="16"/>
+   <object id="1" type="Oneway_Dir" x="15.3478" y="0" width="0.652174" height="16"/>
   </objectgroup>
  </tile>
  <tile id="113">
@@ -358,31 +317,6 @@
  </tile>
  <tile id="130">
   <objectgroup>
-   <object id="1" type="Plataforma" x="0" y="0" width="16" height="16"/>
-  </objectgroup>
- </tile>
- <tile id="132">
-  <objectgroup>
-   <object id="1" type="Plataforma" x="0" y="0" width="16" height="16"/>
-  </objectgroup>
- </tile>
- <tile id="133">
-  <objectgroup>
-   <object id="1" type="Plataforma" x="0" y="0" width="16" height="16"/>
-  </objectgroup>
- </tile>
- <tile id="134">
-  <objectgroup>
-   <object id="1" type="Plataforma" x="0" y="0" width="16" height="16"/>
-  </objectgroup>
- </tile>
- <tile id="135">
-  <objectgroup>
-   <object id="1" type="Plataforma" x="0" y="0" width="16" height="16"/>
-  </objectgroup>
- </tile>
- <tile id="136">
-  <objectgroup draworder="index" id="2">
    <object id="1" type="Plataforma" x="0" y="0" width="16" height="16"/>
   </objectgroup>
  </tile>
@@ -611,16 +545,6 @@
    <object id="1" type="Plataforma" x="0" y="0" width="16" height="16"/>
   </objectgroup>
  </tile>
- <tile id="388">
-  <objectgroup>
-   <object id="1" type="Plataforma" x="0" y="0" width="16" height="16"/>
-  </objectgroup>
- </tile>
- <tile id="389">
-  <objectgroup>
-   <object id="1" type="Plataforma" x="0" y="0" width="16" height="16"/>
-  </objectgroup>
- </tile>
  <tile id="396">
   <objectgroup>
    <object id="1" type="Plataforma" x="0" y="0" width="16" height="16"/>
@@ -677,16 +601,6 @@
   </objectgroup>
  </tile>
  <tile id="411">
-  <objectgroup>
-   <object id="1" type="Plataforma" x="0" y="0" width="16" height="16"/>
-  </objectgroup>
- </tile>
- <tile id="413">
-  <objectgroup>
-   <object id="1" type="Plataforma" x="0" y="0" width="16" height="16"/>
-  </objectgroup>
- </tile>
- <tile id="414">
   <objectgroup>
    <object id="1" type="Plataforma" x="0" y="0" width="16" height="16"/>
   </objectgroup>
