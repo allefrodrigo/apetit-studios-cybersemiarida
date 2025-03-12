@@ -20,35 +20,35 @@
             "scale": 0.33,
             "selectedLayer": 0,
             "viewCenter": {
-                "x": 2560.6060606060605,
-                "y": 478.78787878787875
+                "x": 2559.090909090909,
+                "y": 477.27272727272725
             }
         },
         "Cafundo_01.tmx#tileset_cafundo": {
             "scaleInDock": 0.5
         },
         "Mapa/cafundo_500bl.tmx": {
-            "scale": 3,
+            "scale": 0.5,
             "selectedLayer": 1,
             "viewCenter": {
-                "x": 1220.5,
-                "y": 897
+                "x": 5196,
+                "y": 759
             }
         },
         "Mapa/cafundó_02.tmx": {
-            "scale": 0.75,
+            "scale": 0.25,
             "selectedLayer": 0,
             "viewCenter": {
-                "x": 701.3333333333334,
-                "y": 1031.3333333333333
+                "x": 2024,
+                "y": 558
             }
         },
         "Rules/Autotile_Rules.tmx": {
             "scale": 3,
             "selectedLayer": 2,
             "viewCenter": {
-                "x": 930.3333333333333,
-                "y": 320
+                "x": 930.5,
+                "y": 320.16666666666663
             }
         },
         "Tileset/cafundo1.tsx": {
