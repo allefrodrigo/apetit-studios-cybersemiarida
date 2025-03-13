@@ -4,6 +4,7 @@ res://scenes/main_title.gdshader
 res://shaders/rain.gdshader
 res://scenes/World/rain.gdshader
 res://scenes/World/world.gdshader
+res://Player/player.gd
 res://scenes/World/world_01.tscn
 res://scenes/World/world_02.tscn
 res://scenes/goal.tscn
@@ -17,3 +18,4 @@ res://scenes/FallScene.tscn
 res://levels/Level_design/TILED/CSA/Mapa/cafundo_500bl.tscn
 res://levels/Level_design/TILED/CSA/Mapa/cafundó_02.tscn
 res://levels/Level_design/TILED/CSA/Mapa/Cafundo_01.tscn
+res://scripts/main_title.gd
