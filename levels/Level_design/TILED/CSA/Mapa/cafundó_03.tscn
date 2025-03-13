@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://cs7lxroqer3wu"]
+[gd_scene load_steps=6 format=3 uid="uid://cs7lxroqer3wu"]
 
 [ext_resource type="PackedScene" uid="uid://bapvy71043313" path="res://Player/player.tscn" id="2_e3pr8"]
+[ext_resource type="PackedScene" uid="uid://cls1bhrmlht6k" path="res://scenes/parallax_bg.tscn" id="3_utpfh"]
 [ext_resource type="Texture2D" uid="uid://iq5o5bvwxmgs" path="res://levels/Level_design/Tilesets/tileset_cafundo.png" id="tileset_cafundo"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0"]
@@ -333,6 +334,9 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_0")
 
 [node name="cafundó_03" type="Node2D"]
+
+[node name="ParallaxBg" parent="." instance=ExtResource("3_utpfh")]
+position = Vector2(182, 578)
 
 [node name="TileMap" type="TileMap" parent="."]
 texture_filter = 1

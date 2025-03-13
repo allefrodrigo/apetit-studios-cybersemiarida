@@ -1,6 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://bgti3h7kctofu"]
+[gd_scene load_steps=9 format=3 uid="uid://bgti3h7kctofu"]
 
+[ext_resource type="PackedScene" uid="uid://cls1bhrmlht6k" path="res://scenes/parallax_bg.tscn" id="1_xrpfv"]
 [ext_resource type="PackedScene" uid="uid://bapvy71043313" path="res://Player/player.tscn" id="3_2hyui"]
+[ext_resource type="PackedScene" uid="uid://6x1esumef4rj" path="res://scenes/goal.tscn" id="4_j7fym"]
 [ext_resource type="Texture2D" uid="uid://iq5o5bvwxmgs" path="res://levels/Level_design/Tilesets/tileset_cafundo.png" id="tileset_cafundo"]
 [ext_resource type="Texture2D" uid="uid://d124m6kp50ls7" path="res://assets/Water/tile_jungle_water.png" id="tile_jungle_water"]
 
@@ -405,6 +407,9 @@ sources/1 = SubResource("TileSetAtlasSource_1")
 
 [node name="cafundó_02" type="Node2D"]
 
+[node name="ParallaxBg" parent="." instance=ExtResource("1_xrpfv")]
+position = Vector2(414, 633)
+
 [node name="TileMap" type="TileMap" parent="."]
 texture_filter = 1
 tile_set = SubResource("TileSet_0")
@@ -422,3 +427,8 @@ layer_4/tile_data = PackedInt32Array(1704263, 720897, 11, 2031950, 720897, 11, 2
 
 [node name="Player" parent="." instance=ExtResource("3_2hyui")]
 position = Vector2(277, 854)
+
+[node name="Area2D" parent="." instance=ExtResource("4_j7fym")]
+position = Vector2(7989, 933)
+collision_mask = 2
+next_scene_path = "res://levels/Level_design/TILED/CSA/Mapa/cafundó_03.tscn"

@@ -14,7 +14,7 @@ func _on_fade_timer_timeout() -> void:
 	# Pausa a música
 	if has_node("AudioStreamPlayer2D"):
 		$AudioStreamPlayer2D.stop()
-		get_tree().change_scene_to_file("res://scenes/World/world_01.tscn")
+		get_tree().change_scene_to_file("res://levels/Level_design/TILED/CSA/Mapa/Cafundo_01.tscn")
 	
 	# Aqui você pode adicionar a lógica para mudar de cena
 	 
