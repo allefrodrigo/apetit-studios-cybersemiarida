@@ -7,17 +7,19 @@ const ACCELERATION = 800.0
 const DECELERATION = 600.0
 const COYOTE_TIME = 0.2
 
-# Gravidade obtida das configurações do projeto
+@export var sfx_jump : AudioStream
+@export var sfx_footstep : AudioStream
+@export var sfx_fall : AudioStream  # <-- Som de queda
+
+var footstep_frames : Array = [2, 5]
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
-
-# Dados do jogador
 var health = 100
-
-# Variável para controlar o coyote time
 var coyote_time_counter = 0.0
 
-# Referências aos nós
-@onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
+# Guarda se estava no chão no frame anterior
+var was_on_floor = false
+
+@onready var animated_sprite: AnimatedSprite2D = $Sprite
 @onready var state_label: Label = $Label
 
 func _ready() -> void:
@@ -34,13 +36,21 @@ func _physics_process(delta: float) -> void:
 	handle_movement(delta)
 	update_animations(on_floor)
 	update_stretch_and_squash(delta, on_floor)
+	
 	move_and_slide()
+	
+	# Se acabou de pousar no chão agora, toca o som de queda
+	if not was_on_floor and is_on_floor():
+		load_sfx(sfx_fall)
+		$sfx_player.play()
+	
+	# Atualiza a flag para o próximo frame
+	was_on_floor = on_floor
 
 func apply_gravity(delta: float, on_floor: bool) -> void:
 	if not on_floor:
 		velocity.y += gravity * delta
 	else:
-		# Reseta a velocidade vertical quando estiver no chão para evitar acumulação de erros
 		velocity.y = 0
 
 func update_coyote_time(delta: float, on_floor: bool) -> void:
@@ -48,6 +58,8 @@ func update_coyote_time(delta: float, on_floor: bool) -> void:
 
 func handle_jump() -> void:
 	if Input.is_action_just_pressed("ui_accept") and coyote_time_counter > 0:
+		load_sfx(sfx_jump)
+		$sfx_player.play()
 		velocity.y = JUMP_VELOCITY
 		coyote_time_counter = 0
 
@@ -76,7 +88,6 @@ func update_animations(on_floor: bool) -> void:
 		animated_sprite.play("idle")
 		state = "Idle"
 	
-	# Atualiza o texto somente se houver mudança
 	if state_label.text != state:
 		state_label.text = state
 
@@ -87,7 +98,6 @@ func update_stretch_and_squash(delta: float, on_floor: bool) -> void:
 			target_scale = Vector2(0.95, 1.1)
 		else:
 			target_scale = Vector2(1.1, 0.95)
-		# Multiplica o fator de interpolação pelo delta para independência do framerate
 		animated_sprite.scale = animated_sprite.scale.lerp(target_scale, 5 * delta)
 	else:
 		animated_sprite.scale = Vector2.ONE
@@ -98,3 +108,15 @@ func respawn_if_needed() -> void:
 		global_position = checkpoint_data["position"]
 		health = CheckpointManager.player_data["health"]
 		print("Respawned at:", checkpoint_data["position"])
+
+func load_sfx(sfx_to_load):
+	if $sfx_player.stream != sfx_to_load:
+		$sfx_player.stop()
+		$sfx_player.stream = sfx_to_load
+
+func _on_sprite_frame_changed() -> void:
+	if $Sprite.animation == "idle": return
+	if $Sprite.animation == "jump": return
+	load_sfx(sfx_footstep)
+	if $Sprite.frame in footstep_frames:
+		$sfx_player.play()
