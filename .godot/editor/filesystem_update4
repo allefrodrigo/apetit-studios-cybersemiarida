@@ -4,8 +4,7 @@ res://shaders/arbusto.gdshader
 res://shaders/rain.gdshader
 res://scenes/World/rain.gdshader
 res://scenes/World/world.gdshader
+res://levels/Level_design/TILED/CSA/Mapa/Cafundo_01.gdshader
 res://scenes/main_title.tscn
 res://Player/player.tscn
 res://scenes/goal.tscn
-res://scripts/goal.gd
-res://Player/player.gd
