@@ -1,11 +1,11 @@
-res://default_bus_layout.tres
-res://Player/player.tscn
+res://levels/Level_design/TILED/CSA/Mapa/Cafundo_01.tscn
 res://scenes/main_title.gdshader
 res://shaders/arbusto.gdshader
 res://shaders/rain.gdshader
 res://scenes/World/rain.gdshader
 res://scenes/World/world.gdshader
-res://Player/player.gd
 res://scenes/main_title.tscn
+res://Player/player.tscn
 res://scenes/goal.tscn
-res://levels/Level_design/TILED/CSA/Mapa/Cafundo_01.tscn
+res://scripts/goal.gd
+res://Player/player.gd

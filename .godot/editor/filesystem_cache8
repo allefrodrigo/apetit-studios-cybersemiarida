@@ -1,8 +1,8 @@
 c693a20e708c4e09bfa9edf12a750cf8
-::res://::1742330611
-export_presets.cfg::TextFile::-1::1741896720::0::1::::<><>::
+::res://::1742334851
+default_bus_layout.tres::AudioBusLayout::4814686189288654144::1742331519::0::1::::<><>::
+export_presets.cfg::TextFile::-1::1742333119::0::1::::<><>::
 icon.svg::CompressedTexture2D::3178525421739141164::1731616340::1741895090::1::::<><>::
-default_bus_layout.tres::AudioBusLayout::4814686189288654144::1742329438::0::1::::<><>::
 ::res://addons/::1741898396
 ::res://addons/dialogue_manager/::1741897845
 constants.gd::GDScript::-1::1741897845::0::1::::<>Node<>::
@@ -311,8 +311,8 @@ tile cruz.png::CompressedTexture2D::2625860979119545409::1741640787::1741895090:
 ::res://levels/Level_design/TILED/CSA/::1741895090
 rules.txt::TextFile::-1::1741640787::0::1::::<><>::
 tile cruz.png::CompressedTexture2D::5630572342722077863::1741640787::1741895090::1::::<><>::
-::res://levels/Level_design/TILED/CSA/Mapa/::1742330611
-Cafundo_01.tscn::PackedScene::5265181877415549894::1742330611::0::1::::<><>::uid://p72xbq7jyfgn::::res://levels/Placa_Cyber_Semiarida.png<>uid://cls1bhrmlht6k::::res://scenes/parallax_bg.tscn<>uid://bapvy71043313::::res://Player/player.tscn<>uid://6x1esumef4rj::::res://scenes/goal.tscn<>uid://cydesf84vrb6y::::res://levels/Level_design/Tilesets/tile cruz.png<>uid://d124m6kp50ls7::::res://assets/Water/tile_jungle_water.png<>uid://7s5nhcnt60lt::::res://levels/Level_design/TILED/CSA/Tileset/water_test.png
+::res://levels/Level_design/TILED/CSA/Mapa/::1742334558
+Cafundo_01.tscn::PackedScene::5265181877415549894::1742334558::0::1::::<><>::uid://p72xbq7jyfgn::::res://levels/Placa_Cyber_Semiarida.png<>uid://cls1bhrmlht6k::::res://scenes/parallax_bg.tscn<>uid://bapvy71043313::::res://Player/player.tscn<>uid://6x1esumef4rj::::res://scenes/goal.tscn<>uid://cydesf84vrb6y::::res://levels/Level_design/Tilesets/tile cruz.png<>uid://d124m6kp50ls7::::res://assets/Water/tile_jungle_water.png<>uid://7s5nhcnt60lt::::res://levels/Level_design/TILED/CSA/Tileset/water_test.png
 cafundo_500bl.tscn::PackedScene::5902230825494882321::1741895133::0::1::::<><>::uid://bapvy71043313::::res://Player/player.tscn<>uid://crggrq0ygw5b3::::res://scenes/World/Props/taipa-house-solar.png<>uid://iq5o5bvwxmgs::::res://levels/Level_design/Tilesets/tileset_cafundo.png<>uid://d124m6kp50ls7::::res://assets/Water/tile_jungle_water.png
 cafundó_02.tscn::PackedScene::2847313078574882286::1741898331::0::1::::<><>::uid://cls1bhrmlht6k::::res://scenes/parallax_bg.tscn<>uid://bapvy71043313::::res://Player/player.tscn<>uid://6x1esumef4rj::::res://scenes/goal.tscn<>uid://iq5o5bvwxmgs::::res://levels/Level_design/Tilesets/tileset_cafundo.png<>uid://d124m6kp50ls7::::res://assets/Water/tile_jungle_water.png
 cafundó_03.tscn::PackedScene::6103010516438169272::1741898331::0::1::::<><>::uid://bapvy71043313::::res://Player/player.tscn<>uid://cls1bhrmlht6k::::res://scenes/parallax_bg.tscn<>uid://iq5o5bvwxmgs::::res://levels/Level_design/Tilesets/tileset_cafundo.png
@@ -353,12 +353,12 @@ gem.gd::GDScript::-1::1731616623::0::1::::<>Area2D<>::
 gem.gdshader::Shader::-1::1731616623::0::1::::<><>::
 gem.png::CompressedTexture2D::1239424306479857978::1731616623::1741895090::1::::<><>::
 gem.tscn::PackedScene::5100214827800308183::1731616623::0::1::::<><>::res://Pickups/Gem/gem.gd<>uid://rwnewwkgqglm::::res://Pickups/Gem/gem.png<>res://Pickups/Gem/gem.gdshader
-::res://Player/::1742330611
+::res://Player/::1742334558
 BlackCatAnimationSheet.png::CompressedTexture2D::2602776758746081490::1731616623::1741895090::1::::<><>::
 dona-graca.tscn::PackedScene::3190574535525370506::1741898331::0::1::::<><>::uid://vrp3kkfadffu::::res://NPC/Graça_Idle.png
-player.gd::GDScript::-1::1742330609::0::1::::<>CharacterBody2D<>::
+player.gd::GDScript::-1::1742334181::0::1::::<>CharacterBody2D<>::
 player.png::CompressedTexture2D::3788500887280501548::1731616623::1741895090::1::::<><>::
-player.tscn::PackedScene::2418705987993703504::1742330611::0::1::::<><>::res://Player/player.gd<>uid://bt8gb54hjkhl1::::res://Player/player.png<>uid://dvhb0we5l4wu5::::res://Player/timby_sheet.png<>uid://cohomxrh847yi::::res://levels/Step_01.wav<>uid://bc8qfv8hd1uhd::::res://Player/Dust/SmokeFX Lite SpriteSheet 1A-11.png
+player.tscn::PackedScene::2418705987993703504::1742334558::0::1::::<><>::res://Player/player.gd<>uid://dk7m2altqkeky::::res://levels/jump.wav<>uid://bt8gb54hjkhl1::::res://Player/player.png<>uid://dvhb0we5l4wu5::::res://Player/timby_sheet.png<>uid://cxod1j5xq50sq::::res://levels/Step_03.wav<>uid://cohomxrh847yi::::res://levels/Step_01.wav
 SiameseCatAnimationSheet.png::CompressedTexture2D::41334290820047647::1731616623::1741895090::1::::<><>::
 timby_sheet.png::CompressedTexture2D::8647784936668639734::1731616623::1741895090::1::::<><>::
 ::res://Player/Dust/::1741895090
@@ -371,30 +371,30 @@ fallzone.tscn::PackedScene::3484124963178329017::1732846706::0::1::::<><>::res:/
 coin.tscn::PackedScene::7142990858076396951::1731761349::0::1::::<><>::uid://twj8dnug3raj::::res://Objetos/Coin.png
 flag.tscn::PackedScene::798658734047487512::1733960919::0::1::::<><>::uid://c8um2uh5a5rh0::::res://Objetos/Flag.png<>res://scripts/flag.gd
 key.tscn::PackedScene::4736988325787879589::1731616625::0::1::::<><>::uid://bsq2mem62y5ou::::res://Objetos/Key.png
-::res://scenes/::1742330611
+::res://scenes/::1742334838
 fade.tscn::PackedScene::7188874533177012908::1731616625::0::1::::<><>::
 FallScene.tscn::PackedScene::660727648954875726::1741895132::0::1::::<><>::res://scenes/fall_scene.gd<>uid://7evhyf0bq76a::::res://assets/Wall/tile_jungle_wall_brown.png<>uid://bapvy71043313::::res://Player/player.tscn
 fall_scene.gd::GDScript::-1::1736978285::0::1::::<>Node2D<>::
-goal.tscn::PackedScene::2224921602977118375::1742330611::0::1::::<><>::res://scripts/goal.gd<>uid://bu3ffg8jcb1wn::::res://assets/Music/sound_fade_out.mp3<>uid://cou1d43paw2wa::::res://levels/Sino_Spritesheet.png
-main_title.gdshader::Shader::-1::1742330611::0::1::::<><>::
-main_title.tscn::PackedScene::4876809923569751648::1742330611::0::1::::<><>::res://scripts/main_title.gd<>uid://bfx6vshfsm8us::::res://fonts/PixelifySans-Regular.ttf<>uid://bhfqemcd1sckx::::res://assets/title.png<>uid://b0gu5wcofcm1i::::res://assets/ReguaLPG/horizontal-mono-negativa.png<>res://scenes/main_title.gdshader<>uid://cls1bhrmlht6k::::res://scenes/parallax_bg.tscn<>uid://daolyiryu2ium::::res://scenes/fade.tscn<>uid://cnbpse6ugj67k::::res://assets/Music/OST_menu.wav<>res://scripts/audio_stream_player_2d.gd
+goal.tscn::PackedScene::2224921602977118375::1742334558::0::1::::<><>::res://scripts/goal.gd<>uid://bu3ffg8jcb1wn::::res://assets/Music/sound_fade_out.mp3<>uid://cou1d43paw2wa::::res://levels/Sino_Spritesheet.png
+main_title.gdshader::Shader::-1::1742334838::0::1::::<><>::
+main_title.tscn::PackedScene::4876809923569751648::1742334558::0::1::::<><>::res://scripts/main_title.gd<>uid://bfx6vshfsm8us::::res://fonts/PixelifySans-Regular.ttf<>uid://bhfqemcd1sckx::::res://assets/title.png<>uid://b0gu5wcofcm1i::::res://assets/ReguaLPG/horizontal-mono-negativa.png<>res://scenes/main_title.gdshader<>uid://cls1bhrmlht6k::::res://scenes/parallax_bg.tscn<>uid://daolyiryu2ium::::res://scenes/fade.tscn<>uid://cnbpse6ugj67k::::res://assets/Music/OST_menu.wav<>res://scripts/audio_stream_player_2d.gd
 now_playing.tscn::PackedScene::815315558901866383::1733960919::0::1::::<><>::res://scripts/NowPlayingOverlay.gd<>uid://bpxrh5rb65352::::res://assets/Music/Nt6v-ezgif.com-gif-to-sprite-converter.png
 parallax_background.tscn::PackedScene::4589499538147664169::1740612356::0::1::::<><>::uid://lvu88u5ki4cw::::res://assets/background/9_Céu.png<>uid://dw8p1he01s1xt::::res://assets/clouds/bg_cloud01.png<>uid://c5tnubbk3p3x::::res://assets/clouds/bg_cloud6.png<>uid://5cfcum8bb2ch::::res://assets/background/7_Passaros1.png<>uid://bl755dkdlvdcg::::res://assets/background/6_MontanhaLonge.png<>uid://bmf1w5vhrqstn::::res://assets/background/7_Passaros2.png<>uid://ctilg3dykp3ew::::res://assets/background/5_Montanha.png<>uid://cjnrvuoem4s3t::::res://assets/background/4_PlantasLongeV2.png<>uid://sbycmmfu1vrk::::res://assets/background/4-2_Cactos.png<>uid://c5v8oxi4kpewn::::res://assets/background/3_Arvore.png<>uid://62dfhfojqdqv::::res://assets/background/2_Plantas.png<>res://shaders/arbusto.gdshader<>res://shaders/parallax_background.gdshader<>uid://dpsn6qw3chp3x::::res://assets/background/leaves.png<>uid://5kt7yub1lrsk::::res://assets/background/jungle_recolor.png
 parallax_bg.tscn::PackedScene::5583658269068816284::1741898331::0::1::::<><>::uid://lvu88u5ki4cw::::res://assets/background/9_Céu.png<>uid://btl8y2jdf0j8y::::res://assets/clouds/bg_cloud2.png<>uid://bss5rkqgp4mp3::::res://assets/background/Passaros_Animation.png<>uid://d1hubl6f6iqvm::::res://assets/clouds/bg_cloud5.png<>uid://c5tnubbk3p3x::::res://assets/clouds/bg_cloud6.png<>uid://bl755dkdlvdcg::::res://assets/background/6_MontanhaLonge.png<>uid://ctilg3dykp3ew::::res://assets/background/5_Montanha.png<>uid://cjnrvuoem4s3t::::res://assets/background/4_PlantasLongeV2.png<>uid://sbycmmfu1vrk::::res://assets/background/4-2_Cactos.png<>uid://c5v8oxi4kpewn::::res://assets/background/3_Arvore.png<>uid://62dfhfojqdqv::::res://assets/background/2_Plantas.png<>res://shaders/arbusto.gdshader
 transition.gd::GDScript::-1::1736978286::0::1::::<>CanvasLayer<>::
 transition.tscn::PackedScene::8527658706336095676::1741898895::0::1::::<><>::res://scenes/transition.gd<>uid://bdefjuogdb1n2::::res://assets/silhueta.png<>uid://dfjigslr7quyf::::res://assets/Music/transition_fade_out.mp3
 transition_in.tscn::PackedScene::4654911858397596319::1741898331::0::1::::<><>::res://scenes/transition.gd<>uid://c7httu086a3ng::::res://assets/Music/transition_fade_in.mp3<>uid://bdefjuogdb1n2::::res://assets/silhueta.png
-::res://scenes/World/::1742330611
+::res://scenes/World/::1742334838
 fade.tscn::PackedScene::7188874533177012908::1731616625::0::1::::<><>::
 light.gd::GDScript::-1::1731616623::0::1::::<>ColorRect<>::
 light.gdshader::Shader::-1::1731619400::0::1::::<><>::
 palm.gdshader::Shader::-1::1731619400::0::1::::<><>::
 parallax_background.tscn::PackedScene::2564790551720259395::1731616623::0::1::::<><>::uid://irr6td0rsom0::::res://9_Céu.png
 polygon_2d.gd::GDScript::-1::1731786188::0::1::::<>Polygon2D<>::
-rain.gdshader::Shader::-1::1742330611::0::1::::<><>::
+rain.gdshader::Shader::-1::1742334838::0::1::::<><>::
 world-tileset.tres::TileSet::7613287914799918914::1733249410::0::1::::<><>::uid://thrwp1163dv6::::res://scenes/World/Tilesets/tileset.png
 world.gd::GDScript::-1::1741898398::0::1::::<>Node2D<>::
-world.gdshader::Shader::-1::1742330611::0::1::::<><>::
+world.gdshader::Shader::-1::1742334838::0::1::::<><>::
 world_01.tscn::PackedScene::5072042081859628737::1741898331::0::1::::<><>::res://scenes/World/world.gd<>uid://w1gwsr7bifrb::::res://scenes/World/Tilesets/tile_jungle_ground_brown.png<>uid://lu7emei1niol::::res://scenes/now_playing.tscn<>uid://thrwp1163dv6::::res://scenes/World/Tilesets/tileset.png<>uid://7evhyf0bq76a::::res://assets/Wall/tile_jungle_wall_brown.png<>uid://d124m6kp50ls7::::res://assets/Water/tile_jungle_water.png<>uid://6wwi2wtbmi1n::::res://scenes/World/Tilesets/GandalfHardcore Platformer Assets v2.png<>uid://s2qtomf676ta::::res://assets/Casas Sertão/casa_sertao_1.png<>uid://wj4keo78n4t5::::res://assets/Casas Sertão/casa_sertao_1_3D.png<>uid://fajsyfqlty55::::res://assets/Casas Sertão/casa_sertao_2_3D.png<>uid://tr224s2ciuwi::::res://assets/Casas Sertão/casa_sertao_4_3D.png<>uid://dwwuffuaonhbe::::res://prefabs/controls.tscn<>uid://byhtl04n602rh::::res://assets/Casas Sertão/casa_sertao_3_3D.png<>uid://hiegaj6qjvel::::res://scenes/World/Props/bush.png<>uid://do6fw458xln43::::res://scenes/World/Props/rock-2.png<>res://scripts/MusicManager.gd<>uid://lm417k411oj5::::res://props/flag.tscn<>uid://blpskcxyt3yry::::res://Player/dona-graca.tscn<>uid://6x1esumef4rj::::res://scenes/goal.tscn<>uid://dbpcaqh710nfd::::res://scenes/World/Props/rupestre_1.png<>uid://crggrq0ygw5b3::::res://scenes/World/Props/taipa-house-solar.png<>uid://bpv0a8wadbvx6::::res://prefabs/fallzone.tscn<>uid://bapvy71043313::::res://Player/player.tscn<>uid://dtu6edecpycrc::::res://assets/Music/bg_mundo1.wav<>uid://daolyiryu2ium::::res://scenes/fade.tscn<>uid://badoulo86ypb1::::res://transitions/tutorial_fade.tscn<>uid://cls1bhrmlht6k::::res://scenes/parallax_bg.tscn
 world_02.tscn::PackedScene::3931790193629601965::1741895852::0::1::::<><>::res://scenes/World/world.gd<>uid://cls1bhrmlht6k::::res://scenes/parallax_bg.tscn<>uid://lu7emei1niol::::res://scenes/now_playing.tscn<>uid://w1gwsr7bifrb::::res://scenes/World/Tilesets/tile_jungle_ground_brown.png<>uid://thrwp1163dv6::::res://scenes/World/Tilesets/tileset.png<>uid://7evhyf0bq76a::::res://assets/Wall/tile_jungle_wall_brown.png<>uid://d124m6kp50ls7::::res://assets/Water/tile_jungle_water.png<>uid://crggrq0ygw5b3::::res://scenes/World/Props/taipa-house-solar.png<>uid://6wwi2wtbmi1n::::res://scenes/World/Tilesets/GandalfHardcore Platformer Assets v2.png<>uid://dbpcaqh710nfd::::res://scenes/World/Props/rupestre_1.png<>uid://s2qtomf676ta::::res://assets/Casas Sertão/casa_sertao_1.png<>uid://c27ahlemo01sp::::res://assets/Casas Sertão/casa_sertao_2.png<>uid://c40q6xu4cdxgl::::res://assets/Casas Sertão/casa_sertao_4.png<>uid://cbd4flb86ktus::::res://assets/Casas Sertão/casa_sertao_3.png<>uid://dtu6edecpycrc::::res://assets/Music/bg_mundo1.wav<>uid://daolyiryu2ium::::res://scenes/fade.tscn<>res://scripts/MusicManager.gd<>uid://dwwuffuaonhbe::::res://prefabs/controls.tscn<>uid://bpv0a8wadbvx6::::res://prefabs/fallzone.tscn<>uid://cgm4paby6x5gn::::res://NPC/Base_Graça.png<>uid://bapvy71043313::::res://Player/player.tscn<>uid://6x1esumef4rj::::res://scenes/goal.tscn<>uid://b7k4yoi12eq7p::::res://scenes/transition_in.tscn<>uid://do6fw458xln43::::res://scenes/World/Props/rock-2.png<>uid://hiegaj6qjvel::::res://scenes/World/Props/bush.png<>uid://lm417k411oj5::::res://props/flag.tscn<>uid://badoulo86ypb1::::res://transitions/tutorial_fade.tscn
 ::res://scenes/World/Background/::1741895090
@@ -439,22 +439,22 @@ wooden-house.png::CompressedTexture2D::598532719943918010::1731616623::174189509
 GandalfHardcore Platformer Assets v2.png::CompressedTexture2D::2222621976541662577::1731778494::1741895090::1::::<><>::
 tileset.png::CompressedTexture2D::1349110978982990469::1731616623::1741895090::1::::<><>::
 tile_jungle_ground_brown.png::CompressedTexture2D::1598232944202341479::1731616625::1741895090::1::::<><>::
-::res://scripts/::1742072261
+::res://scripts/::1742334552
 audio_stream_player_2d.gd::GDScript::-1::1732561064::0::1::::<>AudioStreamPlayer2D<>::
 color_rect.gd::GDScript::-1::1731791136::0::1::::<>ColorRect<>::
 dialog_box.gd::GDScript::-1::1731616625::0::1::::<>MarginContainer<>::
 fallzone.gd::GDScript::-1::1732822278::0::1::::<>Area2D<>::
 flag.gd::GDScript::-1::1732821541::0::1::::<>Area2D<>::
-goal.gd::GDScript::-1::1736978285::0::1::::<>Area2D<>::
+goal.gd::GDScript::-1::1742334552::0::1::::<>Area2D<>::
 main_title.gd::GDScript::-1::1742072261::0::1::::<>Node2D<>::
 MusicManager.gd::GDScript::-1::1736978286::0::1::::<>AudioStreamPlayer<>::
 NowPlayingOverlay.gd::GDScript::-1::1736978286::0::1::::<>CanvasLayer<>::
 tutorial_fade.gd::GDScript::-1::1732020527::0::1::::<>Node2D<>::
 warning_sign.gd::GDScript::-1::1731699755::0::1::::<>Node2D<>::
-::res://shaders/::1742330611
-arbusto.gdshader::Shader::-1::1742330611::0::1::::<><>::
+::res://shaders/::1742334838
+arbusto.gdshader::Shader::-1::1742334838::0::1::::<><>::
 parallax_background.gdshader::Shader::-1::1731616625::0::1::::<><>::
-rain.gdshader::Shader::-1::1742330611::0::1::::<><>::
+rain.gdshader::Shader::-1::1742334838::0::1::::<><>::
 ::res://singleton/::1732821212
 CheckpointManager.gd::GDScript::-1::1732821212::0::1::::<>Node<>::
 ::res://transitions/::1732846706

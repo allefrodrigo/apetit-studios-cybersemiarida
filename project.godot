@@ -18,7 +18,6 @@ config/icon="res://icon.svg"
 [autoload]
 
 CheckpointManager="*res://singleton/CheckpointManager.gd"
-Shaker="*res://addons/shaker/src/Shaker.gd"
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
 
 [display]
