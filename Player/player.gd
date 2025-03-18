@@ -1,6 +1,5 @@
 extends CharacterBody2D
 
-# Constantes
 const SPEED = 150.0
 const JUMP_VELOCITY = -350.0
 const ACCELERATION = 800.0
@@ -15,9 +14,11 @@ var footstep_frames : Array = [2, 5]
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var health = 100
 var coyote_time_counter = 0.0
-
-# Guarda se estava no chão no frame anterior
 var was_on_floor = false
+
+# --- NOVOS CONTROLES DE INPUT ---
+var input_enabled = true
+var forced_walk_direction = 0  # Se != 0, o player anda sozinho nessa direção
 
 @onready var animated_sprite: AnimatedSprite2D = $Sprite
 @onready var state_label: Label = $Label
@@ -29,22 +30,31 @@ func _ready() -> void:
 
 func _physics_process(delta: float) -> void:
 	var on_floor = is_on_floor()
-	
+
 	apply_gravity(delta, on_floor)
 	update_coyote_time(delta, on_floor)
-	handle_jump()
-	handle_movement(delta)
+	
+	if input_enabled:
+		# Lê o input normalmente
+		handle_jump()
+		handle_movement(delta)
+	else:
+		# Se input desativado mas forced_walk_direction != 0, continua andando
+		if forced_walk_direction != 0:
+			velocity.x = move_toward(velocity.x, forced_walk_direction * SPEED, ACCELERATION * delta)
+		else:
+			# Se não tem direção forçada, fica parado no eixo X
+			velocity.x = move_toward(velocity.x, 0, DECELERATION * delta)
+	
 	update_animations(on_floor)
 	update_stretch_and_squash(delta, on_floor)
-	
+
 	move_and_slide()
 	
 	# Se acabou de pousar no chão agora, toca o som de queda
-	if not was_on_floor and is_on_floor():
+	if not was_on_floor and on_floor:
 		load_sfx(sfx_fall)
 		$sfx_player.play()
-	
-	# Atualiza a flag para o próximo frame
 	was_on_floor = on_floor
 
 func apply_gravity(delta: float, on_floor: bool) -> void:
