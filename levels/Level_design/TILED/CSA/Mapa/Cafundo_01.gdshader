@@ -1,111 +1,91 @@
-/*
-Shader from Godot Shaders - the free shader library.
-godotshaders.com/shader/god-rays
-
-Feel free to use, improve and change this shader according to your needs
-and consider sharing the modified result on godotshaders.com.
-*/
-
 shader_type canvas_item;
 
-uniform float angle = -0.3;
-uniform float position = -0.2;
-uniform float spread : hint_range(0.0, 1.0) = 0.5;
-uniform float cutoff : hint_range(-1.0, 1.0) = 0.1;
-uniform float falloff : hint_range(0.0, 1.0) = 0.2;
-uniform float edge_fade : hint_range(0.0, 1.0) = 0.15;
+uniform float progress : hint_range(0.0, 1.0) = 0.5;
+uniform vec4 background_color : source_color = vec4(0.5, 0.5, 0.5, 1.0);
+uniform sampler2D color_gradient : source_color;
+uniform sampler2D mask_texture : hint_default_white;
 
+// Wave effect parameters
+uniform float wave_amplitude : hint_range(0.0, 0.1) = 0.02;
+uniform float wave_frequency : hint_range(0.0, 10.0) = 3.0;
+uniform float wave_speed : hint_range(0.0, 5.0) = 1.5;
 
-uniform float speed = 1.0;
-uniform float ray1_density = 8.0;
-uniform float ray2_density = 30.0;
-uniform float ray2_intensity : hint_range(0.0, 1.0) = 0.3;
+// Particle effect parameters
+uniform float particle_speed : hint_range(0.01, 0.5) = 0.05;
+uniform float particle_lifetime : hint_range(1.0, 10.0) = 3.0;
+uniform float particle_softness : hint_range(0.001, 1.0) = 0.01;
+uniform float particle_spacing : hint_range(0.01, 1.0) = 0.1;
+uniform vec2 particle_offset = vec2(0.0, 0.0);
+uniform vec2 particle_start_scale = vec2(0.02, 0.02);
+uniform vec2 particle_end_scale = vec2(0.01, 0.01);
+uniform float particle_scale_randomness : hint_range(0.0, 1.0) = 0.5;
+uniform sampler2D particle_alpha_gradient : source_color;
+uniform int particle_amount : hint_range(0, 50) = 20;
 
-uniform vec4 color : source_color = vec4(1.0, 0.9, 0.65, 0.8);
-
-uniform bool hdr = false;
-uniform float seed = 5.0;
-
-// Backward compatibility
-uniform sampler2D SCREEN_TEXTURE : hint_screen_texture, filter_linear_mipmap;
-
-// Random and noise functions from Book of Shader's chapter on Noise.
-float random(vec2 _uv) {
-   return fract(sin(dot(_uv.xy,
-                        vec2(12.9898, 78.233))) *
-       43758.5453123);
+// Pseudo-random function
+float rand(vec2 co) {
+    return fract(sin(dot(co.xy ,vec2(12.9898,78.233))) * 43758.5453);
 }
 
-float noise (in vec2 uv) {
-   vec2 i = floor(uv);
-   vec2 f = fract(uv);
+// Function to generate a single particle
+float particle(vec2 uv, float particle_id, float time, float mask_value) {
+    float random_offset = rand(vec2(particle_id, 0.0));
+    float spawn_time = particle_id * particle_spacing;
+    float life = mod(time - spawn_time, particle_lifetime) / particle_lifetime;
 
-   // Four corners in 2D of a tile
-   float a = random(i);
-   float b = random(i + vec2(1.0, 0.0));
-   float c = random(i + vec2(0.0, 1.0));
-   float d = random(i + vec2(1.0, 1.0));
+    if (life < 0.0 || life >= 1.0) return 0.0;
 
+    float vertical_pos = rand(vec2(particle_id, 1.0));
+    float horizontal_pos = progress + life * particle_speed;
 
-   // Smooth Interpolation
+    vec2 particle_pos = vec2(horizontal_pos, vertical_pos) + particle_offset;
 
-   // Cubic Hermine Curve. Same as SmoothStep()
-   vec2 u = f * f * (3.0-2.0 * f);
+    // Calculate scale with randomness
+    float scale_random = rand(vec2(particle_id, 2.0)) * particle_scale_randomness;
+    vec2 start_scale = particle_start_scale * (1.0 - scale_random);
+    vec2 end_scale = particle_end_scale * (1.0 - scale_random);
+    vec2 current_scale = mix(start_scale, end_scale, life);
 
-   // Mix 4 coorners percentages
-   return mix(a, b, u.x) +
-           (c - a)* u.y * (1.0 - u.x) +
-           (d - b) * u.x * u.y;
+    vec2 scaled_uv = (uv - particle_pos) / current_scale;
+    float dist = length(scaled_uv);
+
+    float alpha = texture(particle_alpha_gradient, vec2(life, 0.5)).a;
+
+    return smoothstep(1.0 + particle_softness, 1.0, dist) * alpha * mask_value;
 }
 
-mat2 rotate(float _angle){
-   return mat2(vec2(cos(_angle), -sin(_angle)),
-               vec2(sin(_angle), cos(_angle)));
-}
+void fragment() {
+    vec2 uv = UV;
 
-vec4 screen(vec4 base, vec4 blend){
-   return 1.0 - (1.0 - base) * (1.0 - blend);
-}
+    // Sample the mask texture or use default (fully visible) if not provided
+    float mask = texture(mask_texture, uv).r;
 
-void fragment()
-{
+    // Calculate wave offset
+    float wave_offset = wave_amplitude * sin(wave_frequency * uv.y + TIME * wave_speed);
 
-   // Rotate, skew and move the UVs
-   vec2 transformed_uv = ( rotate(angle) * (UV - position) ) / ( (UV.y + spread) - (UV.y * spread) );
+    // Apply wave offset to progress
+    float wave_progress = progress + wave_offset;
 
-   // Animate the ray according the the new transformed UVs
-   vec2 ray1 = vec2(transformed_uv.x * ray1_density + sin(TIME * 0.1 * speed) * (ray1_density * 0.2) + seed, 1.0);
-   vec2 ray2 = vec2(transformed_uv.x * ray2_density + sin(TIME * 0.2 * speed) * (ray1_density * 0.2) + seed, 1.0);
+    // Sample the color from the gradient texture based on progress
+    vec4 gradient_color = texture(color_gradient, vec2(progress, 0.5));
 
-   // Cut off the ray's edges
-   float cut = step(cutoff, transformed_uv.x) * step(cutoff, 1.0 - transformed_uv.x);
-   ray1 *= cut;
-   ray2 *= cut;
+    // Start with the background color
+    vec4 final_color = background_color;
 
-   // Apply the noise pattern (i.e. create the rays)
-   float rays;
+    // Apply the progress bar with mask
+    if (uv.x < wave_progress) {
+        final_color = mix(background_color, gradient_color, mask);
+    }
 
-   if (hdr){
-      // This is not really HDR, but check this to not clamp the two merged rays making
-      // their values go over 1.0. Can make for some nice effect
-      rays = noise(ray1) + (noise(ray2) * ray2_intensity);
-   }
-   else{
-      rays = clamp(noise(ray1) + (noise(ray2) * ray2_intensity), 0., 1.);
-   }
+    // Generate particles
+    float particles = 0.0;
+    for (float i = 0.0; i < float(particle_amount); i++) {
+        particles += particle(uv, i, TIME, mask);
+    }
+    particles = clamp(particles, 0.0, 1.0);
 
-   // Fade out edges
-   rays *= smoothstep(0.0, falloff, (1.0 - UV.y)); // Bottom
-   rays *= smoothstep(0.0 + cutoff, edge_fade + cutoff, transformed_uv.x); // Left
-   rays *= smoothstep(0.0 + cutoff, edge_fade + cutoff, 1.0 - transformed_uv.x); // Right
+    // Add particles to the final color
+    final_color = mix(final_color, gradient_color, particles * step(uv.x, 1.0));
 
-   // Color to the rays
-   vec3 shine = vec3(rays) * color.rgb;
-
-   // Try different blending modes for a nicer effect. "Screen" is included in the code,
-   // but take a look at https://godotshaders.com/snippet/blending-modes/ for more.
-   // With "Screen" blend mode:
-   shine = screen(texture(SCREEN_TEXTURE, SCREEN_UV), vec4(color)).rgb;
-
-   COLOR = vec4(shine, rays * color.a);
+    COLOR = final_color;
 }

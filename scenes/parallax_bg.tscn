@@ -90,54 +90,66 @@ texture_filter = 1
 texture = ExtResource("1_i4mjd")
 centered = false
 
+[node name="Sprite2D2" type="Sprite2D" parent="ParallaxBackground/Sky"]
+texture_filter = 1
+position = Vector2(0, -149.333)
+texture = ExtResource("1_i4mjd")
+centered = false
+
+[node name="Sprite2D3" type="Sprite2D" parent="ParallaxBackground/Sky"]
+texture_filter = 1
+position = Vector2(0, -302)
+texture = ExtResource("1_i4mjd")
+centered = false
+
 [node name="Cloud" type="Parallax2D" parent="ParallaxBackground"]
 scale = Vector2(1.5, 1.5)
-repeat_size = Vector2(544, 0)
-autoscroll = Vector2(-20, 0)
+repeat_size = Vector2(600, 0)
+autoscroll = Vector2(-7, 0)
 repeat_times = 3
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Cloud"]
 texture_filter = 1
-position = Vector2(-64, 16)
+position = Vector2(404, -144.667)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("2_610n1")
 centered = false
 
 [node name="Cloud2" type="Parallax2D" parent="ParallaxBackground"]
 scale = Vector2(1.5, 1.5)
-repeat_size = Vector2(544, 0)
+repeat_size = Vector2(600, 0)
 autoscroll = Vector2(-9, 0)
 repeat_times = 3
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Cloud2"]
 texture_filter = 1
-position = Vector2(-58.6667, -37.3333)
+position = Vector2(410.667, -41.3333)
 scale = Vector2(0.225989, 0.225989)
 texture = ExtResource("3_wqhsm")
 centered = false
 
 [node name="Cloud3" type="Parallax2D" parent="ParallaxBackground"]
 scale = Vector2(1.5, 1.5)
-repeat_size = Vector2(500, 0)
-autoscroll = Vector2(-11, 0)
+repeat_size = Vector2(600, 0)
+autoscroll = Vector2(-15, 0)
 repeat_times = 3
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Cloud3"]
 texture_filter = 1
-position = Vector2(-80, 37.3333)
+position = Vector2(406.667, -100)
 scale = Vector2(0.101106, 0.101106)
 texture = ExtResource("4_an7wo")
 centered = false
 
 [node name="Cloud4" type="Parallax2D" parent="ParallaxBackground"]
 scale = Vector2(1.5, 1.5)
-repeat_size = Vector2(500, 0)
+repeat_size = Vector2(600, 0)
 autoscroll = Vector2(-10, 0)
 repeat_times = 3
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Cloud4"]
 texture_filter = 1
-position = Vector2(-53.3333, -8)
+position = Vector2(408.667, -71.3333)
 scale = Vector2(0.101106, 0.101106)
 texture = ExtResource("4_an7wo")
 centered = false
