@@ -1,7 +1,7 @@
 res://Enemies/Eagle/eagle.tscn::25351bc619ce8d5b5c6e0269a22ff5f6::1731616623::res://.godot/exported/133200997/export-41d67f4995d56eb59bb74961e1453601-eagle.scn
 res://Enemies/Frog/frog.tscn::5f2c61962b205d7ac569c434f6890111::1731616623::res://.godot/exported/133200997/export-039089f6c6df193824c5a1b02cdc4aac-frog.scn
 res://Enemies/Oposum/oposum.tscn::95ab1fe4f115bbbd8e98e11c4b938279::1731616623::res://.godot/exported/133200997/export-532712ca6150eed23281c8a18d30e81e-oposum.scn
-res://levels/Level_design/TILED/CSA/Mapa/Cafundo_01.tscn::e1ec5dd8d90bba3e607dfe0f8fafecaf::1742333093::res://.godot/exported/133200997/export-f30d818210ca894588a00fe61ca4cb14-Cafundo_01.scn
+res://levels/Level_design/TILED/CSA/Mapa/Cafundo_01.tscn::3ec0c60bed8a2458b8ade76f1132b2d3::1742382354::res://.godot/exported/133200997/export-f30d818210ca894588a00fe61ca4cb14-Cafundo_01.scn
 res://levels/Level_design/TILED/CSA/Mapa/cafundo_500bl.tscn::24f2efaee0ea8d3cc7e394ab434c713f::1741895133::res://.godot/exported/133200997/export-ab5c262421020b9b692110687e8da750-cafundo_500bl.scn
 res://levels/Level_design/TILED/CSA/Mapa/cafundó_02.tscn::93f45af0f920edb6caa5d0a2bfb0051f::1741898331::res://.godot/exported/133200997/export-ff507622c4bb7c9ca2c45e623b71957f-cafundó_02.scn
 res://levels/Level_design/TILED/CSA/Mapa/cafundó_03.tscn::55800c867289ff69454f4768808bf175::1741898331::res://.godot/exported/133200997/export-129fe74efb5bb1b05d41ca9f261f2dd8-cafundó_03.scn
@@ -10,7 +10,7 @@ res://Pickups/Cheery/cherry.tscn::a38ef6e6c7069b180d88b06a75f69170::1731616623::
 res://Pickups/Feedback/feedback.tscn::743fa6023bbaa336b01a91655eec11eb::1731616623::res://.godot/exported/133200997/export-f9945efcab7614291791edb498a26195-feedback.scn
 res://Pickups/Gem/gem.tscn::989a8ec2cd7d70890a9918cc12afc100::1731616623::res://.godot/exported/133200997/export-f5169bd7b3ec56476a32dcf6530ece32-gem.scn
 res://Player/dona-graca.tscn::93192a58cec3041a1c972bb801af1b6f::1741898331::res://.godot/exported/133200997/export-0e94bf08ccff029387d08b40f9c28dc7-dona-graca.scn
-res://Player/player.tscn::0ede290d0cb19f2680d2fa62426bdf91::1742333091::res://.godot/exported/133200997/export-d267b47f7e81a3258979164d56d0d9c2-player.scn
+res://Player/player.tscn::510b78656fa7d21a4dfd8f8e7080ae1d::1742382245::res://.godot/exported/133200997/export-d267b47f7e81a3258979164d56d0d9c2-player.scn
 res://prefabs/controls.tscn::c4c2900ac264129378cd6e79d6cb4fa7::1732846706::res://.godot/exported/133200997/export-e1bfc860d202a1a958f3df72f070ad63-controls.scn
 res://prefabs/dialog_box.tscn::b726e642db2fdc4aed3199e8b5dd476b::1731619300::res://.godot/exported/133200997/export-67c1f312581d8577e5e9c471a97f3310-dialog_box.scn
 res://prefabs/fallzone.tscn::04bdf16de2337a960e64cf361808495f::1732846706::res://.godot/exported/133200997/export-900525ebb1eab2501c70617636e75b1a-fallzone.scn
@@ -24,8 +24,8 @@ res://scenes/World/world_01.tscn::c376bae45d2ad6b4464d614719c45cf8::1741898331::
 res://scenes/World/world_02.tscn::81f0c94dd869a93eb8b1752e6d4e1aca::1741895852::res://.godot/exported/133200997/export-266e50e5d3de0a09f625c78a9d4c3708-world_02.scn
 res://scenes/fade.tscn::16944b0d180b5c4142e8884f001faa6e::1731616625::res://.godot/exported/133200997/export-2a43b84906405179a8bcbdfd751d4c18-fade.scn
 res://scenes/FallScene.tscn::351b462aa335741a25a94d1b34e6f5ce::1741895132::res://.godot/exported/133200997/export-ee06d1e3adc574d13c539fca2a216d9b-FallScene.scn
-res://scenes/goal.tscn::714506527cec741d25957970b0dc3915::1742332798::res://.godot/exported/133200997/export-94157eb2f5026022775d1aa2c6e6d7c1-goal.scn
-res://scenes/main_title.tscn::1d0a8e4151eb8e6c63a71cb4333cefa2::1742332798::res://.godot/exported/133200997/export-77f6d36329caef8325d05ddb03010129-main_title.scn
+res://scenes/goal.tscn::e46b59c37ce9a97ccb3084f78f07062f::1742382245::res://.godot/exported/133200997/export-94157eb2f5026022775d1aa2c6e6d7c1-goal.scn
+res://scenes/main_title.tscn::1d0a8e4151eb8e6c63a71cb4333cefa2::1742382245::res://.godot/exported/133200997/export-77f6d36329caef8325d05ddb03010129-main_title.scn
 res://scenes/now_playing.tscn::7625be61dc0301ec08f7c32f9591def1::1733960919::res://.godot/exported/133200997/export-4c71c172afa3322a5042622a8ea40996-now_playing.scn
 res://scenes/parallax_background.tscn::b408b4167dd8dafd626abe19ae55df4d::1740612356::res://.godot/exported/133200997/export-28a5d3ea6b3c3faa0faa2e2aea9d06f9-parallax_background.scn
 res://scenes/parallax_bg.tscn::4391b90073758e94ffbc9f52bc9ea48e::1741898331::res://.godot/exported/133200997/export-0b5dbed2eb66c7ef560a6c05a8950315-parallax_bg.scn
@@ -48,4 +48,4 @@ res://addons/dialogue_manager/views/main_view.tscn::c3c9a6ffcbae1c1180d896c01e40
 res://addons/dialogue_manager/views/settings_view.tscn::95bd37214f904ca8b67aa104a3e8efca::1741897845::res://.godot/exported/133200997/export-e616ee8b42797cb31c0c61fda637fec0-settings_view.scn
 res://addons/dialogue_manager/dialogue_label.tscn::d1cd2e100a3ba7c1d71909b273c69ab4::1741897845::res://.godot/exported/133200997/export-e41b7d5321416240678013b406b79557-dialogue_label.scn
 res://addons/dialogue_manager/test_scene.tscn::d2a49979fbd5dec1a89649e2cbd76d8e::1741897845::res://.godot/exported/133200997/export-74a175fe1e216df3bdf79c5c27a2ac2c-test_scene.scn
-res://default_bus_layout.tres::fcfa114f40974afa85338ea417a234d0::1742331519::res://.godot/exported/133200997/export-19246414aa9fb561ced4b8dce477acec-default_bus_layout.res
+res://default_bus_layout.tres::24bce5fcf496509e2fd9233fc7518b1b::1742382243::res://.godot/exported/133200997/export-19246414aa9fb561ced4b8dce477acec-default_bus_layout.res
