@@ -2853,7 +2853,6 @@ visible = false
 position = Vector2(-178, -50)
 
 [node name="controls" parent="." instance=ExtResource("13_6l3gg")]
-visible = false
 
 [node name="TutorialFade" parent="." instance=ExtResource("42_tlf01")]
 texture_filter = 1
