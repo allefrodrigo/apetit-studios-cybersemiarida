@@ -20,8 +20,8 @@
             "scale": 0.33,
             "selectedLayer": 0,
             "viewCenter": {
-                "x": 2560.60606060606,
-                "y": 477.27272727272737
+                "x": 2559.090909090909,
+                "y": 477.27272727272725
             }
         },
         "Cafundo_01.tmx#tileset_cafundo": {
@@ -40,22 +40,22 @@
             "selectedLayer": 4,
             "viewCenter": {
                 "x": 6536,
-                "y": 674
+                "y": 710
             }
         },
         "Mapa/cafundó_03.tmx": {
-            "scale": 0.33,
-            "selectedLayer": 2,
+            "scale": 3,
+            "selectedLayer": 3,
             "viewCenter": {
-                "x": 1939.3939393939393,
-                "y": 489.3939393939395
+                "x": 927.6666666666665,
+                "y": 742.5
             }
         },
         "Rules/Autotile_Rules.tmx": {
             "scale": 3,
             "selectedLayer": 2,
             "viewCenter": {
-                "x": 930.6666666666665,
+                "x": 930.5,
                 "y": 320.16666666666663
             }
         },
@@ -93,12 +93,12 @@
     "last.externalTilesetPath": "C:/Users/v-vbt/OneDrive/Documentos/GitHub/apetit-studios-cybersemiarida/levels/Level_design/TILED/CSA/Tileset",
     "last.imagePath": "C:/Users/v-vbt/OneDrive/Documentos/GitHub/apetit-studios-cybersemiarida/assets/Water",
     "lastUsedTilesetExportFilter": "Todos os Ficheiros (*)",
-    "map.height": 100,
+    "map.height": 160,
     "map.lastUsedExportFilter": "Ficheiro de Cena do Godot 4 (*.tscn)",
     "map.lastUsedFormat": "tmx",
     "map.tileHeight": 16,
     "map.tileWidth": 16,
-    "map.width": 400,
+    "map.width": 200,
     "mapScene.enableWorlds": true,
     "openFiles": [
         "Cafundo_01.tmx",

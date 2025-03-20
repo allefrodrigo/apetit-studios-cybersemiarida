@@ -27,10 +27,8 @@
   </objectgroup>
  </tile>
  <tile id="32">
-  <objectgroup draworder="index" id="2">
-   <object id="5" type="Oneway_Esq_Cima" x="0.272727" y="0.181818">
-    <polygon points="0,0 15.5968,-0.00790514 15.5968,0.644269 0.596838,0.644269 0.770751,15.6008 -0.185771,15.5573"/>
-   </object>
+  <objectgroup>
+   <object id="1" type="Oneway_Cima" x="0" y="0" width="16" height="1"/>
   </objectgroup>
  </tile>
  <tile id="33">
@@ -49,10 +47,8 @@
   </objectgroup>
  </tile>
  <tile id="36">
-  <objectgroup draworder="index" id="2">
-   <object id="2" type="Oneway_Dir_Cima" x="-0.0434783" y="0.0869565">
-    <polygon points="0,0 15.913,0 15.9565,15.6522 15.3478,15.5652 15.1739,0.652174 0.0869565,0.652174"/>
-   </object>
+  <objectgroup>
+   <object id="1" type="Oneway_Cima" x="0" y="0" width="16" height="1"/>
   </objectgroup>
  </tile>
  <tile id="38">
@@ -105,16 +101,6 @@
    <object id="1" type="Plataforma" x="0" y="0" width="16" height="16"/>
   </objectgroup>
  </tile>
- <tile id="57">
-  <objectgroup draworder="index" id="3">
-   <object id="2" type="Oneway_Esq" x="0" y="0" width="0.727273" height="16"/>
-  </objectgroup>
- </tile>
- <tile id="61">
-  <objectgroup draworder="index" id="2">
-   <object id="1" type="Oneway_Dir" x="15.3478" y="0" width="0.652174" height="16"/>
-  </objectgroup>
- </tile>
  <tile id="63">
   <objectgroup>
    <object id="1" type="Plataforma" x="0" y="0" width="16" height="16"/>
@@ -163,16 +149,6 @@
  <tile id="80">
   <objectgroup>
    <object id="1" type="Plataforma" x="0" y="0" width="16" height="16"/>
-  </objectgroup>
- </tile>
- <tile id="82">
-  <objectgroup>
-   <object id="1" type="Oneway_Esq" x="0" y="0" width="0.727273" height="16"/>
-  </objectgroup>
- </tile>
- <tile id="86">
-  <objectgroup>
-   <object id="1" type="Oneway_Dir" x="15.3478" y="0" width="0.652174" height="16"/>
   </objectgroup>
  </tile>
  <tile id="88">
@@ -238,16 +214,6 @@
  <tile id="105">
   <objectgroup>
    <object id="1" type="Plataforma" x="0" y="0" width="16" height="16"/>
-  </objectgroup>
- </tile>
- <tile id="107">
-  <objectgroup>
-   <object id="1" type="Oneway_Esq" x="0" y="0" width="0.727273" height="16"/>
-  </objectgroup>
- </tile>
- <tile id="111">
-  <objectgroup>
-   <object id="1" type="Oneway_Dir" x="15.3478" y="0" width="0.652174" height="16"/>
   </objectgroup>
  </tile>
  <tile id="113">
