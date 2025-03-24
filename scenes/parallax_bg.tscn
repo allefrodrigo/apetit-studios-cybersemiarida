@@ -149,7 +149,7 @@ repeat_times = 3
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Cloud4"]
 texture_filter = 1
-position = Vector2(408.667, -71.3333)
+position = Vector2(438.667, -186.667)
 scale = Vector2(0.101106, 0.101106)
 texture = ExtResource("4_an7wo")
 centered = false
@@ -167,7 +167,7 @@ centered = false
 
 [node name="Bird" type="Parallax2D" parent="ParallaxBackground"]
 scale = Vector2(1.5, 1.5)
-repeat_size = Vector2(544, 0)
+repeat_size = Vector2(600, 0)
 autoscroll = Vector2(-30, 0)
 repeat_times = 3
 
@@ -235,3 +235,18 @@ texture_filter = 1
 material = SubResource("ShaderMaterial_1gw6j")
 texture = ExtResource("9_u0a06")
 centered = false
+
+[node name="ColorRect" type="ColorRect" parent="ParallaxBackground/Plants_Far2"]
+offset_left = -0.666665
+offset_top = 180.0
+offset_right = 272.333
+offset_bottom = 284.0
+color = Color(0.0588235, 0.333333, 0.243137, 1)
+
+[node name="Sprite2D2" type="Sprite2D" parent="ParallaxBackground/Plants_Far2"]
+texture_filter = 1
+material = SubResource("ShaderMaterial_1gw6j")
+position = Vector2(-2, 151.333)
+texture = ExtResource("9_u0a06")
+centered = false
+flip_v = true
