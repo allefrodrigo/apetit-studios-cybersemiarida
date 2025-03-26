@@ -7,7 +7,6 @@ extends Area2D
 func _ready() -> void:
 	# Deixe o ColorRect visível desde o início
 	color_rect.visible = true
-
 	connect("body_entered", Callable(self, "_on_body_entered"))
 
 func _on_body_entered(body: Node) -> void:
@@ -30,18 +29,22 @@ func handle_goal_reached(player: Node) -> void:
 	if player_camera and player_camera.is_current():
 		player_camera.set_process_mode(Camera2D.PROCESS_MODE_DISABLED)
 
-	# Ativa a câmera fixa
-	var fixed_camera = get_parent().get_node("CameraFixed")
+	# Tenta obter a câmera fixa
+	var fixed_camera = get_parent().get_node_or_null("CameraFixed")
 	if fixed_camera:
 		fixed_camera.make_current()
-
+	else:
+		print("[GOAL] Câmera fixa não encontrada. Pulando espera.")
+	
 	# Aguarda um tempo antes de checar se o player saiu do viewport
 	await get_tree().create_timer(1.5).timeout
 
-	# Espera o player sair da tela
-	await wait_until_player_leaves_screen(player, fixed_camera)
+	# Se a câmera fixa existir, espera o player sair da tela
+	if fixed_camera:
+		await wait_until_player_leaves_screen(player, fixed_camera)
+		print("[GOAL] Player saiu do viewport.")
 
-	print("[GOAL] Player saiu do viewport. Mudando para a próxima cena.")
+	print("[GOAL] Mudando para a próxima cena.")
 	if next_scene_path.is_empty():
 		push_error("[GOAL] ERRO: next_scene_path não foi definido!")
 		return
@@ -50,7 +53,9 @@ func handle_goal_reached(player: Node) -> void:
 
 func wait_until_player_leaves_screen(player: Node, fixed_camera: Camera2D) -> void:
 	var viewport_size = get_viewport().get_visible_rect().size
+	print("[GOAL] Iniciando loop para checar se player saiu do viewport da câmera fixa.")
 	while true:
+		# Converte a posição global do player para o espaço local da câmera fixa
 		var local_pos = fixed_camera.to_local(player.global_position)
 		var screen_rect = Rect2(Vector2.ZERO, viewport_size)
 
@@ -59,3 +64,4 @@ func wait_until_player_leaves_screen(player: Node, fixed_camera: Camera2D) -> vo
 			break
 
 		await get_tree().process_frame
+	print("[GOAL] Encerrando loop de espera (player saiu do viewport).")
