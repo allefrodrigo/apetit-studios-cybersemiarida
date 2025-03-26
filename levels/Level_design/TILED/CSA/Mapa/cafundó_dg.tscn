@@ -1,8 +1,10 @@
-[gd_scene load_steps=6 format=3]
+[gd_scene load_steps=9 format=3 uid="uid://bw1uyyxsccc3r"]
 
-
-[ext_resource type="Texture2D" path="res://levels/Level_design/Tilesets/Dungeon_Ground_Tileset.png" id="Dungeon_Ground_Tileset"]
-[ext_resource type="Texture2D" path="res://levels/Level_design/Tilesets/tileset_cafundo.png" id="tileset_cafundo"]
+[ext_resource type="PackedScene" uid="uid://dwo7sqxi3mg1h" path="res://scenes/parallax_bg_dungeon.tscn" id="3_8tjxy"]
+[ext_resource type="PackedScene" uid="uid://bapvy71043313" path="res://Player/player.tscn" id="4_a1c18"]
+[ext_resource type="PackedScene" uid="uid://6x1esumef4rj" path="res://scenes/goal.tscn" id="5_yf7ts"]
+[ext_resource type="Texture2D" uid="uid://bc3njw6xo37qa" path="res://levels/Level_design/Tilesets/Dungeon_Ground_Tileset.png" id="Dungeon_Ground_Tileset"]
+[ext_resource type="Texture2D" uid="uid://iq5o5bvwxmgs" path="res://levels/Level_design/Tilesets/tileset_cafundo.png" id="tileset_cafundo"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0"]
 texture = ExtResource("Dungeon_Ground_Tileset")
@@ -573,15 +575,17 @@ texture = ExtResource("tileset_cafundo")
 14:20/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_0"]
-tile_shape = 0
-tile_layout = 0
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_0")
 sources/1 = SubResource("TileSetAtlasSource_1")
 
 [node name="cafundó_dg" type="Node2D"]
 
+[node name="ParallaxBg" parent="." instance=ExtResource("3_8tjxy")]
+position = Vector2(1153, 806)
+
 [node name="TileMap" type="TileMap" parent="."]
+texture_filter = 1
 tile_set = SubResource("TileSet_0")
 format = 2
 layer_0/name = "prototype"
@@ -591,7 +595,10 @@ layer_1/tile_data = PackedInt32Array(0, 196608, 3, 1, 196608, 3, 2, 196608, 3, 3
 layer_2/name = "assets"
 layer_2/tile_data = PackedInt32Array(655450, 720897, 18, 655451, 720897, 18, 655452, 786433, 18, 655453, 851969, 18, 655454, 917505, 18, 655463, 720897, 18, 655464, 786433, 18, 655465, 851969, 18, 655466, 917505, 18, 655467, 720897, 18, 655468, 786433, 18, 655469, 851969, 18, 655470, 917505, 18, 655471, 720897, 18, 655472, 786433, 18, 655473, 851969, 18, 655474, 917505, 18, 852022, 720897, 18, 852023, 786433, 18, 852024, 851969, 18, 852025, 917505, 18, 852026, 851969, 18, 852027, 917505, 18, 852028, 720897, 18, 852029, 786433, 18, 852030, 851969, 18, 852031, 917505, 18, 852032, 720897, 18, 852033, 786433, 18, 852034, 851969, 18, 852035, 917505, 18, 852036, 720897, 18, 852037, 786433, 18, 852038, 851969, 18, 852039, 917505, 18, 852040, 720897, 18, 852041, 786433, 18, 852042, 851969, 18, 852043, 917505, 18, 3735630, 720897, 18, 3735631, 786433, 18, 3735632, 851969, 18, 3735633, 917505, 18, 3735634, 720897, 18, 3735635, 786433, 18, 3735636, 851969, 18, 3735637, 917505, 18, 3735638, 720897, 18, 3735639, 786433, 18, 3735640, 851969, 18, 3735641, 917505, 18, 3735642, 720897, 18, 3735643, 786433, 18, 3735644, 851969, 18, 3735645, 917505, 18, 3735646, 720897, 18, 3735647, 786433, 18, 3735648, 720897, 18, 3735649, 786433, 18, 3735650, 851969, 18, 3735651, 917505, 18, 4587575, 655361, 18, 4653111, 655361, 18, 4718647, 655361, 18, 4784183, 655361, 18, 4849719, 655361, 18, 4915251, 655361, 18, 4915252, 655361, 18, 4915253, 655361, 18, 4915254, 655361, 18, 4980787, 655361, 18, 4980788, 655361, 18, 4980789, 655361, 18, 4980790, 655361, 18, 6160444, 720897, 18, 6160445, 786433, 18, 6160446, 851969, 18, 6160447, 917505, 18, 6160448, 720897, 18, 6160449, 786433, 18, 6160450, 851969, 18, 6160451, 917505, 18, 6160452, 720897, 18, 6160453, 786433, 18, 6160454, 851969, 18, 6160455, 917505, 18, 6160456, 720897, 18, 6160457, 786433, 18, 6160458, 851969, 18, 6160459, 917505, 18, 6160460, 720897, 18, 6160461, 786433, 18, 6160462, 851969, 18, 6160463, 917505, 18, 6160464, 720897, 18, 6160465, 786433, 18, 6160466, 851969, 18, 6160467, 917505, 18, 6160468, 720897, 18, 6160469, 786433, 18, 6160470, 851969, 18, 6160471, 917505, 18, 6160472, 720897, 18, 6160473, 786433, 18, 6160474, 851969, 18, 6160475, 917505, 18, 6226090, 720897, 18, 6226091, 786433, 18, 6226092, 786433, 18, 6226093, 851969, 18, 6226094, 786433, 18, 6226095, 851969, 18, 6226096, 786433, 18, 6226097, 851969, 18, 6226098, 786433, 18, 6226099, 851969, 18, 6226100, 786433, 18, 6226101, 851969, 18, 6226102, 786433, 18, 6226103, 851969, 18, 6226104, 917505, 18)
 layer_3/name = "sombras"
-layer_3/tile_data = PackedInt32Array()
 layer_4/name = "sombras 2"
-layer_4/tile_data = PackedInt32Array()
 
+[node name="Player" parent="." instance=ExtResource("4_a1c18")]
+position = Vector2(301, 1338)
+
+[node name="Area2D" parent="." instance=ExtResource("5_yf7ts")]
+position = Vector2(2777, 2488)
