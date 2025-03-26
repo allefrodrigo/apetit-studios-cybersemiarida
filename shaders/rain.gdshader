@@ -1,51 +1,59 @@
 shader_type canvas_item;
 
-#define iResolution 1.0/SCREEN_PIXEL_SIZE
-#define iTime TIME
-#define fragColor COLOR
+// Declara o sampler2D para a tela.
+// Em Godot 4.x é preciso usar hint_screen_texture.
+uniform sampler2D SCREEN_TEXTURE : hint_screen_texture;
 
-uniform sampler2D iChannel0;
-uniform float frequency : hint_range(-10.0, 4.0, 0.1) = 2.0; // Aumentado o valor padrão
-uniform float size : hint_range(0.001, 0.05, 0.001) = 0.008; // Reduzido o tamanho
+// Color correction mode
+// 0 - Protanopia
+// 1 - Deuteranopia
+// 2 - Tritanopia
+uniform int mode : hint_range(0, 2) = 0;
 
-vec2 rand(vec2 c){
-    mat2 m = mat2(vec2(12.9898,.16180),vec2(78.233,.31415));
-    return fract(sin(m * c) * vec2(43758.5453, 14142.1));
-}
-
-vec2 noise(vec2 p){
-    vec2 co = floor(p);
-    vec2 mu = fract(p);
-    mu = 3.*mu*mu-2.*mu*mu*mu;
-    vec2 a = rand((co+vec2(0.,0.)));
-    vec2 b = rand((co+vec2(1.,0.)));
-    vec2 c = rand((co+vec2(0.,1.)));
-    vec2 d = rand((co+vec2(1.,1.)));
-    return mix(mix(a, b, mu.x), mix(c, d, mu.x), mu.y);
-}
+uniform float intensity : hint_range(0.0, 1.0) = 1.0;
 
 void fragment()
 {
-    vec2 u = UV,
-         v = UV * 0.05, // Reduzido para suavizar o deslocamento
-         n = noise(v*100.); // Reduzido para 100 para suavizar o ruído
+    // Usa a nova forma de amostrar a tela
+    // Se "SCREEN_UV" não funcionar em sua versão, troque por "UV".
+    vec4 tex = texture(SCREEN_TEXTURE, SCREEN_UV);
 
-    fragColor = textureLod(iChannel0, u, 1.5); // Reduzido o nível de detalhe
+    float L = (17.8824 * tex.r) + (43.5161 * tex.g) + (4.11935 * tex.b);
+    float M = (3.45565 * tex.r) + (27.1554 * tex.g) + (3.86714 * tex.b);
+    float S = (0.0299566 * tex.r) + (0.184309 * tex.g) + (1.46709 * tex.b);
 
-    for (float r = 4. ; r > frequency ; r--) {
-        vec2 x = iResolution.xy * r * size,
-             p = 6.28 * u * x + (n - .5) * 1.5, // Reduzido o fator de deslocamento
-             s = sin(p);
-
-        vec2 v = round(u * x - 0.25) / x;
-        vec4 d = vec4(noise(v*100.), noise(v)); // Reduzido para 100
-
-        float t = (s.x+s.y) * max(0., 1. - fract(iTime * (d.b + .05) + d.g) * 1.5); // Reduzido a velocidade e intensidade
-
-        if (d.r < (5.-r)*.06 && t > .6) { // Ajustado os limiares
-            vec3 v = normalize(-vec3(cos(p), mix(.1, 1.5, t-.6))); // Reduzido o range do mix
-
-            fragColor = texture(iChannel0, u - v.xy * .2); // Reduzido o fator de refração
-        }
+    float l, m, s;
+    if (mode == 0) { // Protanopia
+        l = 0.0 * L + 2.02344 * M + -2.52581 * S;
+        m = 0.0 * L + 1.0 * M + 0.0 * S;
+        s = 0.0 * L + 0.0 * M + 1.0 * S;
     }
+
+    if (mode == 1) { // Deuteranopia
+        l = 1.0 * L + 0.0 * M + 0.0 * S;
+        m = 0.494207 * L + 0.0 * M + 1.24827 * S;
+        s = 0.0 * L + 0.0 * M + 1.0 * S;
+    }
+
+    if (mode == 2) { // Tritanopia
+        l = 1.0 * L + 0.0 * M + 0.0 * S;
+        m = 0.0 * L + 1.0 * M + 0.0 * S;
+        s = -0.395913 * L + 0.801109 * M + 0.0 * S;
+    }
+
+    vec4 error;
+    error.r = (0.0809444479 * l) + (-0.130504409 * m) + (0.116721066 * s);
+    error.g = (-0.0102485335 * l) + (0.0540193266 * m) + (-0.113614708 * s);
+    error.b = (-0.000365296938 * l) + (-0.00412161469 * m) + (0.693511405 * s);
+    error.a = 1.0;
+
+    vec4 diff = tex - error;
+    vec4 correction;
+    correction.r = 0.0;
+    correction.g = (diff.r * 0.7) + (diff.g * 1.0);
+    correction.b = (diff.r * 0.7) + (diff.b * 1.0);
+    correction = tex + correction;
+    correction.a = tex.a * intensity;
+
+    COLOR = correction;
 }

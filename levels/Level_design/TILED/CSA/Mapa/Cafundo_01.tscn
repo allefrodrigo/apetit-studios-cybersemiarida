@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://chaq1nmpk6kxy"]
+[gd_scene load_steps=17 format=3 uid="uid://chaq1nmpk6kxy"]
 
 [ext_resource type="Texture2D" uid="uid://p72xbq7jyfgn" path="res://levels/Placa_Cyber_Semiarida.png" id="2_tnl2m"]
 [ext_resource type="PackedScene" uid="uid://cls1bhrmlht6k" path="res://scenes/parallax_bg.tscn" id="4_2nxsj"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://6x1esumef4rj" path="res://scenes/goal.tscn" id="6_tnen5"]
 [ext_resource type="PackedScene" uid="uid://dbnnn8x7jpx30" path="res://parede_colisao.tscn" id="9_2jj3n"]
 [ext_resource type="PackedScene" uid="uid://dwwuffuaonhbe" path="res://prefabs/controls.tscn" id="9_8wwyo"]
+[ext_resource type="Shader" path="res://shaders/rain.gdshader" id="11_lbno6"]
 [ext_resource type="Texture2D" uid="uid://cydesf84vrb6y" path="res://levels/Level_design/Tilesets/tile cruz.png" id="cafundo"]
 [ext_resource type="Texture2D" uid="uid://d124m6kp50ls7" path="res://assets/Water/tile_jungle_water.png" id="tile_jungle_water"]
 [ext_resource type="Texture2D" uid="uid://7s5nhcnt60lt" path="res://levels/Level_design/TILED/CSA/Tileset/water_test.png" id="water_test"]
@@ -335,6 +336,11 @@ sources/0 = SubResource("TileSetAtlasSource_0")
 sources/1 = SubResource("TileSetAtlasSource_1")
 sources/2 = SubResource("TileSetAtlasSource_2")
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_6yu34"]
+shader = ExtResource("11_lbno6")
+shader_parameter/mode = 2
+shader_parameter/intensity = 0.3
+
 [node name="Cafundo_01" type="Node2D"]
 
 [node name="ParallaxBg" parent="." instance=ExtResource("4_2nxsj")]
@@ -378,3 +384,11 @@ position = Vector2(399, 464)
 [node name="Area2D2" parent="." instance=ExtResource("9_2jj3n")]
 
 [node name="controls" parent="." instance=ExtResource("9_8wwyo")]
+visible = false
+
+[node name="Daltonismo" type="ColorRect" parent="."]
+visible = false
+material = SubResource("ShaderMaterial_6yu34")
+offset_top = -599.0
+offset_right = 5478.0
+offset_bottom = 1422.0

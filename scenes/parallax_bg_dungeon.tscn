@@ -1,0 +1,146 @@
+[gd_scene load_steps=16 format=3 uid="uid://dwo7sqxi3mg1h"]
+
+[ext_resource type="Texture2D" uid="uid://dj3p8w03cgot7" path="res://scenes/1.png" id="1_wuhk5"]
+[ext_resource type="Texture2D" uid="uid://ccr701hb6m4hw" path="res://scenes/2.png" id="2_srhfu"]
+[ext_resource type="Texture2D" uid="uid://dbuxorqesy6ih" path="res://scenes/3.png" id="4_sp8om"]
+[ext_resource type="Texture2D" uid="uid://d0qcg6enkblkl" path="res://scenes/4.png" id="5_omqwh"]
+[ext_resource type="Texture2D" uid="uid://bss5rkqgp4mp3" path="res://assets/background/Passaros_Animation.png" id="6_h8l4e"]
+[ext_resource type="Texture2D" uid="uid://cr54bwjdj7fpb" path="res://scenes/5.png" id="7_e44di"]
+[ext_resource type="Shader" path="res://shaders/arbusto.gdshader" id="11_72g2a"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8twc2"]
+atlas = ExtResource("6_h8l4e")
+region = Rect2(0, 0, 24, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_efbld"]
+atlas = ExtResource("6_h8l4e")
+region = Rect2(24, 0, 24, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kqx7d"]
+atlas = ExtResource("6_h8l4e")
+region = Rect2(48, 0, 24, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l5v2g"]
+atlas = ExtResource("6_h8l4e")
+region = Rect2(72, 0, 24, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c5qpi"]
+atlas = ExtResource("6_h8l4e")
+region = Rect2(96, 0, 24, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6huwv"]
+atlas = ExtResource("6_h8l4e")
+region = Rect2(120, 0, 24, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lwtyo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8twc2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_efbld")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kqx7d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l5v2g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c5qpi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6huwv")
+}],
+"loop": true,
+"name": &"bird",
+"speed": 5.0
+}]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_1gw6j"]
+shader = ExtResource("11_72g2a")
+shader_parameter/speed = 1.0
+shader_parameter/minStrength = 0.05
+shader_parameter/maxStrength = 0.01
+shader_parameter/strengthScale = 100.0
+shader_parameter/interval = 3.5
+shader_parameter/detail = 1.0
+shader_parameter/distortion = null
+shader_parameter/heightOffset = null
+shader_parameter/offset = 0.0
+
+[node name="ParallaxBg" type="Node2D"]
+position = Vector2(3, -29)
+
+[node name="ParallaxBackground" type="Node2D" parent="."]
+
+[node name="Sky" type="Parallax2D" parent="ParallaxBackground"]
+scale = Vector2(1.5, 1.5)
+repeat_size = Vector2(272, 0)
+repeat_times = 3
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Sky"]
+texture_filter = 1
+texture = ExtResource("1_wuhk5")
+centered = false
+
+[node name="Mountain" type="Parallax2D" parent="ParallaxBackground"]
+scale = Vector2(1.5, 1.5)
+scroll_scale = Vector2(0.7, 0.7)
+repeat_size = Vector2(272, 0)
+repeat_times = 3
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Mountain"]
+texture_filter = 1
+texture = ExtResource("2_srhfu")
+centered = false
+
+[node name="Bird" type="Parallax2D" parent="ParallaxBackground"]
+scale = Vector2(1.5, 1.5)
+repeat_size = Vector2(600, 0)
+autoscroll = Vector2(-30, 0)
+repeat_times = 3
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="ParallaxBackground/Bird"]
+texture_filter = 1
+position = Vector2(106.667, 53.3333)
+sprite_frames = SubResource("SpriteFrames_lwtyo")
+animation = &"bird"
+autoplay = "bird"
+frame_progress = 0.9192
+
+[node name="Mountain_Near" type="Parallax2D" parent="ParallaxBackground"]
+scale = Vector2(1.5, 1.5)
+scroll_scale = Vector2(0.8, 0.8)
+repeat_size = Vector2(272, 0)
+repeat_times = 3
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Mountain_Near"]
+texture_filter = 1
+texture = ExtResource("4_sp8om")
+centered = false
+
+[node name="Plants_Far" type="Parallax2D" parent="ParallaxBackground"]
+scale = Vector2(1.5, 1.5)
+scroll_scale = Vector2(0.9, 0.9)
+repeat_size = Vector2(272, 0)
+repeat_times = 3
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Plants_Far"]
+texture_filter = 1
+texture = ExtResource("5_omqwh")
+centered = false
+
+[node name="Plants_Far2" type="Parallax2D" parent="ParallaxBackground"]
+scale = Vector2(1.5, 1.5)
+scroll_scale = Vector2(0.9, 0.9)
+scroll_offset = Vector2(-1, 20)
+repeat_size = Vector2(272, 0)
+repeat_times = 3
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Plants_Far2"]
+texture_filter = 1
+material = SubResource("ShaderMaterial_1gw6j")
+texture = ExtResource("7_e44di")
+centered = false
