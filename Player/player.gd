@@ -51,6 +51,11 @@ func _physics_process(delta: float) -> void:
 
 	move_and_slide()
 	
+	for platforms in get_slide_collision_count():
+		var collision = get_slide_collision(platforms)
+		if collision.get_collider().has_method("has_collided_with"):
+			collision.get_collider().has_collided_with(collision, self)
+	
 	# Se acabou de pousar no chão agora, toca o som de queda
 	if not was_on_floor and on_floor:
 		load_sfx(sfx_fall)
