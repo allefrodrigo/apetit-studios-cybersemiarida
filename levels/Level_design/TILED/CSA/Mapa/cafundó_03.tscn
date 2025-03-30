@@ -1,5 +1,6 @@
-[gd_scene load_steps=7 format=3 uid="uid://bemuvsg5wcgy2"]
+[gd_scene load_steps=8 format=3 uid="uid://bemuvsg5wcgy2"]
 
+[ext_resource type="PackedScene" uid="uid://cls1bhrmlht6k" path="res://scenes/parallax_bg.tscn" id="1_gwo73"]
 [ext_resource type="PackedScene" uid="uid://bapvy71043313" path="res://Player/player.tscn" id="2_ig0c1"]
 [ext_resource type="PackedScene" uid="uid://6x1esumef4rj" path="res://scenes/goal.tscn" id="3_4t4ci"]
 [ext_resource type="PackedScene" uid="uid://bqa760f4vreov" path="res://prefabs/falling_platform.tscn" id="4_kx5jq"]
@@ -330,6 +331,9 @@ sources/0 = SubResource("TileSetAtlasSource_0")
 
 [node name="cafundó_03" type="Node2D"]
 
+[node name="ParallaxBg" parent="." instance=ExtResource("1_gwo73")]
+position = Vector2(410, 510)
+
 [node name="TileMap" type="TileMap" parent="."]
 texture_filter = 1
 tile_set = SubResource("TileSet_0")
@@ -361,4 +365,4 @@ position = Vector2(3120, 522)
 position = Vector2(2615, 607)
 
 [node name="Player" parent="." instance=ExtResource("2_ig0c1")]
-position = Vector2(281, 758)
+position = Vector2(275, 739)
