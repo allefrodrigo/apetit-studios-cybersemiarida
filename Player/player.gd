@@ -9,6 +9,7 @@ const COYOTE_TIME = 0.2
 @export var sfx_jump : AudioStream
 @export var sfx_footstep : AudioStream
 @export var sfx_fall : AudioStream  # <-- Som de queda
+@onready var camera = $Camera2D  # Ajuste o caminho se necessário
 
 var footstep_frames : Array = [2, 5]
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
@@ -135,3 +136,31 @@ func _on_sprite_frame_changed() -> void:
 	load_sfx(sfx_footstep)
 	if $Sprite.frame in footstep_frames:
 		$sfx_player.play()
+
+func shake_camera(intensity: float = 8.0, duration: float = 0.3) -> void:
+	var rng = RandomNumberGenerator.new()
+	rng.randomize()
+	var shakes = 8
+	var original_offset = camera.offset
+	var shake_tween = create_tween()
+	for i in range(shakes):
+		var random_offset = Vector2(
+			rng.randf_range(-intensity, intensity),
+			rng.randf_range(-intensity, intensity)
+		)	
+		shake_tween.tween_property(
+			camera, 
+			"offset", 
+			random_offset, 
+			duration / (shakes * 2)
+		)
+		shake_tween.tween_property(
+			camera, 
+			"offset", 
+			original_offset, 
+			duration / (shakes * 2)
+		)
+	shake_tween.tween_callback(Callable(self, "_restore_camera_offset"))
+	
+func _restore_camera_offset() -> void:
+	camera.offset = Vector2.ZERO

@@ -23,6 +23,8 @@ func has_collided_with(collision: KinematicCollision2D, collider: CharacterBody2
 		is_triggered = true
 		anim.play("shake")
 		velocity = Vector2.ZERO
+		if collider.has_method("shake_camera"):
+			collider.shake_camera(8, 0.3)  # Ajuste os valores como preferir
 		
 
 
