@@ -7,8 +7,8 @@ extends Node2D
 
 # Variáveis para o movimento
 var fall_speed = 0.01
-var rotation_speed = 10
-var walls_speed = 50
+var rotation_speed = 1
+var walls_speed = 0.1
 
 func _ready():
 	# Verifica se os nós foram atribuídos corretamente
