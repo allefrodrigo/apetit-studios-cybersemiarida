@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://bemuvsg5wcgy2"]
+[gd_scene load_steps=9 format=3 uid="uid://bemuvsg5wcgy2"]
 
 [ext_resource type="PackedScene" uid="uid://cls1bhrmlht6k" path="res://scenes/parallax_bg.tscn" id="1_gwo73"]
 [ext_resource type="PackedScene" uid="uid://bapvy71043313" path="res://Player/player.tscn" id="2_ig0c1"]
 [ext_resource type="PackedScene" uid="uid://6x1esumef4rj" path="res://scenes/goal.tscn" id="3_4t4ci"]
 [ext_resource type="PackedScene" uid="uid://bqa760f4vreov" path="res://prefabs/falling_platform.tscn" id="4_kx5jq"]
+[ext_resource type="PackedScene" uid="uid://dwwuffuaonhbe" path="res://prefabs/controls.tscn" id="6_jmm08"]
 [ext_resource type="Texture2D" uid="uid://iq5o5bvwxmgs" path="res://levels/Level_design/Tilesets/tileset_cafundo.png" id="tileset_cafundo"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0"]
@@ -366,3 +367,5 @@ position = Vector2(2615, 607)
 
 [node name="Player" parent="." instance=ExtResource("2_ig0c1")]
 position = Vector2(275, 739)
+
+[node name="controls" parent="." instance=ExtResource("6_jmm08")]
