@@ -1,7 +1,6 @@
 [gd_scene load_steps=20 format=3 uid="uid://chaq1nmpk6kxy"]
 
 [ext_resource type="Script" path="res://levels/Level_design/TILED/CSA/Mapa/cafundo_01.gd" id="1_ukt4w"]
-[ext_resource type="Texture2D" uid="uid://p72xbq7jyfgn" path="res://levels/Placa_Cyber_Semiarida.png" id="2_tnl2m"]
 [ext_resource type="PackedScene" uid="uid://cls1bhrmlht6k" path="res://scenes/parallax_bg.tscn" id="4_2nxsj"]
 [ext_resource type="Texture2D" uid="uid://cpfen1uhaaw7a" path="res://scenes/sign_forbiden.png" id="4_7j24h"]
 [ext_resource type="PackedScene" uid="uid://bapvy71043313" path="res://Player/player.tscn" id="5_bqhrp"]
@@ -11,6 +10,7 @@
 [ext_resource type="Shader" path="res://shaders/rain.gdshader" id="11_lbno6"]
 [ext_resource type="PackedScene" uid="uid://blpskcxyt3yry" path="res://Player/dona-graca.tscn" id="13_twaow"]
 [ext_resource type="PackedScene" uid="uid://bn4sgxqrg1y63" path="res://prefabs/pop_up.tscn" id="14_1n6rp"]
+[ext_resource type="Texture2D" uid="uid://crggrq0ygw5b3" path="res://scenes/World/Props/taipa-house-solar.png" id="14_12flb"]
 [ext_resource type="Texture2D" uid="uid://cydesf84vrb6y" path="res://levels/Level_design/Tilesets/tile cruz.png" id="cafundo"]
 [ext_resource type="Texture2D" uid="uid://d124m6kp50ls7" path="res://assets/Water/tile_jungle_water.png" id="tile_jungle_water"]
 [ext_resource type="Texture2D" uid="uid://7s5nhcnt60lt" path="res://levels/Level_design/TILED/CSA/Tileset/water_test.png" id="water_test"]
@@ -350,10 +350,10 @@ script = ExtResource("1_ukt4w")
 [node name="ParallaxBg" parent="." instance=ExtResource("4_2nxsj")]
 position = Vector2(410, 235)
 
-[node name="PlacaCyberSemiarida" type="Sprite2D" parent="."]
+[node name="Taipa-house-solar" type="Sprite2D" parent="."]
 texture_filter = 1
-position = Vector2(417, 448)
-texture = ExtResource("2_tnl2m")
+position = Vector2(460, 433)
+texture = ExtResource("14_12flb")
 
 [node name="Goal" parent="." instance=ExtResource("6_tnen5")]
 position = Vector2(4954, 169)
@@ -400,4 +400,6 @@ offset_bottom = 1422.0
 position = Vector2(560, 452)
 
 [node name="pop_up" parent="." instance=ExtResource("14_1n6rp")]
-position = Vector2(648, 422)
+position = Vector2(4525, 348)
+collision_layer = 1
+collision_mask = 2

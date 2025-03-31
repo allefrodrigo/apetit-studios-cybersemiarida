@@ -4,14 +4,14 @@
 [ext_resource type="Script" path="res://prefabs/hit_pop.gd" id="2_1psdk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ygc1w"]
-size = Vector2(17, 15)
+size = Vector2(15.75, 15.375)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s3gga"]
 size = Vector2(16, 4)
 
 [node name="pop_up" type="StaticBody2D"]
 position = Vector2(613, 414)
-collision_mask = 2
+collision_layer = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
@@ -19,7 +19,7 @@ position = Vector2(1, 2)
 texture = ExtResource("1_c6cpp")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(3, 2)
+position = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_ygc1w")
 
 [node name="hit_pop" type="Area2D" parent="."]
@@ -29,7 +29,7 @@ script = ExtResource("2_1psdk")
 dialog_texts = Array[String](["Pulo no abismo, nao importa o que te digam", "Fume maconhaTexto 2", "Sério estou com fomo", "Testex"])
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="hit_pop"]
-position = Vector2(2, 8)
+position = Vector2(-1, 7)
 shape = SubResource("RectangleShape2D_s3gga")
 
 [connection signal="body_entered" from="hit_pop" to="hit_pop" method="_on_body_entered"]
