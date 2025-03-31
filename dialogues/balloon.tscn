@@ -1,6 +1,7 @@
-[gd_scene load_steps=10 format=3 uid="uid://cegaolta0futx"]
+[gd_scene load_steps=11 format=3 uid="uid://cegaolta0futx"]
 
 [ext_resource type="Script" path="res://dialogues/balloon.gd" id="1_s2gbs"]
+[ext_resource type="Texture2D" uid="uid://bnofkyygwqkww" path="res://Interface.png" id="2_5i4rn"]
 [ext_resource type="PackedScene" uid="uid://ckvgyvclnwggo" path="res://addons/dialogue_manager/dialogue_label.tscn" id="2_hfvdi"]
 [ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_reponses_menu.gd" id="3_1j1j0"]
 
@@ -103,7 +104,8 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = SubResource("Theme_qq3yp")
 
-[node name="Panel" type="Panel" parent="Balloon"]
+[node name="Panel" type="NinePatchRect" parent="Balloon"]
+texture_filter = 1
 layout_mode = 1
 anchors_preset = 12
 anchor_top = 1.0
@@ -115,9 +117,16 @@ offset_right = -4.0
 offset_bottom = -4.0
 grow_horizontal = 2
 grow_vertical = 0
+texture = ExtResource("2_5i4rn")
+region_rect = Rect2(65.1431, 0.00685525, 64.0089, 64.0085)
+patch_margin_left = 10
+patch_margin_top = 14
+patch_margin_right = 10
+patch_margin_bottom = 16
 
 [node name="Dialogue" type="MarginContainer" parent="Balloon/Panel"]
-modulate = Color(1, 1, 0, 1)
+modulate = Color(0.028208, 0.0101333, 0.00575702, 1)
+texture_filter = 1
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0

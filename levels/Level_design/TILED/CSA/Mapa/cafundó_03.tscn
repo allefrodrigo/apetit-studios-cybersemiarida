@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://bemuvsg5wcgy2"]
+[gd_scene load_steps=11 format=3 uid="uid://bemuvsg5wcgy2"]
 
 [ext_resource type="PackedScene" uid="uid://cls1bhrmlht6k" path="res://scenes/parallax_bg.tscn" id="1_gwo73"]
 [ext_resource type="PackedScene" uid="uid://bapvy71043313" path="res://Player/player.tscn" id="2_ig0c1"]
 [ext_resource type="PackedScene" uid="uid://6x1esumef4rj" path="res://scenes/goal.tscn" id="3_4t4ci"]
 [ext_resource type="PackedScene" uid="uid://bqa760f4vreov" path="res://prefabs/falling_platform.tscn" id="4_kx5jq"]
 [ext_resource type="PackedScene" uid="uid://dwwuffuaonhbe" path="res://prefabs/controls.tscn" id="6_jmm08"]
+[ext_resource type="Shader" path="res://levels/Level_design/TILED/CSA/Mapa/rain.gdshader" id="7_fqgie"]
 [ext_resource type="Texture2D" uid="uid://iq5o5bvwxmgs" path="res://levels/Level_design/Tilesets/tileset_cafundo.png" id="tileset_cafundo"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0"]
@@ -330,10 +331,22 @@ texture = ExtResource("tileset_cafundo")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_0")
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_us3wa"]
+shader = ExtResource("7_fqgie")
+shader_parameter/count = 100
+shader_parameter/slant = 0.1
+shader_parameter/speed = 30.899
+shader_parameter/blur = 0.0015
+shader_parameter/colour = Color(1, 1, 1, 1)
+shader_parameter/size = Vector2(0.005, 0.2)
+
 [node name="cafundó_03" type="Node2D"]
 
 [node name="ParallaxBg" parent="." instance=ExtResource("1_gwo73")]
 position = Vector2(410, 510)
+
+[node name="falling_platform6" parent="." instance=ExtResource("4_kx5jq")]
+position = Vector2(3168, 512)
 
 [node name="TileMap" type="TileMap" parent="."]
 texture_filter = 1
@@ -354,18 +367,38 @@ collision_mask = 2
 next_scene_path = "res://levels/Level_design/TILED/CSA/Mapa/cafundó_dg.tscn"
 
 [node name="falling_platform" parent="." instance=ExtResource("4_kx5jq")]
-position = Vector2(2393, 516)
+position = Vector2(2376, 590)
 
 [node name="falling_platform2" parent="." instance=ExtResource("4_kx5jq")]
-position = Vector2(2495, 574)
+position = Vector2(2701, 503)
 
 [node name="falling_platform3" parent="." instance=ExtResource("4_kx5jq")]
-position = Vector2(3120, 522)
+position = Vector2(2484, 651)
 
 [node name="falling_platform4" parent="." instance=ExtResource("4_kx5jq")]
-position = Vector2(2615, 607)
+position = Vector2(2895, 557)
+
+[node name="falling_platform5" parent="." instance=ExtResource("4_kx5jq")]
+position = Vector2(3013, 435)
+
+[node name="falling_platform7" parent="." instance=ExtResource("4_kx5jq")]
+position = Vector2(2593, 588)
+
+[node name="falling_platform8" parent="." instance=ExtResource("4_kx5jq")]
+position = Vector2(2377, 701)
+
+[node name="falling_platform9" parent="." instance=ExtResource("4_kx5jq")]
+position = Vector2(2791, 437)
 
 [node name="Player" parent="." instance=ExtResource("2_ig0c1")]
-position = Vector2(275, 739)
+position = Vector2(3229, 491)
 
 [node name="controls" parent="." instance=ExtResource("6_jmm08")]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+material = SubResource("ShaderMaterial_us3wa")
+offset_left = 2285.0
+offset_top = 214.0
+offset_right = 3527.0
+offset_bottom = 776.0

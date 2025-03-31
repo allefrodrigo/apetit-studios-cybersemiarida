@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://prefabs/hit_pop.gd" id="2_1psdk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ygc1w"]
-size = Vector2(15.75, 15.375)
+size = Vector2(15.75, 14.6875)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s3gga"]
 size = Vector2(16, 4)
@@ -19,7 +19,7 @@ position = Vector2(1, 2)
 texture = ExtResource("1_c6cpp")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(1, 1)
+position = Vector2(1, 1.34375)
 shape = SubResource("RectangleShape2D_ygc1w")
 
 [node name="hit_pop" type="Area2D" parent="."]
