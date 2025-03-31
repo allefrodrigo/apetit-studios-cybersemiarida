@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="beta-cybersemiarida"
+config/name="cybersemiarida"
 run/main_scene="res://scenes/main_title.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
 config/icon="res://icon.svg"
@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 CheckpointManager="*res://singleton/CheckpointManager.gd"
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
+DialogManager="*res://prefabs/dialog_manager.tscn"
 
 [dialogue_manager]
 
@@ -32,6 +33,7 @@ window/size/window_width_override=1904
 window/size/window_height_override=1071
 window/stretch/mode="canvas_items"
 window/stretch/scale=0.7
+window/name="beta-cybersemiarida"
 
 [editor_plugins]
 
