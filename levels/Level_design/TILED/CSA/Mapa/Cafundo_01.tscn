@@ -400,6 +400,6 @@ offset_bottom = 1422.0
 position = Vector2(560, 452)
 
 [node name="pop_up" parent="." instance=ExtResource("14_1n6rp")]
-position = Vector2(657, 426)
+position = Vector2(1516, 606)
 collision_layer = 1
 collision_mask = 2

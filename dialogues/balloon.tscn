@@ -96,6 +96,7 @@ script = ExtResource("1_s2gbs")
 
 [node name="Balloon" type="Control" parent="."]
 unique_name_in_owner = true
+texture_filter = 1
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -118,7 +119,7 @@ offset_bottom = -4.0
 grow_horizontal = 2
 grow_vertical = 0
 texture = ExtResource("2_5i4rn")
-region_rect = Rect2(65.1431, 0.00685525, 64.0089, 64.0085)
+region_rect = Rect2(-0.06987, -0.0691071, 64.0382, 63.7656)
 patch_margin_left = 10
 patch_margin_top = 14
 patch_margin_right = 10

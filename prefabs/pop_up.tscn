@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://bn4sgxqrg1y63"]
 
-[ext_resource type="Texture2D" uid="uid://bbxwngh2nnwwn" path="res://prefabs/bell_box.png" id="1_c6cpp"]
+[ext_resource type="Texture2D" uid="uid://cyo8n3iymuyom" path="res://prefabs/graca_box.png" id="1_cb65k"]
 [ext_resource type="Script" path="res://prefabs/hit_pop.gd" id="2_1psdk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ygc1w"]
@@ -15,8 +15,9 @@ collision_layer = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
-position = Vector2(1, 2)
-texture = ExtResource("1_c6cpp")
+position = Vector2(0.5, 1.5)
+scale = Vector2(0.133929, 0.133929)
+texture = ExtResource("1_cb65k")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(1, 1.34375)
