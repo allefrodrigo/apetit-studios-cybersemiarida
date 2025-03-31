@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://bruuggoajpbgv"]
 
 [ext_resource type="Script" path="res://prefabs/dialog_box.gd" id="1_gjut1"]
-[ext_resource type="Texture2D" uid="uid://di30hpo3hj6xj" path="res://tile_fall.png" id="2_jk17t"]
+[ext_resource type="Texture2D" uid="uid://bnofkyygwqkww" path="res://Interface.png" id="2_la5tu"]
 [ext_resource type="Texture2D" uid="uid://yx40jxeqvri2" path="res://prefabs/ok_button_off.png" id="2_lfbxf"]
 [ext_resource type="Texture2D" uid="uid://bsovlxu0eyjoe" path="res://prefabs/ok_button_on.png" id="3_1c48g"]
 [ext_resource type="FontFile" uid="uid://bfx6vshfsm8us" path="res://fonts/PixelifySans-Regular.ttf" id="3_e8q7x"]
@@ -31,12 +31,12 @@ script = ExtResource("1_gjut1")
 [node name="bg_dialog_box" type="NinePatchRect" parent="."]
 texture_filter = 1
 layout_mode = 2
-texture = ExtResource("2_jk17t")
-region_rect = Rect2(0.814539, 0.81546, 64.4327, 31.9399)
-patch_margin_left = 9
-patch_margin_top = 22
-patch_margin_right = 9
-patch_margin_bottom = 21
+texture = ExtResource("2_la5tu")
+region_rect = Rect2(0.286894, -0.0130038, 63.2068, 63.6915)
+patch_margin_left = 11
+patch_margin_top = 10
+patch_margin_right = 11
+patch_margin_bottom = 11
 
 [node name="text_container" type="MarginContainer" parent="."]
 texture_filter = 1
@@ -49,8 +49,10 @@ theme_override_constants/margin_bottom = 14
 [node name="text_label" type="Label" parent="text_container"]
 custom_minimum_size = Vector2(150, 40)
 layout_mode = 2
+theme_override_colors/font_color = Color(0.690196, 0.447059, 0.345098, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_e8q7x")
-theme_override_font_sizes/font_size = 8
+theme_override_font_sizes/font_size = 10
 vertical_alignment = 1
 autowrap_mode = 2
 
