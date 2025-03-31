@@ -44,3 +44,4 @@ animations = [{
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_33dlg")
 autoplay = "default"
+flip_h = true

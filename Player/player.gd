@@ -24,6 +24,10 @@ var forced_walk_direction = 0  # Se != 0, o player anda sozinho nessa direção
 @onready var animated_sprite: AnimatedSprite2D = $Sprite
 @onready var state_label: Label = $Label
 
+func vibrate(duration_ms: int) -> void:
+	if OS.has_feature("HTML5") and Engine.has_singleton("JavaScript"):
+		Engine.get_singleton("JavaScript").eval("if(navigator.vibrate){navigator.vibrate(" + str(duration_ms) + ");}", "")
+
 func _ready() -> void:
 	add_to_group("player")
 	print("Grupos do jogador:", get_groups())
@@ -78,6 +82,8 @@ func handle_jump() -> void:
 		$sfx_player.play()
 		velocity.y = JUMP_VELOCITY
 		coyote_time_counter = 0
+		vibrate(400)  # Vibração mais longa para o pulo
+
 
 func handle_movement(delta: float) -> void:
 	var direction = Input.get_axis("ui_left", "ui_right")
@@ -136,6 +142,7 @@ func _on_sprite_frame_changed() -> void:
 	load_sfx(sfx_footstep)
 	if $Sprite.frame in footstep_frames:
 		$sfx_player.play()
+		vibrate(50)
 
 func shake_camera(intensity: float = 8.0, duration: float = 0.3) -> void:
 	var rng = RandomNumberGenerator.new()

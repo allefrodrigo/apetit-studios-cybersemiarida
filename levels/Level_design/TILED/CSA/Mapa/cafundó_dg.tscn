@@ -1,8 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://bw1uyyxsccc3r"]
+[gd_scene load_steps=10 format=3 uid="uid://bw1uyyxsccc3r"]
 
 [ext_resource type="PackedScene" uid="uid://dwo7sqxi3mg1h" path="res://scenes/parallax_bg_dungeon.tscn" id="3_8tjxy"]
 [ext_resource type="PackedScene" uid="uid://bapvy71043313" path="res://Player/player.tscn" id="4_a1c18"]
 [ext_resource type="PackedScene" uid="uid://6x1esumef4rj" path="res://scenes/goal.tscn" id="5_yf7ts"]
+[ext_resource type="PackedScene" uid="uid://dwwuffuaonhbe" path="res://prefabs/controls.tscn" id="6_a0re3"]
 [ext_resource type="Texture2D" uid="uid://bc3njw6xo37qa" path="res://levels/Level_design/Tilesets/Dungeon_Ground_Tileset.png" id="Dungeon_Ground_Tileset"]
 [ext_resource type="Texture2D" uid="uid://iq5o5bvwxmgs" path="res://levels/Level_design/Tilesets/tileset_cafundo.png" id="tileset_cafundo"]
 
@@ -603,4 +604,6 @@ collision_mask = 2
 next_scene_path = "res://scenes/main_title.tscn"
 
 [node name="Player" parent="." instance=ExtResource("4_a1c18")]
-position = Vector2(2080, 2424)
+position = Vector2(97, 1204)
+
+[node name="controls" parent="." instance=ExtResource("6_a0re3")]
