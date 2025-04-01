@@ -27,7 +27,7 @@ shape = SubResource("RectangleShape2D_ygc1w")
 position = Vector2(2, 1)
 collision_mask = 2
 script = ExtResource("2_1psdk")
-dialog_texts = Array[String](["Pulo no abismo, nao importa o que te digam", "Fume maconhaTexto 2", "Sério estou com fomo", "Testex"])
+dialog_texts = Array[String](["Pulo no abismo, nao importa o que te digam", "Fume maconhaTexto 2", "Sério estou com fomo"])
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="hit_pop"]
 position = Vector2(-1, 7)
