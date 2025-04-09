@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 [gd_scene load_steps=20 format=4 uid="uid://cbuf1q3xsse3q"]
+=======
+[gd_scene load_steps=16 format=3 uid="uid://cbuf1q3xsse3q"]
+>>>>>>> 3d0e8ad8f86d80cb25b8dabae39310c3331f006f
 
 [ext_resource type="Script" path="res://addons/dialogue_manager/views/main_view.gd" id="1_h6qfq"]
 [ext_resource type="PackedScene" uid="uid://civ6shmka5e8u" path="res://addons/dialogue_manager/components/code_edit.tscn" id="2_f73fm"]
@@ -11,15 +15,22 @@
 [ext_resource type="PackedScene" uid="uid://cpg4lg1r3ff6m" path="res://addons/dialogue_manager/views/settings_view.tscn" id="9_8bf36"]
 [ext_resource type="PackedScene" uid="uid://0n7hwviyyly4" path="res://addons/dialogue_manager/components/find_in_files.tscn" id="10_yold3"]
 
+<<<<<<< HEAD
 [sub_resource type="Image" id="Image_b1t6l"]
 data = {
 "data": PackedByteArray("////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A/11d//9dXf//XV3//11d//9dXf//XV3//11d/////wD/Xl5/////AP///wD///8A////AP///wD///8A////AP9dXf//XV3//11d//9dXf//XV3//11d//9dXf////8A/11d//9eXn////8A////AP///wD///8A////AP///wD/XV3//11d//9dXf//XV3//11d//9dXf//XV3/////AP9dXf//XV3//15ef////wD///8A////AP///wD///8A/11d//9dXf//XV3//11d//9dXf//XV3//11d/////wD/XV3//11d//9dXf//Xl5/////AP///wD///8A////AP9dXf//XV3//11d//9dXf//XV3//11d//9dXf////8A////AP///wD///8A////AP///wD///8A////AP///wD/XV3//11d//9dXf//XV3//11d//9dXf//XV3//11d//9dXf//XV3//11d//9dXf////8A////AP///wD///8A/11d//9dXf//XV3//11d//9dXf//XV3//11d//9dXf//XV3//11d//9dXf//XV3/////AP///wD///8A////AP9dXef/Xl42/15eOf9dXen/XV3//11d//9dXef/Xl42/15eOf9dXen/XV3//11d/////wD///8A////AP///wD/YWEq////AP///wD/YWEq/11d6f9dXej/XV0p////AP///wD/YWEq/11d6f9dXej///8A////AP///wD///8A////AP9gYC3/XV0s////AP9hYSr/YWEq////AP9gYC3/XV0s////AP9hYSr/YWEq////AP///wD///8A////AP9gYC3/XV3r/15e6v9fXyv///8A////AP9gYC3/XV3r/15e6v9fXyv///8A////AP///wD///8A////AP///wD/XV3r/11d//9dXf//XV3p/19fO/9gYD3/XV3r/11d//9dXf//XV3p/19fO/9gYD3///8A////AP///wD///8A/11d//9dXf//XV3//11d//9dXf//XV3//11d//9dXf//XV3//11d//9dXf//XV3/////AP///wD///8A////AP9dXf//XV3//11d//9dXf//XV3//11d//9dXf//XV3//11d//9dXf//XV3//11d/////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AA=="),
+=======
+[sub_resource type="Image" id="Image_68x0r"]
+data = {
+"data": PackedByteArray(255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 255, 255, 0, 255, 94, 94, 127, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 255, 255, 0, 255, 93, 93, 255, 255, 94, 94, 127, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 255, 255, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 94, 94, 127, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 255, 255, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 94, 94, 127, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 93, 93, 231, 255, 94, 94, 54, 255, 94, 94, 57, 255, 93, 93, 233, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 231, 255, 94, 94, 54, 255, 94, 94, 57, 255, 93, 93, 233, 255, 93, 93, 255, 255, 93, 93, 255, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 97, 97, 42, 255, 255, 255, 0, 255, 255, 255, 0, 255, 97, 97, 42, 255, 93, 93, 233, 255, 93, 93, 232, 255, 93, 93, 41, 255, 255, 255, 0, 255, 255, 255, 0, 255, 97, 97, 42, 255, 93, 93, 233, 255, 93, 93, 232, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 96, 96, 45, 255, 93, 93, 44, 255, 255, 255, 0, 255, 97, 97, 42, 255, 97, 97, 42, 255, 255, 255, 0, 255, 96, 96, 45, 255, 93, 93, 44, 255, 255, 255, 0, 255, 97, 97, 42, 255, 97, 97, 42, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 96, 96, 45, 255, 93, 93, 235, 255, 94, 94, 234, 255, 95, 95, 43, 255, 255, 255, 0, 255, 255, 255, 0, 255, 96, 96, 45, 255, 93, 93, 235, 255, 94, 94, 234, 255, 95, 95, 43, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 93, 93, 235, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 233, 255, 95, 95, 59, 255, 96, 96, 61, 255, 93, 93, 235, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 233, 255, 95, 95, 59, 255, 96, 96, 61, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0),
+>>>>>>> 3d0e8ad8f86d80cb25b8dabae39310c3331f006f
 "format": "RGBA8",
 "height": 16,
 "mipmaps": false,
 "width": 16
 }
 
+<<<<<<< HEAD
 [sub_resource type="ImageTexture" id="ImageTexture_7xbyn"]
 image = SubResource("Image_b1t6l")
 
@@ -1625,6 +1636,24 @@ cache/0/12/0/glyphs/76/uv_rect = Rect2(1, 14, 5, 12)
 cache/0/12/0/glyphs/76/texture_idx = 0
 
 [sub_resource type="SyntaxHighlighter" id="SyntaxHighlighter_ao0we"]
+=======
+[sub_resource type="ImageTexture" id="ImageTexture_ka3gk"]
+image = SubResource("Image_68x0r")
+
+[sub_resource type="Image" id="Image_j5bhl"]
+data = {
+"data": PackedByteArray(255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 255, 255, 0, 255, 94, 94, 127, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 255, 255, 0, 255, 93, 93, 255, 255, 94, 94, 127, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 255, 255, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 94, 94, 127, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 255, 255, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 94, 94, 127, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 93, 93, 231, 255, 94, 94, 54, 255, 94, 94, 57, 255, 93, 93, 233, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 231, 255, 94, 94, 54, 255, 94, 94, 57, 255, 93, 93, 233, 255, 93, 93, 255, 255, 93, 93, 255, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 97, 97, 42, 255, 255, 255, 0, 255, 255, 255, 0, 255, 97, 97, 42, 255, 93, 93, 233, 255, 93, 93, 232, 255, 93, 93, 41, 255, 255, 255, 0, 255, 255, 255, 0, 255, 97, 97, 42, 255, 93, 93, 233, 255, 93, 93, 232, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 96, 96, 45, 255, 93, 93, 44, 255, 255, 255, 0, 255, 97, 97, 42, 255, 97, 97, 42, 255, 255, 255, 0, 255, 96, 96, 45, 255, 93, 93, 44, 255, 255, 255, 0, 255, 97, 97, 42, 255, 97, 97, 42, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 96, 96, 45, 255, 93, 93, 235, 255, 94, 94, 234, 255, 95, 95, 43, 255, 255, 255, 0, 255, 255, 255, 0, 255, 96, 96, 45, 255, 93, 93, 235, 255, 94, 94, 234, 255, 95, 95, 43, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 93, 93, 235, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 233, 255, 95, 95, 59, 255, 96, 96, 61, 255, 93, 93, 235, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 233, 255, 95, 95, 59, 255, 96, 96, 61, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0),
+"format": "RGBA8",
+"height": 16,
+"mipmaps": false,
+"width": 16
+}
+
+[sub_resource type="ImageTexture" id="ImageTexture_57eek"]
+image = SubResource("Image_j5bhl")
+
+[sub_resource type="SyntaxHighlighter" id="SyntaxHighlighter_bxc68"]
+>>>>>>> 3d0e8ad8f86d80cb25b8dabae39310c3331f006f
 script = ExtResource("7_necsa")
 
 [node name="MainView" type="Control"]
@@ -1657,6 +1686,10 @@ metadata/_edit_layout_mode = 1
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
+<<<<<<< HEAD
+=======
+dragger_visibility = 1
+>>>>>>> 3d0e8ad8f86d80cb25b8dabae39310c3331f006f
 
 [node name="SidePanel" type="VBoxContainer" parent="Margin/Content"]
 custom_minimum_size = Vector2(150, 0)
@@ -1670,13 +1703,17 @@ layout_mode = 2
 unique_name_in_owner = true
 layout_mode = 2
 tooltip_text = "Start a new file"
+<<<<<<< HEAD
 icon = SubResource("ImageTexture_7xbyn")
+=======
+>>>>>>> 3d0e8ad8f86d80cb25b8dabae39310c3331f006f
 flat = true
 
 [node name="OpenButton" type="MenuButton" parent="Margin/Content/SidePanel/Toolbar"]
 unique_name_in_owner = true
 layout_mode = 2
 tooltip_text = "Open a file"
+<<<<<<< HEAD
 icon = SubResource("ImageTexture_7xbyn")
 item_count = 6
 popup/item_0/text = "Open..."
@@ -1694,19 +1731,51 @@ popup/item_4/id = -1
 popup/item_4/separator = true
 popup/item_5/text = "Clear recent files"
 popup/item_5/id = 102
+=======
+item_count = 9
+popup/item_0/text = "Open..."
+popup/item_0/icon = SubResource("ImageTexture_ka3gk")
+popup/item_0/id = 100
+popup/item_1/icon = SubResource("ImageTexture_ka3gk")
+popup/item_1/id = 101
+popup/item_2/id = -1
+popup/item_2/separator = true
+popup/item_3/text = "res://examples/dialogue.dialogue"
+popup/item_3/icon = SubResource("ImageTexture_ka3gk")
+popup/item_3/id = 3
+popup/item_4/text = "res://examples/dialogue_with_input.dialogue"
+popup/item_4/icon = SubResource("ImageTexture_ka3gk")
+popup/item_4/id = 4
+popup/item_5/text = "res://examples/dialogue_for_point_n_click.dialogue"
+popup/item_5/icon = SubResource("ImageTexture_ka3gk")
+popup/item_5/id = 5
+popup/item_6/text = "res://examples/dialogue_for_visual_novel.dialogue"
+popup/item_6/icon = SubResource("ImageTexture_ka3gk")
+popup/item_6/id = 6
+popup/item_7/id = -1
+popup/item_7/separator = true
+popup/item_8/text = "Clear recent files"
+popup/item_8/id = 102
+>>>>>>> 3d0e8ad8f86d80cb25b8dabae39310c3331f006f
 
 [node name="SaveAllButton" type="Button" parent="Margin/Content/SidePanel/Toolbar"]
 unique_name_in_owner = true
 layout_mode = 2
 disabled = true
+<<<<<<< HEAD
 icon = SubResource("ImageTexture_7xbyn")
+=======
+>>>>>>> 3d0e8ad8f86d80cb25b8dabae39310c3331f006f
 flat = true
 
 [node name="FindInFilesButton" type="Button" parent="Margin/Content/SidePanel/Toolbar"]
 unique_name_in_owner = true
 layout_mode = 2
 tooltip_text = "Find in files..."
+<<<<<<< HEAD
 icon = SubResource("ImageTexture_7xbyn")
+=======
+>>>>>>> 3d0e8ad8f86d80cb25b8dabae39310c3331f006f
 flat = true
 
 [node name="Bookmarks" type="VSplitContainer" parent="Margin/Content/SidePanel"]
@@ -1715,6 +1784,10 @@ size_flags_vertical = 3
 
 [node name="FilesList" parent="Margin/Content/SidePanel/Bookmarks" instance=ExtResource("2_npj2k")]
 unique_name_in_owner = true
+<<<<<<< HEAD
+=======
+visible = false
+>>>>>>> 3d0e8ad8f86d80cb25b8dabae39310c3331f006f
 layout_mode = 2
 size_flags_vertical = 3
 
@@ -1723,6 +1796,10 @@ unique_name_in_owner = true
 
 [node name="TitleList" parent="Margin/Content/SidePanel/Bookmarks" instance=ExtResource("2_onb4i")]
 unique_name_in_owner = true
+<<<<<<< HEAD
+=======
+visible = false
+>>>>>>> 3d0e8ad8f86d80cb25b8dabae39310c3331f006f
 layout_mode = 2
 
 [node name="CodePanel" type="VBoxContainer" parent="Margin/Content"]
@@ -1736,6 +1813,7 @@ layout_mode = 2
 [node name="InsertButton" type="MenuButton" parent="Margin/Content/CodePanel/Toolbar"]
 unique_name_in_owner = true
 layout_mode = 2
+<<<<<<< HEAD
 text = "Insert"
 icon = SubResource("ImageTexture_7xbyn")
 item_count = 15
@@ -1743,10 +1821,20 @@ popup/item_0/text = "Wave BBCode"
 popup/item_0/icon = SubResource("ImageTexture_7xbyn")
 popup/item_1/text = "Shake BBCode"
 popup/item_1/icon = SubResource("ImageTexture_7xbyn")
+=======
+disabled = true
+text = "Insert"
+item_count = 15
+popup/item_0/text = "Wave BBCode"
+popup/item_0/icon = SubResource("ImageTexture_57eek")
+popup/item_1/text = "Shake BBCode"
+popup/item_1/icon = SubResource("ImageTexture_57eek")
+>>>>>>> 3d0e8ad8f86d80cb25b8dabae39310c3331f006f
 popup/item_1/id = 1
 popup/item_2/id = -1
 popup/item_2/separator = true
 popup/item_3/text = "Typing pause"
+<<<<<<< HEAD
 popup/item_3/icon = SubResource("ImageTexture_7xbyn")
 popup/item_3/id = 3
 popup/item_4/text = "Typing speed change"
@@ -1754,11 +1842,21 @@ popup/item_4/icon = SubResource("ImageTexture_7xbyn")
 popup/item_4/id = 4
 popup/item_5/text = "Auto advance"
 popup/item_5/icon = SubResource("ImageTexture_7xbyn")
+=======
+popup/item_3/icon = SubResource("ImageTexture_57eek")
+popup/item_3/id = 3
+popup/item_4/text = "Typing speed change"
+popup/item_4/icon = SubResource("ImageTexture_57eek")
+popup/item_4/id = 4
+popup/item_5/text = "Auto advance"
+popup/item_5/icon = SubResource("ImageTexture_57eek")
+>>>>>>> 3d0e8ad8f86d80cb25b8dabae39310c3331f006f
 popup/item_5/id = 5
 popup/item_6/text = "Templates"
 popup/item_6/id = -1
 popup/item_6/separator = true
 popup/item_7/text = "Title"
+<<<<<<< HEAD
 popup/item_7/icon = SubResource("ImageTexture_7xbyn")
 popup/item_7/id = 6
 popup/item_8/text = "Dialogue"
@@ -1772,29 +1870,60 @@ popup/item_10/icon = SubResource("ImageTexture_7xbyn")
 popup/item_10/id = 9
 popup/item_11/text = "Random text"
 popup/item_11/icon = SubResource("ImageTexture_7xbyn")
+=======
+popup/item_7/icon = SubResource("ImageTexture_57eek")
+popup/item_7/id = 6
+popup/item_8/text = "Dialogue"
+popup/item_8/icon = SubResource("ImageTexture_57eek")
+popup/item_8/id = 7
+popup/item_9/text = "Response"
+popup/item_9/icon = SubResource("ImageTexture_57eek")
+popup/item_9/id = 8
+popup/item_10/text = "Random lines"
+popup/item_10/icon = SubResource("ImageTexture_57eek")
+popup/item_10/id = 9
+popup/item_11/text = "Random text"
+popup/item_11/icon = SubResource("ImageTexture_57eek")
+>>>>>>> 3d0e8ad8f86d80cb25b8dabae39310c3331f006f
 popup/item_11/id = 10
 popup/item_12/text = "Actions"
 popup/item_12/id = -1
 popup/item_12/separator = true
 popup/item_13/text = "Jump to title"
+<<<<<<< HEAD
 popup/item_13/icon = SubResource("ImageTexture_7xbyn")
 popup/item_13/id = 11
 popup/item_14/text = "End dialogue"
 popup/item_14/icon = SubResource("ImageTexture_7xbyn")
+=======
+popup/item_13/icon = SubResource("ImageTexture_57eek")
+popup/item_13/id = 11
+popup/item_14/text = "End dialogue"
+popup/item_14/icon = SubResource("ImageTexture_57eek")
+>>>>>>> 3d0e8ad8f86d80cb25b8dabae39310c3331f006f
 popup/item_14/id = 12
 
 [node name="TranslationsButton" type="MenuButton" parent="Margin/Content/CodePanel/Toolbar"]
 unique_name_in_owner = true
 layout_mode = 2
+<<<<<<< HEAD
 text = "Translations"
 icon = SubResource("ImageTexture_7xbyn")
 item_count = 5
 popup/item_0/text = "Generate line IDs"
 popup/item_0/icon = SubResource("ImageTexture_7xbyn")
+=======
+disabled = true
+text = "Translations"
+item_count = 5
+popup/item_0/text = "Generate line IDs"
+popup/item_0/icon = SubResource("ImageTexture_57eek")
+>>>>>>> 3d0e8ad8f86d80cb25b8dabae39310c3331f006f
 popup/item_0/id = 100
 popup/item_1/id = -1
 popup/item_1/separator = true
 popup/item_2/text = "Save character names to CSV..."
+<<<<<<< HEAD
 popup/item_2/icon = SubResource("ImageTexture_7xbyn")
 popup/item_2/id = 201
 popup/item_3/text = "Save lines to CSV..."
@@ -1802,6 +1931,15 @@ popup/item_3/icon = SubResource("ImageTexture_7xbyn")
 popup/item_3/id = 202
 popup/item_4/text = "Import line changes from CSV..."
 popup/item_4/icon = SubResource("ImageTexture_7xbyn")
+=======
+popup/item_2/icon = SubResource("ImageTexture_57eek")
+popup/item_2/id = 201
+popup/item_3/text = "Save lines to CSV..."
+popup/item_3/icon = SubResource("ImageTexture_57eek")
+popup/item_3/id = 202
+popup/item_4/text = "Import line changes from CSV..."
+popup/item_4/icon = SubResource("ImageTexture_57eek")
+>>>>>>> 3d0e8ad8f86d80cb25b8dabae39310c3331f006f
 popup/item_4/id = 203
 
 [node name="Separator" type="VSeparator" parent="Margin/Content/CodePanel/Toolbar"]
@@ -1811,15 +1949,24 @@ layout_mode = 2
 unique_name_in_owner = true
 layout_mode = 2
 tooltip_text = "Search for text"
+<<<<<<< HEAD
 toggle_mode = true
 icon = SubResource("ImageTexture_7xbyn")
+=======
+disabled = true
+toggle_mode = true
+>>>>>>> 3d0e8ad8f86d80cb25b8dabae39310c3331f006f
 flat = true
 
 [node name="TestButton" type="Button" parent="Margin/Content/CodePanel/Toolbar"]
 unique_name_in_owner = true
 layout_mode = 2
 tooltip_text = "Test dialogue"
+<<<<<<< HEAD
 icon = SubResource("ImageTexture_7xbyn")
+=======
+disabled = true
+>>>>>>> 3d0e8ad8f86d80cb25b8dabae39310c3331f006f
 flat = true
 
 [node name="Separator3" type="VSeparator" parent="Margin/Content/CodePanel/Toolbar"]
@@ -1829,7 +1976,10 @@ layout_mode = 2
 unique_name_in_owner = true
 layout_mode = 2
 tooltip_text = "Settings"
+<<<<<<< HEAD
 icon = SubResource("ImageTexture_7xbyn")
+=======
+>>>>>>> 3d0e8ad8f86d80cb25b8dabae39310c3331f006f
 flat = true
 
 [node name="Spacer2" type="Control" parent="Margin/Content/CodePanel/Toolbar"]
@@ -1841,7 +1991,10 @@ unique_name_in_owner = true
 layout_mode = 2
 tooltip_text = "Support Dialogue Manager"
 text = "Sponsor"
+<<<<<<< HEAD
 icon = SubResource("ImageTexture_7xbyn")
+=======
+>>>>>>> 3d0e8ad8f86d80cb25b8dabae39310c3331f006f
 flat = true
 
 [node name="Separator4" type="VSeparator" parent="Margin/Content/CodePanel/Toolbar"]
@@ -1851,14 +2004,21 @@ layout_mode = 2
 unique_name_in_owner = true
 layout_mode = 2
 text = "Docs"
+<<<<<<< HEAD
 icon = SubResource("ImageTexture_7xbyn")
+=======
+>>>>>>> 3d0e8ad8f86d80cb25b8dabae39310c3331f006f
 flat = true
 
 [node name="VersionLabel" type="Label" parent="Margin/Content/CodePanel/Toolbar"]
 unique_name_in_owner = true
 modulate = Color(1, 1, 1, 0.490196)
 layout_mode = 2
+<<<<<<< HEAD
 text = "v2.45.0"
+=======
+text = "v2.42.2"
+>>>>>>> 3d0e8ad8f86d80cb25b8dabae39310c3331f006f
 vertical_alignment = 1
 
 [node name="UpdateButton" parent="Margin/Content/CodePanel/Toolbar" instance=ExtResource("2_ph3vs")]
@@ -1871,6 +2031,7 @@ layout_mode = 2
 
 [node name="CodeEdit" parent="Margin/Content/CodePanel" instance=ExtResource("2_f73fm")]
 unique_name_in_owner = true
+<<<<<<< HEAD
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -1909,27 +2070,70 @@ Dona Graça: \"O destino te chama. A escolha é tua.\"
 "
 scroll_smooth = true
 syntax_highlighter = SubResource("SyntaxHighlighter_ao0we")
+=======
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_colors/current_line_color = Color(0.266667, 0.278431, 0.352941, 0.243137)
+theme_override_colors/background_color = Color(0.156863, 0.164706, 0.211765, 1)
+theme_override_colors/font_color = Color(0.972549, 0.972549, 0.94902, 1)
+theme_override_font_sizes/font_size = 14
+theme_override_colors/bookmark_color = Color(1, 0.333333, 0.333333, 1)
+text = "~ start
+
+Nathan: Hi, I'm Nathan and this is Coco.
+Coco: Meow.
+Nathan: Here are some response options.
+- First one
+	Nathan: You picked the first one.
+- Second one
+	Nathan: You picked the second one.
+- Start again => start
+- End the conversation => END
+Nathan: I hope this example is helpful.
+Coco: Meow.
+
+=> END"
+scroll_smooth = true
+syntax_highlighter = SubResource("SyntaxHighlighter_bxc68")
+>>>>>>> 3d0e8ad8f86d80cb25b8dabae39310c3331f006f
 
 [node name="ErrorsPanel" parent="Margin/Content/CodePanel" instance=ExtResource("7_5cvl4")]
 unique_name_in_owner = true
 layout_mode = 2
 
 [node name="NewDialog" type="FileDialog" parent="."]
+<<<<<<< HEAD
 size = Vector2i(1200, 1000)
 min_size = Vector2i(1200, 1000)
+=======
+size = Vector2i(900, 750)
+min_size = Vector2i(600, 500)
+>>>>>>> 3d0e8ad8f86d80cb25b8dabae39310c3331f006f
 dialog_hide_on_ok = true
 filters = PackedStringArray("*.dialogue ; Dialogue")
 
 [node name="SaveDialog" type="FileDialog" parent="."]
+<<<<<<< HEAD
 size = Vector2i(1200, 1000)
 min_size = Vector2i(1200, 1000)
+=======
+size = Vector2i(900, 750)
+min_size = Vector2i(600, 500)
+>>>>>>> 3d0e8ad8f86d80cb25b8dabae39310c3331f006f
 dialog_hide_on_ok = true
 filters = PackedStringArray("*.dialogue ; Dialogue")
 
 [node name="OpenDialog" type="FileDialog" parent="."]
 title = "Open a File"
+<<<<<<< HEAD
 size = Vector2i(1200, 1000)
 min_size = Vector2i(1200, 1000)
+=======
+size = Vector2i(900, 750)
+min_size = Vector2i(600, 500)
+>>>>>>> 3d0e8ad8f86d80cb25b8dabae39310c3331f006f
 ok_button_text = "Open"
 dialog_hide_on_ok = true
 file_mode = 0
@@ -1937,13 +2141,19 @@ filters = PackedStringArray("*.dialogue ; Dialogue")
 
 [node name="QuickOpenDialog" type="ConfirmationDialog" parent="."]
 title = "Quick open"
+<<<<<<< HEAD
 size = Vector2i(800, 1200)
 min_size = Vector2i(800, 1200)
+=======
+size = Vector2i(600, 900)
+min_size = Vector2i(400, 600)
+>>>>>>> 3d0e8ad8f86d80cb25b8dabae39310c3331f006f
 ok_button_text = "Open"
 
 [node name="QuickOpenFilesList" parent="QuickOpenDialog" instance=ExtResource("2_npj2k")]
 
 [node name="ExportDialog" type="FileDialog" parent="."]
+<<<<<<< HEAD
 size = Vector2i(1200, 1000)
 min_size = Vector2i(1200, 1000)
 
@@ -1951,6 +2161,15 @@ min_size = Vector2i(1200, 1000)
 title = "Open a File"
 size = Vector2i(1200, 1000)
 min_size = Vector2i(1200, 1000)
+=======
+size = Vector2i(900, 750)
+min_size = Vector2i(600, 500)
+
+[node name="ImportDialog" type="FileDialog" parent="."]
+title = "Open a File"
+size = Vector2i(900, 750)
+min_size = Vector2i(600, 500)
+>>>>>>> 3d0e8ad8f86d80cb25b8dabae39310c3331f006f
 ok_button_text = "Open"
 file_mode = 0
 filters = PackedStringArray("*.csv ; Translation CSV")
@@ -1961,10 +2180,17 @@ dialog_text = "You have errors in your script. Fix them and then try again."
 
 [node name="SettingsDialog" type="AcceptDialog" parent="."]
 title = "Settings"
+<<<<<<< HEAD
 size = Vector2i(2000, 1200)
 unresizable = true
 min_size = Vector2i(2000, 1200)
 max_size = Vector2i(2000, 1200)
+=======
+size = Vector2i(1000, 600)
+unresizable = true
+min_size = Vector2i(1000, 600)
+max_size = Vector2i(1000, 600)
+>>>>>>> 3d0e8ad8f86d80cb25b8dabae39310c3331f006f
 ok_button_text = "Done"
 
 [node name="SettingsView" parent="SettingsDialog" instance=ExtResource("9_8bf36")]
@@ -1988,8 +2214,13 @@ dialog_text = "You're now up to date!"
 
 [node name="FindInFilesDialog" type="AcceptDialog" parent="."]
 title = "Find in files"
+<<<<<<< HEAD
 size = Vector2i(1600, 1200)
 min_size = Vector2i(1600, 1200)
+=======
+size = Vector2i(1200, 900)
+min_size = Vector2i(800, 600)
+>>>>>>> 3d0e8ad8f86d80cb25b8dabae39310c3331f006f
 ok_button_text = "Done"
 
 [node name="FindInFiles" parent="FindInFilesDialog" node_paths=PackedStringArray("main_view", "code_edit") instance=ExtResource("10_yold3")]

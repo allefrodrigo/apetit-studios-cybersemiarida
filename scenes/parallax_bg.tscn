@@ -102,12 +102,15 @@ position = Vector2(0, -302)
 texture = ExtResource("1_i4mjd")
 centered = false
 
+<<<<<<< HEAD
 [node name="Sprite2D4" type="Sprite2D" parent="ParallaxBackground/Sky"]
 texture_filter = 1
 position = Vector2(1.19209e-07, -453.333)
 texture = ExtResource("1_i4mjd")
 centered = false
 
+=======
+>>>>>>> 3d0e8ad8f86d80cb25b8dabae39310c3331f006f
 [node name="Cloud" type="Parallax2D" parent="ParallaxBackground"]
 scale = Vector2(1.5, 1.5)
 repeat_size = Vector2(600, 0)

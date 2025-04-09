@@ -1,7 +1,12 @@
+<<<<<<< HEAD
 class_name Player
 extends CharacterBody2D
 
 
+=======
+extends CharacterBody2D
+
+>>>>>>> 3d0e8ad8f86d80cb25b8dabae39310c3331f006f
 const SPEED = 150.0
 const JUMP_VELOCITY = -350.0
 const ACCELERATION = 800.0
