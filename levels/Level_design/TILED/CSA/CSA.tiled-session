@@ -35,11 +35,11 @@
             }
         },
         "Mapa/cafundo_dg.tmx": {
-            "scale": 0.0625,
+            "scale": 0.25,
             "selectedLayer": 1,
             "viewCenter": {
-                "x": -560,
-                "y": 1336
+                "x": 2092,
+                "y": 1730
             }
         },
         "Mapa/cafundó_02.tmx": {
@@ -63,7 +63,7 @@
             "selectedLayer": 3,
             "viewCenter": {
                 "x": 28992,
-                "y": 16592
+                "y": 16880
             }
         },
         "Mapa/cidade_transicao.tmx": {
@@ -72,6 +72,14 @@
             "viewCenter": {
                 "x": 3866.666666666666,
                 "y": 604.5454545454546
+            }
+        },
+        "Mapa/deserto1.tmx": {
+            "scale": 0.125,
+            "selectedLayer": 1,
+            "viewCenter": {
+                "x": 1688,
+                "y": -92
             }
         },
         "Rules/Autotile_Rules.tmx": {
@@ -116,7 +124,8 @@
             "scaleInEditor": 1
         }
     },
-    "last.exportedFilePath": "C:/Users/v-vbt/OneDrive/Documentos/GitHub/apetit-studios-cybersemiarida/levels/Level_design/TILED/CSA/Mapa",
+    "last.exportedFilePath": "C:/Users/v-vbt/OneDrive/Documentos/GitHub/070525/apetit-studios-cybersemiarida/levels/Level_design/TILED/CSA/Mapa",
+    "last.imagePath": "C:/Users/v-vbt/OneDrive/Documentos/GitHub/apetit-studios-cybersemiarida-assets/apetit-studios-cybersemiarida-assets/Deserto_Tilesets/ground_tileset/ground",
     "map.height": 100,
     "map.lastUsedExportFilter": "Ficheiro de Cena do Godot 4 (*.tscn)",
     "map.lastUsedFormat": "tmx",
@@ -150,5 +159,10 @@
         "Mapa/cafundo_dg.tmx",
         "Mapa/cafundó_dg.tmx",
         "Cafundo_01.tmx"
-    ]
+    ],
+    "tileset.lastUsedFormat": "tsx",
+    "tileset.tileSize": {
+        "height": 16,
+        "width": 16
+    }
 }
